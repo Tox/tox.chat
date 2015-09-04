@@ -2,6 +2,10 @@ body {
 	font-family: "Fira Sans";
 }
 
+* {
+	font-weight: 300 !important;
+}
+
 .navbar {
 	background: #ECF0F1;
 	border-color: #ECF0F1;
