@@ -2,6 +2,9 @@
 	font-family: "Fira Sans";
 	font-style: normal;
 	font-weight: 300;
-	src: url("../fonts/fira+sans-300.eot");
-	src: url("../fonts/fira+sans-300.eot?#iefix") format("embedded-opentype"), url("../fonts/fira+sans-300.woff") format("woff"), url("../fonts/fira+sans-300.ttf") format("truetype"), url("../fonts/fira+sans-300.svg#fira_sansregular") format("svg");
+	src: url("../fonts/FiraSans-Light.eot");
+	src: local("Fira Sans Light"),
+		url("../fonts/FiraSans-Light.eot") format("embedded-opentype"),
+		url("../fonts/FiraSans-Light.woff") format("woff"),
+		url("../fonts/FiraSans-Light.ttf") format("truetype");
 }
