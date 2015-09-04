@@ -1,6 +1,5 @@
 body {
 	font-family: "Fira Sans";
-	/*font-weight: norma;*/
 }
 
 .navbar {
@@ -97,6 +96,7 @@ section {
 #screenshot {
 	background: #ECF0F1;
 	color: #4B5F6D;
+	text-align: center;
 }
 
 #screenshot .feature .icon {
