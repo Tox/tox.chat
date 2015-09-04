@@ -1,0 +1,180 @@
+body {
+	font-family: "Fira Sans";
+	/*font-weight: normal;*/
+}
+
+.navbar {
+	background: #ECF0F1;
+	border-color: #ECF0F1;
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+
+@media (min-width: 768px) {
+	.navbar {
+		height: 70px;
+	}
+}
+
+.nav {
+	margin-top: 8px;
+}
+
+.nav li a {
+	color: #4B5F6D;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+.navbar-brand img {
+	height: 50px;
+	padding-top: 10px;
+}
+
+section {
+	padding: 25px 25px 0px;
+	padding-top: 25px;
+	min-height: 200px;
+}
+
+@media (max-width: 480px) {
+	* {
+		text-align: center
+	}
+
+	section {
+		padding: 15px 15px 0px;
+	}
+}
+
+.lead {
+	margin-bottom: 0;
+	padding-bottom: 20px;
+}
+
+#cover-parent {
+	background: #24221F;
+	color: #C4D2DF;
+}
+
+@media (min-width: 768px) {
+	#cover-parent {
+		height: calc(100vh - 70px);
+	}
+}
+
+@media (min-width: 768px) {
+	#cover {
+		position: absolute;
+		top: 50%;
+		margin-top: -80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+}
+
+#cover img {
+	height: 280px;
+	width: calc(100% - 5px);
+	margin: 10px;
+}
+
+#cover .header {
+	color: #FEB41C;
+}
+
+#mini-about {
+	background: #5E7C88;
+	color: #fff;
+	text-align: center;
+}
+
+#mini-about .header {
+	margin-top: 0;
+}
+
+#screenshot {
+	background: #ECF0F1;
+	color: #4B5F6D;
+}
+
+#screenshot .feature .icon {
+	font-size: 45px;
+}
+
+#screenshot .screenshot {
+	width: 100%;
+}
+
+#download {
+	background: #5E7C88;
+	color: #fff;
+	text-align: center;
+}
+
+#download .header {
+	color: #FEB41C;
+}
+
+#download .row {
+	width: 90%;
+	margin-left: 5%;
+}
+
+#download .row .button {
+	padding-top: 15px;
+	margin: 15px 0 -10px;
+	border-radius: 5px;
+	background: #4B5F6D;
+	color: #fff;
+	text-align: center;
+	display: block;
+	margin-bottom: 20px;
+}
+
+#download .row .button .icon {
+	font-size: 30px;
+}
+
+#social-media {
+	background: #24221F;
+	color: #C4D2DF;
+	background: #414141;
+	color: #fff;
+	text-align: center;
+}
+
+#social-media .header {
+	margin-bottom: 25px;
+}
+
+#social-media .row {
+	width: 90%;
+	margin-left: 5%;
+}
+
+#social-media .row a {
+	color: #fff;
+	display: block;
+}
+
+#social-media .icon {
+	font-size: 30px;
+}
+
+#footer {
+	text-align: center;
+	background: #ECF0F1;
+	color: #4B5F6D;
+}
+
+#footer span {
+	padding-bottom: 0;
+}
+
+/* other colours: #ECF0F1, #FEB41C, #24221F */
