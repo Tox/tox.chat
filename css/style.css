@@ -1,6 +1,6 @@
 body {
 	font-family: "Fira Sans";
-	/*font-weight: normal;*/
+	/*font-weight: norma;*/
 }
 
 .navbar {
@@ -55,36 +55,32 @@ section {
 	padding-bottom: 20px;
 }
 
-#cover-parent {
+#cover {
 	background: #24221F;
 	color: #C4D2DF;
 }
 
 @media (min-width: 768px) {
-	#cover-parent {
-		height: calc(100vh - 70px);
-	}
-}
-
-@media (min-width: 768px) {
 	#cover {
-		position: absolute;
-		top: 50%;
-		margin-top: -80px;
+		height: calc(100vh - 70px);
 		display: flex;
-		justify-content: center;
+		align-items: center;
+	}
+
+	#cover-line {
+		display: flex;
 		align-items: center;
 		align-content: center;
 	}
 }
 
-#cover img {
+#cover-line img {
 	height: 280px;
 	width: calc(100% - 5px);
 	margin: 10px;
 }
 
-#cover .header {
+#cover-line .header {
 	color: #FEB41C;
 }
 
