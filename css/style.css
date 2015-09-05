@@ -13,17 +13,6 @@ body {
 	border-radius: 0;
 }
 
-
-@media (min-width: 768px) {
-	.navbar {
-		height: 70px;
-	}
-}
-
-.nav {
-	margin-top: 8px;
-}
-
 .nav li a {
 	color: #4B5F6D;
 }
@@ -33,8 +22,8 @@ body {
 }
 
 .navbar-brand img {
-	height: 50px;
-	padding-top: 10px;
+	height: 46px;
+	padding-top: 2px;
 }
 
 section {
@@ -65,7 +54,7 @@ section {
 
 @media (min-width: 768px) {
 	#cover {
-		height: calc(100vh - 70px);
+		height: calc(100vh - 52px);
 		display: flex;
 		align-items: center;
 	}
