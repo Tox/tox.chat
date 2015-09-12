@@ -14,15 +14,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-	background: #ECF0F1;
-	border-color: #ECF0F1;
+	background: #252A2B;
+	border-color: #252A2B;
 	margin-bottom: 0;
 	border-radius: 0;
 	font-weight: 400;
 }
 
-.nav li a {
-	color: #4B5F6D;
+@media (min-width: 768px) {
+	.navbar {
+		height: 70px;
+	}
+}
+
+.nav {
+	margin-top: 8px;
+}
+
+.nav > li > a {
+	color: #C4D2DF;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+	color: #fff;
+	background: #252A2B;
+	text-decoration: underline;
 }
 
 .navbar-brand {
@@ -30,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand img {
-	height: 46px;
-	padding-top: 2px;
+	height: 50px; 
+	padding-top: 10px;
 }
 
 section {
@@ -56,13 +72,13 @@ section {
 }
 
 #cover {
-	background: #24221F;
+	background: #252A2B;
 	color: #C4D2DF;
 }
 
 @media (min-width: 768px) {
 	#cover {
-		height: calc(100vh - 52px);
+		height: calc(100vh - 70px);
 		display: flex;
 		align-items: center;
 	}
@@ -81,8 +97,7 @@ section {
 }
 
 #cover-line .header {
-	color: #ff9805
-;
+	color: #ff9805;
 }
 
 #cover-line .button {
@@ -116,7 +131,7 @@ section {
 }
 
 #mini-about {
-	background: #5E7C88;
+	background: #3A5F72;
 	color: #fff;
 	text-align: center;
 }
@@ -140,14 +155,13 @@ section {
 }
 
 #download {
-	background: #5E7C88;
+	background: #3A5F72;
 	color: #fff;
 	text-align: center;
 }
 
 #download .header {
-	color: #ff9805
-;
+	color: #ff9805;
 }
 
 #download .row {
@@ -158,8 +172,6 @@ section {
 #download .row .button {
 	padding-top: 15px;
 	margin: 15px 0 -10px;
-	border-radius: 5px;
-	background: #4B5F6D;
 	color: #fff;
 	text-align: center;
 	display: block;
@@ -171,9 +183,8 @@ section {
 }
 
 #social-media {
-	background: #24221F;
+	background: #252A2B;
 	color: #C4D2DF;
-	background: #414141;
 	color: #fff;
 	text-align: center;
 }
