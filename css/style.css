@@ -1,5 +1,7 @@
 body {
 	font-family: "Fira Sans";
+	font-style: normal;
+	text-rendering: optimizelegibility;
 }
 
 * {
@@ -157,13 +159,18 @@ section {
 }
 
 #footer {
-	text-align: center;
 	background: #ECF0F1;
 	color: #4B5F6D;
+	padding: 15px 15px 0 15px;
 }
 
-#footer span {
-	padding-bottom: 0;
+#footer .cc {
+	text-align: right;
+	font-size: 15px;
+}
+
+#footer .languages {
+	margin-bottom: 25px;
 }
 
 /* other colours: #ECF0F1, #FEB41C, #24221F */
