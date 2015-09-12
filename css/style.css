@@ -103,7 +103,7 @@ section {
 }
 
 #cover-line .button.download {
-	background :url("../img/download-button.png");
+	background: #ff9805;
 	color: #fff;
 }
 
