@@ -81,7 +81,8 @@ section {
 }
 
 #cover-line .header {
-	color: #FEB41C;
+	color: #ff9805
+;
 }
 
 #cover-line .button {
@@ -145,7 +146,8 @@ section {
 }
 
 #download .header {
-	color: #FEB41C;
+	color: #ff9805
+;
 }
 
 #download .row {
@@ -209,5 +211,3 @@ section {
 #footer .languages {
 	margin-bottom: 25px;
 }
-
-/* other colours: #ECF0F1, #FEB41C, #24221F */
