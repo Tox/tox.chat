@@ -4,8 +4,8 @@ body {
 	text-rendering: optimizelegibility;
 }
 
-* {
-	font-weight: 300 !important;
+body, h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
 }
 
 .navbar {
@@ -13,6 +13,7 @@ body {
 	border-color: #ECF0F1;
 	margin-bottom: 0;
 	border-radius: 0;
+	font-weight: 400;
 }
 
 .nav li a {
@@ -79,6 +80,7 @@ section {
 }
 
 #cover-line .button {
+	font-weight: 400;
 	cursor: pointer;
 	display: inline-block;
 	padding: 0px 1em;
@@ -194,7 +196,7 @@ section {
 }
 
 #footer .cc {
-	text-align: right;
+	text-align: center;
 	font-size: 15px;
 }
 
