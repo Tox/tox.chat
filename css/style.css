@@ -2,10 +2,15 @@ body {
 	font-family: "Fira Sans";
 	font-style: normal;
 	text-rendering: optimizelegibility;
+	font-weight: 200;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
+}
+
+.lead {
+	font-weight: 200;
 }
 
 .navbar {
@@ -191,6 +196,7 @@ section {
 
 #footer {
 	background: #ECF0F1;
+	font-weight: 300;
 	color: #4B5F6D;
 	padding: 15px 15px 0 15px;
 }
