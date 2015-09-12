@@ -78,6 +78,35 @@ section {
 	color: #FEB41C;
 }
 
+#cover-line .button {
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px 1em;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 2.3em;
+	font-size: 18px;
+	margin-right: 5px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+}
+
+@media (max-width: 768px) {
+	#cover-line .button {
+		margin-bottom: 15px;
+	}
+}
+
+#cover-line .button.learn-more {
+	background: #A7BABE;
+	color: #fff;
+}
+
+#cover-line .button.download {
+	background :url("../img/download-button.png");
+	color: #fff;
+}
+
 #mini-about {
 	background: #5E7C88;
 	color: #fff;
