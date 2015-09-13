@@ -79,7 +79,7 @@ section {
 @media (min-width: 768px) {
 	#cover {
 		height: calc(100vh - 70px);
-		max-height: 650px;
+		max-height: 768px;
 		display: flex;
 		align-items: center;
 	}
