@@ -76,7 +76,7 @@ section {
 	color: #C4D2DF;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
 	#cover {
 		height: calc(100vh - 70px);
 		max-height: 768px;
