@@ -76,10 +76,10 @@ section {
 	color: #C4D2DF;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
 	#cover {
 		height: calc(100vh - 70px);
-		max-height: 768px;
+		max-height: 900px;
 		display: flex;
 		align-items: center;
 	}
