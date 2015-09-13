@@ -53,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 section {
 	padding: 25px 25px 0;
 	padding-top: 25px;
-	min-height: 200px;
 }
 
 @media (max-width: 480px) {
@@ -201,9 +200,10 @@ section {
 	margin-left: 5%;
 }
 
-#social-media .row a {
+#social-media .row .button {
 	color: #fff;
 	display: block;
+	margin: 15px 0px 20px;
 }
 
 #social-media .icon {
