@@ -79,6 +79,7 @@ section {
 @media (min-width: 768px) {
 	#cover {
 		height: calc(100vh - 70px);
+		max-height: 650px;
 		display: flex;
 		align-items: center;
 	}
@@ -121,7 +122,7 @@ section {
 }
 
 #cover-line .button.learn-more {
-	background: #287CA8;
+	background: #22658A;
 	color: #fff;
 }
 
@@ -131,7 +132,7 @@ section {
 }
 
 #mini-about {
-	background: #287CA8;
+	background: #22658A;
 	color: #fff;
 	text-align: center;
 }
@@ -155,7 +156,7 @@ section {
 }
 
 #download {
-	background: #287CA8;
+	background: #22658A;
 	color: #fff;
 	text-align: center;
 }
