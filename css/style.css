@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding: 25px 25px 0px;
+	padding: 25px 25px 0;
 	padding-top: 25px;
 	min-height: 200px;
 }
@@ -162,7 +162,7 @@ section {
 }
 
 #download .header {
-	color: #ff9805;
+	color: #56C3FF;
 }
 
 #download .row {
