@@ -74,6 +74,7 @@ section {
 #cover {
 	background: #252A2B;
 	color: #C4D2DF;
+	text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -82,6 +83,7 @@ section {
 		max-height: 900px;
 		display: flex;
 		align-items: center;
+		text-align: left;
 	}
 
 	#cover-line {
