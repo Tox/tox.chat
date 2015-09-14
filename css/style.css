@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 
+.limit-width {
+	max-width: 1170px;
+}
+
 .navbar {
 	background: #252A2B;
 	border-color: #252A2B;
@@ -52,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand img {
 	height: 50px; 
 	padding-top: 10px;
+	margin-left: 10px;
 }
 
 section {
@@ -158,6 +163,19 @@ section {
 
 #screenshot .screenshot {
 	width: 100%;
+}
+
+#screenshot .screenshot.mobile {
+	display: none;
+}
+
+@media (max-width: 480px) {
+	#screenshot .screenshot {
+		display: none;
+	}
+	#screenshot .screenshot.mobile {
+		display: block;
+	}
 }
 
 #download {
