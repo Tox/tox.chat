@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #C4D2DF;
 }
 
+.navbar .navbar-toggle .icon-bar {
+	background: #C4D2DF;
+}
+
 .nav > li > a:focus, .nav > li > a:hover {
 	color: #fff;
 	background: #252A2B;
