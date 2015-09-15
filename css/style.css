@@ -88,13 +88,14 @@ section {
 @media (min-width: 768px) {
 	#cover {
 		height: calc(100vh - 70px);
-		max-height: 900px;
+		max-height: 800px;
 		display: flex;
 		align-items: center;
 		text-align: left;
 	}
 
 	#cover-line {
+		margin-top: -35px;
 		display: flex;
 		align-items: center;
 		align-content: center;
