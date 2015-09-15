@@ -167,9 +167,11 @@ section {
 
 #screenshot .screenshot.mobile {
 	display: none;
+	margin: auto;
+	max-width: 300px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
 	#screenshot .screenshot {
 		display: none;
 	}
