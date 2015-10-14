@@ -164,7 +164,7 @@ section {
 
 #screenshot .screenshot {
 	width: 100%;
-	padding-bottom: 10px;
+	padding-bottom: 25px;
 }
 
 #screenshot .screenshot.mobile {
@@ -186,6 +186,7 @@ section {
 	background: #22658A;
 	color: #fff;
 	text-align: center;
+	padding-top: 10px;
 }
 
 #download .header {
@@ -210,44 +211,64 @@ section {
 	font-size: 30px;
 }
 
-#social-media {
+#footer {
 	background: #252A2B;
 	color: #C4D2DF;
-	color: #fff;
-	text-align: center;
-}
-
-#social-media .header {
-	margin-bottom: 25px;
-}
-
-#social-media .row {
-	width: 90%;
-	margin-left: 5%;
-}
-
-#social-media .row .button {
-	color: #fff;
-	display: block;
-	margin: 15px 0px 20px;
-}
-
-#social-media .icon {
-	font-size: 30px;
-}
-
-#footer {
-	background: #ECF0F1;
-	font-weight: 300;
-	color: #4B5F6D;
-	padding: 15px 15px 0 15px;
 }
 
 #footer .cc {
-	text-align: center;
+	text-align: right;
 	font-size: 15px;
+	width: 280px;
+	margin-bottom: 13px;
+}
+
+#footer .cc img {
+	margin-bottom: 5px;
+}
+
+#footer .cc a {
+	color: #8a4622;
+}
+
+#footer .cc a:hover {
+	color: #ffeadb;
+	text-decoration: none;
+}
+
+#footer .soc-med {
+	margin-top: 30px;
+}
+
+#footer .soc-med a {
+	color: #8a4622;
+}
+
+#footer .soc-med a:hover {
+	color: #fff;
 }
 
 #footer .languages {
 	margin-bottom: 25px;
 }
+
+.soc-med .icon {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 490px) {
+	#footer .cc {
+		width: 88px;
+	}
+
+	#footer .cc p {
+		display: none;
+	}
+
+	#footer .soc-med {
+		top: 30px;
+		margin-top: 0;
+	}
+}
+
