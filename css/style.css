@@ -189,6 +189,7 @@ section {
 
 #about .icon {
 	font-size: 120px;
+	cursor: default;
 }
 
 #about .icon-parent {
@@ -233,7 +234,7 @@ section {
 }
 
 #footer .cc a:hover {
-	color: #ffeadb;
+	color: #DCDCDC;
 	text-decoration: none;
 }
 
@@ -246,7 +247,7 @@ section {
 }
 
 #footer .soc-med a:hover {
-	color: #fff;
+	color: #DCDCDC;
 }
 
 #footer .languages {
