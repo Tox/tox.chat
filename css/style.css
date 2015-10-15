@@ -84,7 +84,7 @@ section {
 @media (min-width: 768px) {
 	#cover {
 		height: calc(100vh - 70px);
-		max-height: 600px;
+		max-height: 800px;
 		display: flex;
 		align-items: center;
 		text-align: left;
