@@ -2,15 +2,14 @@ body {
 	font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif;;
 	font-style: normal;
 	text-rendering: optimizelegibility;
-	font-weight: 200;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 300;
+	font-weight: 500;
 }
 
 .lead {
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .limit-width {
@@ -18,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-	background: #414141;
+	background: #ECF0F1;
 	border-color: #414141;
 	margin-bottom: 0;
 	border-radius: 0;
@@ -36,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav > li > a {
-	color: #DCDCDC;
+	color: #414141;
 }
 
 .navbar .navbar-toggle .icon-bar {
@@ -44,8 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
-	color: #fff;
-	background: #414141;
 	text-decoration: underline;
 }
 
@@ -108,7 +105,7 @@ section {
 }
 
 #cover-line .header {
-	color: #FB6962;
+	color: #F5AD1A;
 }
 
 #cover-line .button {
@@ -132,13 +129,25 @@ section {
 }
 
 #cover-line .button.learn-more {
-	background: #DCDCDC;
+	background: #5DBA9E;
 	color: #fff;
 }
 
-#cover-line .button.download {
-	background: #FB6962;
+#cover-line .button.learn-more:hover {
+	background: #69D1B2;
 	color: #fff;
+	text-decoration: none;
+}
+
+#cover-line .button.download {
+	background: #FFBA2B;
+	color: #fff;
+}
+
+#cover-line .button.download:hover {
+	background: #FFC44C;
+	color: #fff;
+	text-decoration: none;
 }
 
 #screenshot {
@@ -189,7 +198,6 @@ section {
 
 #about .icon {
 	font-size: 120px;
-	cursor: default;
 }
 
 #about .icon-parent {
@@ -197,7 +205,7 @@ section {
 }
 
 #about .header {
-	color: #FB6962;
+	color: #F5AD1A;
 	margin-top: 0;
 }
 
@@ -230,11 +238,11 @@ section {
 }
 
 #footer .cc a {
-	color: #FB6962;
+	color: #F5AD1A;
 }
 
 #footer .cc a:hover {
-	color: #DCDCDC;
+	color: #FFC44C;
 	text-decoration: none;
 }
 
@@ -243,11 +251,11 @@ section {
 }
 
 #footer .soc-med a {
-	color: #FB6962;
+	color: #F5AD1A;
 }
 
 #footer .soc-med a:hover {
-	color: #DCDCDC;
+	color: #FFC44C;
 }
 
 #footer .languages {
