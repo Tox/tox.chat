@@ -1,195 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>A New Kind of Instant Messaging</title>
-
-	<link href="css/fonts.css" rel="stylesheet">
-	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>A New Kind of Instant Messaging</title>
+	
+  <link href="css/fonts.css" rel="stylesheet">
+  <link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-	<nav class="navbar">
-		<div class="container-fluid limit-width">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+  <nav class="navbar">
+    <div class="container-fluid limit-width">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
+        <button class="navbar-toggle collapsed" data-target="#navbar"
+        data-toggle="collapse" type="button">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="https://wiki.tox.chat/">
-							<span class="fa fa-globe"></span> Wiki
+      </div>
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span>
+            	Wiki
 						</a>
-					</li>
-					<li>
-						<a href="https://github.com/irungentoo/toxcore">
-							<span class="fa fa-github"></span> Code
+          </li>
+          <li>
+            <a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span>
+							Code
 						</a>
-					</li>
-					<li>
-						<a href="https://lists.tox.chat/">
-							<span class="fa fa-envelope"></span> Mailing lists
+          </li>
+          <li>
+            <a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span>
+							Mailing lists
 						</a>
-					</li>
-					<li>
-						<a href="https://wiki.tox.chat/users/community#irc">
-							<span class="fa fa-comments"></span> IRC
+          </li>
+          <li>
+            <a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span>
+							IRC
 						</a>
-					</li>
-					<li>
-						<a href="https://blog.tox.chat/">
-							<span class="fa fa-rss"></span> Blog
+          </li>
+          <li>
+            <a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span>
+            	Blog
 						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<section id="cover">
-		<div class="container-fluid limit-width">
-			<div id="cover-line">
-				<div class="col-sm-4"><img src="img/icon.svg" alt=""></div>
-				<div class="col-sm-8">
-					<h1 class="header">A New Kind of Instant Messaging</h1>
-					<p class="lead">With the rise of government monitoring programs, Tox provides an easy to use application that allows you to connect with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising &mdash; forever.</p>
-
-					<h6>Note: Tox is still under heavy development — expect to run into some bugs.</h6>
-
-					<a href="#download" class="button download">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="cover">
+    <div class="container-fluid limit-width">
+      <div id="cover-line">
+        <div class="col-sm-4"><img alt="" src="img/icon.svg"></div>
+        <div class="col-sm-8">
+          <h1 class="header">A New Kind of Instant Messaging</h1>
+          <p class="lead">
+						With the rise of government monitoring programs, Tox provides an
+						easy to use application that allows you to connect with friends and
+						family without anyone else listening in. While other big-name
+						services require you to pay for features, Tox is totally free and
+						comes without advertising &mdash; forever.
+					</p>
+          <h6>
+						Note: Tox is still under heavy development — expect to run into
+          some bugs.
+					</h6>
+					<a class="button download" href="#download">
 						<span class="fa fa-download">&nbsp;</span>Download
 					</a>
-
-					<a href="#mini-about" class="button learn-more">
-						<span class="fa fa-info-circle">&nbsp;</span>Learn more
+          <a class="button learn-more" href="#mini-about">
+						<span class="fa fa-info-circle">&nbsp;</span>
+						Learn more
 					</a>
-				</div>
-			</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="screenshot">
+    <div class="container-fluid limit-width">
+			<img class="screenshot" src="img/desktop_screenshot.png">
+			<img class="screenshot mobile" src="img/mobile_screenshot.png">
 		</div>
-	</section>
-
-	<section id="screenshot">
-		<div class="container-fluid limit-width">
-			<img src="img/desktop_screenshot.png" class="screenshot"></img>
-			<img src="img/mobile_screenshot.png" class="screenshot mobile"></img>
-		</div>
-	</section>
-
-	<section id="client-features" class="features">
-		<div class="container-fluid limit-width">
-			<div class="row">
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-comment"></span>
-					<h2>Instant messaging</h2>
-					<p class="lead">Instantly and securely communicate accross the globe with Tox's secure instant messaging.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-phone"></span>
-					<h2>Voice calls</h2>
-					<p class="lead">Keep in touch with friends and family using Tox's completely free and encrypted voice calls.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-video-camera"></span>
-					<h2>Video calls</h2>
-					<p class="lead">Catch up face to face using Tox's secure video calls.</p>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-desktop"></span>
-					<h2>Screen sharing</h2>
-					<p class="lead">Share your desktop with your friends securely with Tox's screen sharing.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-file-text"></span>
-					<h2>File sharing</h2>
-					<p class="lead">Share files instantly and securely over Tox.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-group"></span>
-					<h2>Group chats</h2>
-					<p class="lead">Chat, call, and even share video with multiple people with Tox's group chats.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="about">
-		<div class="container-fluid limit-width">
-			<div id="about-line">
-				<div class="col-sm-8">
-					<h2 class="header">Ayy, placeholder!</h2>
-					<p class="lead">Tox uhh...... zero-one or anyone else who is good at writing, please write this part, thanx.</p>
-				</div>
-
-				<div class="col-sm-4 icon-parent"><span class="icon fa fa-lock"></span></div>
-			</div>
-		</div>
-	</section>
-
-	<section id="features" class="features">
-		<div class="container-fluid limit-width">
-			<div class="row">
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-shield"></span>
-					<h2>Encrypted</h2>
-					<p class="lead">Something something e2e encrypted something. Uh yeah, you'll need to write this part too zero-one.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-server"></span>
-					<h2>Distributed</h2>
-					<p class="lead">Sorry, and this part.</p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<span class="icon fa fa-exchange"></span>
-					<h2>P2P</h2>
-					<p class="lead">Look, I'll give you 3 euros on paypal, so you're not just working <span style="color:#0f0;">&gt;for free</span>, k zero-one?</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer id="footer">
-		<div class="container-fluid limit-width">
-			<div class="languages">
-
-			</div>
-
-			<div class="soc-med pull-left">
-				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
-				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
-				<a class="button" href="https://blog.tox.chat/" title="Subscribe to our blog"><span class="icon fa fa-rss"></span></a>
-			</div>
-			<div class="cc pull-right">
-				<a href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License"><img src="img/CC.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License"></a>
-				<br>
-				<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
-			</div>
-		</div>
-	</footer>
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
+  </section>
+  <section class="features" id="client-features">
+    <div class="container-fluid limit-width">
+      <div class="row">
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-comment"></span>
+          <h2>Instant messaging</h2>
+          <p class="lead">
+						Instantly and securely communicate accross the globe with Tox's
+						secure instant messaging.
+					</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-phone"></span>
+          <h2>Voice calls</h2>
+          <p class="lead">
+						Keep in touch with friends and family using Tox's completely free
+						and encrypted voice calls.
+					</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-video-camera"></span>
+          <h2>Video calls</h2>
+          <p class="lead">
+						Catch up face to face using Tox's secure video calls.
+					</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-desktop"></span>
+          <h2>Screen sharing</h2>
+          <p class="lead">
+						Share your desktop with your friends securely with Tox's screen
+						sharing.
+					</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-file-text"></span>
+          <h2>File sharing</h2>
+          <p class="lead">
+						Share files instantly and securely over Tox.
+					</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-group"></span>
+          <h2>Group chats</h2>
+          <p class="lead">
+						Chat, call, and even share video with multiple people with Tox's
+						group chats.
+					</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="container-fluid limit-width">
+      <div id="about-line">
+        <div class="col-sm-8">
+          <h2 class="header">Ayy, placeholder!</h2>
+          <p class="lead">
+						Tox uhh...... zero-one or anyone else who is good at writing, please
+						 write this part, thanx.
+					</p>
+        </div>
+        <div class="col-sm-4 icon-parent">
+          <span class="icon fa fa-lock"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="features" id="features">
+    <div class="container-fluid limit-width">
+      <div class="row">
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-shield"></span>
+          <h2>Encrypted</h2>
+          <p class="lead">
+						Something something e2e encrypted something. Uh yeah, you'll need to
+						 write this part too zero-one.
+					</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-server"></span>
+          <h2>Distributed</h2>
+          <p class="lead">Sorry, and this part.</p>
+        </div>
+        <div class="col-sm-4 feature">
+          <span class="icon fa fa-exchange"></span>
+          <h2>P2P</h2>
+          <p class="lead">
+						Look, I'll give you 3 euros on paypal, so you're not just working
+						<span style="color:#0f0;">&gt;for free</span>, k zero-one?
+					</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="container-fluid limit-width">
+      <div class="languages"></div>
+      <div class="soc-med pull-left">
+        <a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter">
+					<span class="icon fa fa-twitter"></span>
+				</a>
+        <a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook">
+					<span class="icon fa fa-facebook"></span>
+				</a>
+        <a class="button" href="https://blog.tox.chat/" title="Subscribe to our blog">
+					<span class="icon fa fa-rss"></span>
+				</a>
+      </div>
+      <div class="cc pull-right">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License">
+					<img alt="Creative Commons Attribution-ShareAlike 4.0 International License" src="img/CC.png">
+				</a>
+        <p>
+					This work is licensed under a
+					<a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+						Creative Commons Attribution-ShareAlike 4.0 International License
+					</a>
+				</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
