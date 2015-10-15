@@ -60,8 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding: 25px 25px 0;
-	padding-top: 25px;
+	padding: 45px 25px;
 }
 
 @media (max-width: 480px) {
@@ -183,7 +182,6 @@ section {
 }
 
 #about {
-	padding: 45px 0;
 	background: #414141;
 	color: #DCDCDC;
 	text-align: center;
