@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-	background: #252A2B;
-	border-color: #252A2B;
+	background: #414141;
+	border-color: #414141;
 	margin-bottom: 0;
 	border-radius: 0;
 	font-weight: 400;
@@ -36,16 +36,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav > li > a {
-	color: #C4D2DF;
+	color: #DCDCDC;
 }
 
 .navbar .navbar-toggle .icon-bar {
-	background: #C4D2DF;
+	background: #DCDCDC;
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
 	color: #fff;
-	background: #252A2B;
+	background: #414141;
 	text-decoration: underline;
 }
 
@@ -80,8 +80,8 @@ section {
 }
 
 #cover {
-	background: #252A2B;
-	color: #C4D2DF;
+	background: #414141;
+	color: #DCDCDC;
 	text-align: center;
 }
 
@@ -109,7 +109,7 @@ section {
 }
 
 #cover-line .header {
-	color: #ff9805;
+	color: #FB6962;
 }
 
 #cover-line .button {
@@ -133,28 +133,18 @@ section {
 }
 
 #cover-line .button.learn-more {
-	background: #22658A;
+	background: #DCDCDC;
 	color: #fff;
 }
 
 #cover-line .button.download {
-	background: #ff9805;
+	background: #FB6962;
 	color: #fff;
-}
-
-#mini-about {
-	background: #22658A;
-	color: #fff;
-	text-align: center;
-}
-
-#mini-about .header {
-	margin-top: 0;
 }
 
 #screenshot {
 	background: #ECF0F1;
-	color: #252A2B;
+	color: #414141;
 	text-align: center;
 }
 
@@ -164,7 +154,7 @@ section {
 
 #screenshot .screenshot {
 	width: 100%;
-	padding-bottom: 25px;
+	max-width: 900px;
 }
 
 #screenshot .screenshot.mobile {
@@ -182,38 +172,51 @@ section {
 	}
 }
 
-#download {
-	background: #22658A;
-	color: #fff;
+.features {
+	background: #fff;
+	color: #414141;
 	text-align: center;
-	padding-top: 10px;
 }
 
-#download .header {
-	color: #56C3FF;
+.features .feature {
+	font-size: 40px;
 }
 
-#download .row {
-	width: 90%;
-	margin-left: 5%;
-}
-
-#download .row .button {
-	padding-top: 15px;
-	margin: 15px 0 -10px;
-	color: #fff;
+#about {
+	padding: 45px 0;
+	background: #414141;
+	color: #DCDCDC;
 	text-align: center;
-	display: block;
-	margin-bottom: 20px;
 }
 
-#download .row .button .icon {
-	font-size: 30px;
+#about .icon {
+	font-size: 120px;
+}
+
+#about .icon-parent {
+	text-align: center;
+}
+
+#about .header {
+	color: #FB6962;
+	margin-top: 0;
+}
+
+@media (min-width: 768px) {
+	#about {
+		display: flex;
+		align-items: center;
+		text-align: left;
+	}
+
+	#about-line {
+		display: flex;
+	}
 }
 
 #footer {
-	background: #252A2B;
-	color: #C4D2DF;
+	background: #414141;
+	color: #DCDCDC;
 }
 
 #footer .cc {
@@ -228,7 +231,7 @@ section {
 }
 
 #footer .cc a {
-	color: #8a4622;
+	color: #FB6962;
 }
 
 #footer .cc a:hover {
@@ -241,7 +244,7 @@ section {
 }
 
 #footer .soc-med a {
-	color: #8a4622;
+	color: #FB6962;
 }
 
 #footer .soc-med a:hover {
