@@ -2,14 +2,15 @@ body {
 	font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif;;
 	font-style: normal;
 	text-rendering: optimizelegibility;
+	font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
+	font-weight: 300;
 }
 
 .lead {
-	font-weight: 300;
+	font-weight: 200;
 }
 
 .limit-width {
@@ -21,7 +22,6 @@ h1, h2, h3, h4, h5, h6 {
 	border-color: #414141;
 	margin-bottom: 0;
 	border-radius: 0;
-	font-weight: 400;
 }
 
 @media (min-width: 768px) {
