@@ -198,6 +198,7 @@ section {
 
 #about .icon {
 	font-size: 120px;
+	cursor: default;
 }
 
 #about .icon-parent {
@@ -281,4 +282,3 @@ section {
 		margin-top: 0;
 	}
 }
-
