@@ -155,10 +155,6 @@ section {
 	text-align: center;
 }
 
-#screenshot .feature .icon {
-	font-size: 45px;
-}
-
 #screenshot .screenshot {
 	width: 100%;
 	max-width: 900px;
@@ -185,8 +181,9 @@ section {
 	text-align: center;
 }
 
-.features .feature {
+.features .icon {
 	font-size: 40px;
+	cursor: default;
 }
 
 #about {
