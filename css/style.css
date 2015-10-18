@@ -53,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-brand img {
 	height: 50px;
 	padding-top: 10px;
-	padding-bottom: 10px;
 	margin-left: 10px;
 }
 
@@ -61,9 +60,13 @@ section {
 	padding: 45px 25px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 	* {
 		text-align: center
+	}
+
+	.navbar-brand img {
+		padding-bottom: 10px;
 	}
 
 	section {
