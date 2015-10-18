@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar .navbar-toggle .icon-bar {
-	background: #DCDCDC;
+	background: #414141;
 }
 
 .nav > li > a:focus, .nav > li > a:hover {
@@ -60,9 +60,13 @@ section {
 	padding: 45px 25px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 	* {
 		text-align: center
+	}
+
+	.navbar-brand img {
+		padding-bottom: 10px;
 	}
 
 	section {
