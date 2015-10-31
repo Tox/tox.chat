@@ -196,30 +196,13 @@ section {
 	text-align: center;
 }
 
-#about .icon {
-	font-size: 120px;
-	cursor: default;
-}
-
-#about .icon-parent {
-	text-align: center;
+#about .container-fluid {
+	max-width: 850px;
 }
 
 #about .header {
 	color: #F5AD1A;
 	margin-top: 0;
-}
-
-@media (min-width: 768px) {
-	#about {
-		display: flex;
-		align-items: center;
-		text-align: left;
-	}
-
-	#about-line {
-		display: flex;
-	}
 }
 
 #footer {
