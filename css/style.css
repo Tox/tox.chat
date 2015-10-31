@@ -1,5 +1,5 @@
 body {
-	font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif;;
+	font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 	font-style: normal;
 	text-rendering: optimizelegibility;
 	font-weight: 300;
