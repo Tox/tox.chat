@@ -10,9 +10,6 @@ var dlLink64 = false;
  * thanks nutella
  */
 
-if (window.navigator.userAgent.indexOf("Android")!=-1) { 
-    OSName="Android"; dlLink="https://wiki.tox.chat/binaries#f-droid";}
-
 if (window.navigator.userAgent.indexOf("Mac")!=-1) {
     OSName="Mac"; dlLink="https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg";}
 if (window.navigator.userAgent.indexOf("iPad")!=-1) {
@@ -24,6 +21,8 @@ if (window.navigator.userAgent.indexOf("Linux")!=-1) {
     OSName="Linux"; dlLink="https://wiki.tox.chat/binaries#gnulinux";}
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; dlLink="https://www.freshports.org/net-im/qTox";}
+if (window.navigator.userAgent.indexOf("Android")!=-1) { 
+    OSName="Android"; dlLink="https://wiki.tox.chat/binaries#f-droid";}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     OSName="Windows"; dlLink="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip"; dlLink64="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip";}
