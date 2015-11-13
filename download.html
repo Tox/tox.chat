@@ -136,10 +136,21 @@
 
     <section id="instructions">
         <div id="gnulinux" class="modalDialog button">
-            <div>	<a href="#close" title="Close" class="close">X</a>
-                <h2>Linux Instructions</h2>
-                <p>This is a sample modal box that can be created using the powers of CSS3.</p>
-                <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+            <div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+                <h2>Linux</h2>
+                <section>
+                <input id="tab-1" name="distroOpt" checked="checked" type="radio">
+                    <!--default option shows nothing-->
+                <input id="tab-2" name="distroOpt" type="radio">
+                    <label for="tab-2" class="tablabel">Debian</label>
+                    <div class="tabdiv"><p>//Debian instructions</p></div>
+                <input id="tab-3" name="distroOpt" type="radio">
+                    <label for="tab-3" class="tablabel">Redhat</label>
+                    <div class="tabdiv"><p>//Redhat instructions</p></div>
+                <input id="tab-4" name="distroOpt" type="radio">
+                    <label for="tab-4" class="tablabel">Arch</label>
+                    <div class="tabdiv"><p>//Arch instructions</p></div>
+                </section>
             </div>
         </div>
     </section>

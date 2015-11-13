@@ -275,8 +275,6 @@ section {
 		margin-top: 0;
 	}
 }
-
-
 .modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -315,4 +313,51 @@ section {
     width: 24px;
     text-decoration: none;
     font-weight: bold;
+}
+section {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+label.tablabel {
+	background-color: #ddd;
+	padding: 3em 3em;
+	cursor: pointer;
+	z-index: 1;
+	margin: 5px;
+	border-radius: 3px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition:.2s ease-out;
+}
+label.tablabel:hover {
+	opacity:0.7;
+	transition:.2s;
+}
+label:first-of-type {
+	margin-left: 0;
+}
+div.tabdiv {
+	width: 100%;
+	padding: 1em;
+	border: 1px solid #ddd;
+	-webkit-order: 1;
+	order: 1;
+}
+input[type=radio], div.tabdiv {
+	display: none;
+}
+input[type=radio]:checked + label {
+	color: #fff;
+	background-color: #414141;
+	opacity:1;
+	cursor: default;
+}
+input[type=radio]:checked + label.tablabel + div {
+	display: block;
 }
