@@ -1,6 +1,7 @@
 var OSName = "Unknown";
 var dlLink = ["https://wiki.tox.chat/binaries"];
 var title = ["Download"];
+var groupnum = 2;
 
 /* order matters because of timid niche device UAs
  * some windows phones say they're also iOS so we put WP at the bottom
@@ -21,8 +22,8 @@ if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
     dlLink=["http://antidote.im"];}
 
 if (window.navigator.userAgent.indexOf("Linux")!=-1) {
-    OSName="Linux"; title=["qTox", "Toxic", "uTox"];
-    dlLink=["https://wiki.tox.chat/binaries#gnulinux"];}
+    OSName="Linux"; title=["Tox"];
+    dlLink=["#gnulinux"];}
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; title=["qTox"];
     dlLink=["https://www.freshports.org/net-im/qTox"];}
@@ -31,8 +32,8 @@ if (window.navigator.userAgent.indexOf("Android")!=-1) {
     dlLink=["https://wiki.tox.chat/binaries#f-droid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
-    OSName="Windows"; title=["32 bit", "64 bit"];
-    dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip"];}
+    OSName="Windows"; title=["32bit qTox", "64bit qTox", "32bit uTox", "64bit uTox", "32bit Toxy", "64bit Toxy"];
+    dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip", "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip", "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"];}
 if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
     OSName="Unknown"; title=["Download"];
     dlLink=["http://wiki.tox.chat/binaries"];}
@@ -43,9 +44,18 @@ document.getElementById("platImg").src = "img/plat/" + OSName.toLowerCase() + ".
 //remove normal button
 document.getElementById("defaultButton").innerHTML="";
 
-//loop through all links and make buttons
-var arlen=dlLink.length;
-for (var i=0; i < arlen; i++) {
-    var button64 = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + " for " + OSName + "</a>";
-    document.getElementById("buttonarea").innerHTML = document.getElementById("buttonarea").innerHTML + button64;
+//if Unknown OS, do boring button, else generate from UA config
+if (OSName=="Unknown") {
+    document.getElementById("buttonArea").innerHTML = "<a id='link' href='http://wiki.tox.chat/binaries' class='button download'><span class='fa fa-download'>&nbsp;</span>Download</a>"
+} else {
+    //loop through all links and make buttons
+    var arlen=dlLink.length;
+    for (var i=0; i < arlen; i++) {
+        //br every two buttons
+        var bab = "";
+        var hi = i + 1;
+        if (hi % groupnum === 0) bab = "<br/>";
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + "</a>" + bab;
+        document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button;
+    }
 }
