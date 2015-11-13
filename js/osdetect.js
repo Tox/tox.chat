@@ -38,7 +38,7 @@ if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
     dlLink=["http://wiki.tox.chat/binaries"];}
 
 //set image
-document.getElementById("platimg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
+document.getElementById("platImg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
 
 //remove normal button
 document.getElementById("defaultButton").innerHTML="";
