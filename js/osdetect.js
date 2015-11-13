@@ -38,7 +38,7 @@ if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     dlLink=["https://www.freshports.org/net-im/qTox"];}
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
     OSName="Android"; title=["Antox (Fdroid)", "Antox (APK)"];
-    dlLink=["https://wiki.tox.chat/binaries#f-droid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
+    dlLink=["#f-droid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     OSName="Windows"; title=["32bit qTox", "64bit qTox", "32bit uTox", "64bit uTox", "32bit Toxy", "64bit Toxy"];
