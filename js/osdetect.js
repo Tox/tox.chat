@@ -2,6 +2,15 @@ var OSName = "Unknown";
 var dlLink = ["https://wiki.tox.chat/binaries"];
 var title = ["Download"];
 var groupnum = 2;
+var arch = 0;
+
+//detect arch
+if (window.navigator.userAgent.indexOf("WOW64")!=-1 || window.navigator.userAgent.indexOf("x86_64")!=-1 || window.navigator.userAgent.indexOf("x64;")!=-1 || window.navigator.userAgent.indexOf("Win64")!=-1 || window.navigator.userAgent.indexOf("AMD64")!=-1) {
+    arch = 64;
+}
+if (window.navigator.userAgent.indexOf("i386")!=-1 || window.navigator.userAgent.indexOf("i686")!=-1 || window.navigator.userAgent.indexOf("i586")!=-1) {
+    arch = 32;
+}
 
 /* order matters because of timid niche device UAs
  * some windows phones say they're also iOS so we put WP at the bottom
@@ -55,7 +64,7 @@ if (OSName=="Unknown") {
         var bab = "";
         var hi = i + 1;
         if (hi % groupnum === 0) bab = "<br/>";
-        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + "</a>" + bab;
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + arch + "</a>" + bab;
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button;
     }
 }
