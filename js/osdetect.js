@@ -1,5 +1,6 @@
 var OSName = "Unknown";
 var dlLink = ["https://wiki.tox.chat/binaries"];
+var title = ["Download"];
 
 /* order matters because of timid niche device UAs
  * some windows phones say they're also iOS so we put WP at the bottom
@@ -10,23 +11,31 @@ var dlLink = ["https://wiki.tox.chat/binaries"];
  */
 
 if (window.navigator.userAgent.indexOf("Mac")!=-1) {
-    OSName="Mac"; dlLink=["https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg"];}
+    OSName="Mac"; title=["uTox"]; 
+    dlLink=["https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg"];}
 if (window.navigator.userAgent.indexOf("iPad")!=-1) {
-    OSName="iOS"; dlLink=["http://antidote.im"];}
+    OSName="iOS"; title=["Antidote"];
+    dlLink=["http://antidote.im"];}
 if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
-    OSName="iOS"; dlLink=["http://antidote.im"];}
+    OSName="iOS"; title=["Antidote"];
+    dlLink=["http://antidote.im"];}
 
 if (window.navigator.userAgent.indexOf("Linux")!=-1) {
-    OSName="Linux"; dlLink=["https://wiki.tox.chat/binaries#gnulinux"];}
+    OSName="Linux"; title=["qTox", "Toxic", "uTox"];
+    dlLink=["https://wiki.tox.chat/binaries#gnulinux"];}
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
-    OSName="FreeBSD"; dlLink=["https://www.freshports.org/net-im/qTox"];}
+    OSName="FreeBSD"; title=["qTox"];
+    dlLink=["https://www.freshports.org/net-im/qTox"];}
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
-    OSName="Android"; dlLink=["https://wiki.tox.chat/binaries#f-droid"];}
+    OSName="Android"; title=["Antox (Fdroid)", "Antox (APK)"];
+    dlLink=["https://wiki.tox.chat/binaries#f-droid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
-    OSName="Windows"; dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip"];}
+    OSName="Windows"; title=["32 bit", "64 bit"];
+    dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip"];}
 if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
-    OSName="Unknown"; dlLink=["http://wiki.tox.chat/binaries"];}
+    OSName="Unknown"; title=["Download"];
+    dlLink=["http://wiki.tox.chat/binaries"];}
 
 //set image
 document.getElementById("platimg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
@@ -37,6 +46,6 @@ document.getElementById("defaultButton").innerHTML="";
 //loop through all links and make buttons
 var arlen=dlLink.length;
 for (var i=0; i < arlen; i++) {
-    var button64 = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + i + "<span id='plat64'>&nbsp;</span></a>";
+    var button64 = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + " for " + OSName + "</a>";
     document.getElementById("buttonarea").innerHTML = document.getElementById("buttonarea").innerHTML + button64;
 }
