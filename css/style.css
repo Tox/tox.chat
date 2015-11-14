@@ -314,7 +314,7 @@ section {
     text-decoration: none;
     font-weight: bold;
 }
-section {
+section.tabsection {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -348,6 +348,7 @@ div.tabdiv {
 	border: 1px solid #ddd;
 	-webkit-order: 1;
 	order: 1;
+	margin-top: 5px;
 }
 input[type=radio], div.tabdiv {
 	display: none;

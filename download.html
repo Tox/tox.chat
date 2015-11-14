@@ -138,18 +138,28 @@
         <div id="gnulinux" class="modalDialog button">
             <div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
                 <h2>Linux</h2>
-                <section>
+                <section class="tabsection">
                 <input id="tab-1" name="distroOpt" checked="checked" type="radio">
                     <!--default option shows nothing-->
                 <input id="tab-2" name="distroOpt" type="radio">
                     <label for="tab-2" class="tablabel"><span class="icon-debian"></span></label>
-                    <div class="tabdiv"><p>//Debian instructions</p></div>
+                    <div class="tabdiv">
+                        <p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
+                        <pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
+wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
+sudo apt-get install apt-transport-https
+sudo apt-get update</pre>
+                    </div>
                 <input id="tab-3" name="distroOpt" type="radio">
                     <label for="tab-3" class="tablabel"><span class="icon-gentoo"></span></label>
-                    <div class="tabdiv"><p>//Gentoo instructions</p></div>
+                    <div class="tabdiv">
+                        <p>//Gentoo instructions</p>
+                    </div>
                 <input id="tab-4" name="distroOpt" type="radio">
                     <label for="tab-4" class="tablabel"><span class="icon-arch"></span></label>
-                    <div class="tabdiv"><p>//Arch instructions</p></div>
+                    <div class="tabdiv">
+                        <p>//Arch instructions</p>
+                    </div>
                 
                 </section>
             </div>
