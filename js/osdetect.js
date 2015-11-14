@@ -5,10 +5,16 @@ var groupnum = 2;
 var arch = 0;
 
 //detect arch
+//if it declares 64 be 64
 if (window.navigator.userAgent.indexOf("WOW64")!=-1 || window.navigator.userAgent.indexOf("x86_64")!=-1 || window.navigator.userAgent.indexOf("x64;")!=-1 || window.navigator.userAgent.indexOf("Win64")!=-1 || window.navigator.userAgent.indexOf("AMD64")!=-1) {
     arch = 64;
 }
-if (window.navigator.userAgent.indexOf("i386")!=-1 || window.navigator.userAgent.indexOf("i686")!=-1 || window.navigator.userAgent.indexOf("i586")!=-1) {
+//if it declares 32 be 32
+if (window.navigator.userAgent.indexOf("i386")!=-1 || window.navigator.userAgent.indexOf("i686")!=-1) {
+    arch = 32;
+}
+//if it declared neither and it's windows we know it's 32 (WP has lolnoclients for now)
+if (window.navigator.userAgent.indexOf("Windows")!=-1 && arch==0) {
     arch = 32;
 }
 
@@ -21,24 +27,24 @@ if (window.navigator.userAgent.indexOf("i386")!=-1 || window.navigator.userAgent
  */
 
 if (window.navigator.userAgent.indexOf("Mac")!=-1) {
-    OSName="Mac"; title=["uTox"]; 
+    OSName="Mac"; title=["Download uTox"]; 
     dlLink=["https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg"];}
 if (window.navigator.userAgent.indexOf("iPad")!=-1) {
-    OSName="iOS"; title=["Antidote"];
+    OSName="iOS"; title=["Install Antidote"];
     dlLink=["http://antidote.im"];}
 if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
-    OSName="iOS"; title=["Antidote"];
+    OSName="iOS"; title=["Install Antidote"];
     dlLink=["http://antidote.im"];}
 
 if (window.navigator.userAgent.indexOf("Linux")!=-1) {
-    OSName="Linux"; title=["Tox"];
+    OSName="Linux"; title=["Install Tox"];
     dlLink=["#gnulinux"];}
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
-    OSName="FreeBSD"; title=["qTox"];
-    dlLink=["https://www.freshports.org/net-im/qTox"];}
+    OSName="FreeBSD"; title=["Install qTox", "Install uTox", "Install Toxic"];
+    dlLink=["https://www.freshports.org/net-im/qTox", "https://freshports.org/net-im/uTox/", "https://freshports.org/net-im/toxic/"];}
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
-    OSName="Android"; title=["Antox (Fdroid)", "Antox (APK)"];
-    dlLink=["#f-droid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
+    OSName="Android"; title=["Install Antox from Fdroid", "Get Antox APK"];
+    dlLink=["#fdroid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     OSName="Windows"; title=["32bit qTox", "64bit qTox", "32bit uTox", "64bit uTox", "32bit Toxy", "64bit Toxy"];
@@ -64,7 +70,7 @@ if (OSName=="Unknown") {
         var bab = "";
         var hi = i + 1;
         if (hi % groupnum === 0) bab = "<br/>";
-        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>Download " + title[i] + arch + "</a>" + bab;
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + arch + "</a>" + bab;
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button;
     }
 }
