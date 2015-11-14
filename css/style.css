@@ -296,6 +296,7 @@ section {
 }
 .modalDialog > div {
     width: 90%;
+    max-height: 90%;
     max-width: 700px;
     position: relative;
     margin: 10% auto;
@@ -319,6 +320,7 @@ section.tabsection {
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	padding-top: 5px;
 }
 label.tablabel {
 	background-color: #ddd;
@@ -345,7 +347,6 @@ label:first-of-type {
 div.tabdiv {
 	width: 100%;
 	padding: 1em;
-	border: 1px solid #ddd;
 	-webkit-order: 1;
 	order: 1;
 	margin-top: 5px;
