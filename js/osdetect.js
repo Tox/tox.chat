@@ -66,11 +66,7 @@ if (OSName=="Unknown") {
     //loop through all links and make buttons
     var arlen=dlLink.length;
     for (var i=0; i < arlen; i++) {
-        //br every two buttons
-        var bab = "";
-        var hi = i + 1;
-        if (hi % groupnum === 0) bab = "<br/>";
-        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + arch + "</a>" + bab;
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + arch + "</a><br/>";
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button;
     }
 }
