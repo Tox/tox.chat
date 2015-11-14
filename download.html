@@ -97,6 +97,8 @@
                     <img src="img/plat/windows.svg">
 					<h2>Windows</h2>
 					<p class="lead"><a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip">32 bit</a> | <a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip">32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip">32 bit</a> | <a href="https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip">64 bit</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
@@ -108,7 +110,7 @@
 				<div class="col-sm-4 feature">
 					<img src="img/plat/linux.svg">
 					<h2>Linux</h2>
-					<p class="lead"><a href="https://wiki.tox.chat/binaries#gnulinux">Linux Instructions</a></p>
+					<p class="lead"><a href="#gnulinux">Linux Instructions</a></p>
 				</div>
 			</div>
             
@@ -128,7 +130,7 @@
 				<div class="col-sm-4 feature">
 					<img src="img/plat/android.svg">
 					<h2>Android</h2>
-					<p class="lead"><a href="https://wiki.tox.chat/binaries#f-droid">Fdroid Instructions</a> | <a href="https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk">APK (no updates)</a></p>
+					<p class="lead"><a href="#fdroid">Fdroid Instructions</a> | <a href="https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk">APK (no updates)</a></p>
 				</div>
 			</div>
 		</div>
@@ -168,10 +170,19 @@ sudo apt-get update</pre>
                         <p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
                         <p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
                     </div>
-                
                 </section>
             </div>
         </div>
+    
+    <div id="fdroid" class="modalDialog button">
+        <div>   <a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+            <h2>F-droid</h2>
+            <p>Add the repo to F-droid:</p>
+            <pre>https://antox.me/fdroid/repo</pre>
+            <p>Then search for Antox, and enjoy.</p>
+        </div>
+    </div>
+    
     </section>
 
 	<footer id="footer">
