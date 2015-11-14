@@ -55,9 +55,16 @@ if (window.navigator.userAgent.indexOf("Android")!=-1) {
     dlLink=["#fdroid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
-    OSName="Windows"; title=["qTox 32-bit", "qTox 64-bit", "uTox 32-bit", "uTox 64-bit", "Toxy 32-bit", "Toxy 64-bit"];
-    desc=["Recommended, most user-friendly.", "Recommended, most user-friendly.", "Might run more lightly. A little glitchy.", "Might run more lightly. A little glitchy.", "Metro-style.", "Metro-style."];
-    dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip", "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip", "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"];}
+    if (arch==64) {
+        OSName="Windows"; title=["qTox 64-bit", "uTox 64-bit", "Toxy 64-bit"];
+        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy.", "Metro-style."];
+        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip", "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"];
+    } else {
+        OSName="Windows"; title=["qTox 32-bit", "uTox 32-bit", "Toxy 32-bit"];
+        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy.", "Metro-style."];
+        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip", "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip"];
+    }
+}
 if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
     OSName="Unknown"; title=["Download"];
     dlLink=["http://wiki.tox.chat/binaries"];}
