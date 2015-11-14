@@ -51,18 +51,19 @@ if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     desc=["Qt 5, prioritizes UX", "own toolkit, more minimal", "ncurses, cli"];
     dlLink=["https://www.freshports.org/net-im/qTox", "https://freshports.org/net-im/uTox/", "https://freshports.org/net-im/toxic/"];}
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
-    OSName="Android"; title=["Install Antox from Fdroid", "Get Antox APK"];
+    OSName="Android"; title=["Install Antox", "Get Antox APK"];
+    desc=["Requires F-droid.", "You'll need to update manually."];
     dlLink=["#fdroid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     if (arch==64) {
-        OSName="Windows"; title=["qTox 64-bit", "uTox 64-bit", "Toxy 64-bit"];
-        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy.", "Metro-style."];
-        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip", "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"];
+        OSName="Windows"; title=["qTox 64-bit", "uTox 64-bit"/*, "Toxy 64-bit"*/];
+        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy."/*, "Metro-style."*/];
+        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip"/*, "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"*/];
     } else {
-        OSName="Windows"; title=["qTox 32-bit", "uTox 32-bit", "Toxy 32-bit"];
-        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy.", "Metro-style."];
-        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip", "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip"];
+        OSName="Windows"; title=["qTox 32-bit", "uTox 32-bit"/*, "Toxy 32-bit"*/];
+        desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy."/*, "Metro-style."*/];
+        dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"/*, "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip"*/];
     }
 }
 if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
@@ -82,7 +83,7 @@ if (OSName=="Unknown") {
     //loop through all links and make buttons
     var arlen=dlLink.length;
     for (var i=0; i < arlen; i++) {
-        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + arch + "</a>";
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + "</a>";
         var blurb = "<span class='button' style='background:#353535;box-shadow:none;cursor:default;'>" + desc[i] + "</span>"
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + blurb + "<br/>";
     }
