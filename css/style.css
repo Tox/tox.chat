@@ -329,7 +329,8 @@ label.tablabel {
 	padding: 3em 3em;
 	cursor: pointer;
 	z-index: 1;
-	margin-right: 10px;
+	margin-right: auto;
+	margin-left: auto;
 	margin-bottom: 10px;
 	border-radius: 3px;
 	-webkit-touch-callout: none;
@@ -343,9 +344,6 @@ label.tablabel {
 label.tablabel:hover {
 	opacity:0.7;
 	transition:.2s;
-}
-label:first-of-type {
-	margin-left: 0;
 }
 div.tabdiv {
 	width: 100%;
