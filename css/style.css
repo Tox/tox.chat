@@ -330,7 +330,8 @@ label.tablabel {
 	padding: 3em 3em;
 	cursor: pointer;
 	z-index: 1;
-	margin: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 	border-radius: 3px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
