@@ -48,7 +48,7 @@ if (window.navigator.userAgent.indexOf("Linux")!=-1) {
     dlLink=["#gnulinux"];}
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; title=["Install qTox", "Install uTox", "Install Toxic"];
-    desc=["Qt 5, prioritizes UX", "own toolkit, more minimal", "ncurses, cli"];
+    desc=["Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
     dlLink=["https://www.freshports.org/net-im/qTox", "https://freshports.org/net-im/uTox/", "https://freshports.org/net-im/toxic/"];}
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
     OSName="Android"; title=["Install Antox", "Get Antox APK"];
