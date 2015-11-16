@@ -66,22 +66,22 @@
 				<div class="col-sm-8">
 					<h1 class="header">Thanks for downloading!</h1>
 					<p class="lead">
-                        You're helping to make the world more free, secure, and fun! Seriously, <a href="https://en.wikipedia.org/wiki/Network_effect">every bit counts</a>.
-                        <br/>
-                        After you've installed, try <a href="tox:56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5">adding GroupBot</a>, and then <a href="tweet or something">invite some friends</a>!
-                    </p>
+						You're helping to make the world more free, secure, and fun! Seriously, <a href="https://en.wikipedia.org/wiki/Network_effect">every bit counts</a>.
+						<br/>
+						After you've installed, try <a href="tox:56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5">adding GroupBot</a>, and then <a href="tweet or something">invite some friends</a>!
+					</p>
 
 					<h6>Note: Tox is still under heavy development — expect to run into some bugs.</h6>
 
-                    <span id="defaultButton">
-                        <a href="https://wiki.tox.chat/binaries" class="button download">
-                            <span class="fa fa-download">&nbsp;</span>Download
-                        </a>
-                    </span>
+					<span id="defaultButton">
+						<a href="https://wiki.tox.chat/binaries" class="button download">
+							<span class="fa fa-download">&nbsp;</span>Download
+						</a>
+					</span>
 
 					<span id="buttonArea">
-                    
-                    </span>
+					
+					</span>
 
 				</div>
 			</div>
@@ -89,12 +89,12 @@
 	</section>
 
 	<section id="oses" class="features">
-        <h1>All Platforms:</h1>
-        <br/>
+		<h1>All Platforms:</h1>
+		<br/>
 		<div class="container-fluid limit-width">
 			<div class="row">
 				<div class="col-sm-4 feature">
-                    <img src="img/plat/windows_dark.svg">
+					<img src="img/plat/windows_dark.svg">
 					<h2>Windows</h2>
 					<p class="lead"><a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip">32 bit</a> | <a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip">64 bit</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip">32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
@@ -114,10 +114,10 @@
 					<p class="lead"><a href="#gnulinux">Linux Instructions</a></p>
 				</div>
 			</div>
-            
-            <div class="row">
-                <div class="col-sm-4 feature">
-                    <img src="img/plat/freebsd_dark.svg">
+			
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<img src="img/plat/freebsd_dark.svg">
 					<h2>FreeBSD</h2>
 					<p class="lead"><a href="https://www.freshports.org/net-im/qTox">Freshports</a></p>
 				</div>
@@ -137,54 +137,54 @@
 		</div>
 	</section>
 
-    <section id="instructions">
-        <div id="gnulinux" class="modalDialog button">
-            <div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-                <h2>Linux</h2>
-                <section class="tabsection">
-                <input id="tab-1" name="distroOpt" checked="checked" type="radio">
-                    <!--default option shows nothing-->
-                <input id="tab-2" name="distroOpt" type="radio">
-                    <label for="tab-2" class="tablabel"><span class="icon-debian"></span></label>
-                    <div class="tabdiv">
-                        <p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
-                        <pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
+	<section id="instructions">
+		<div id="gnulinux" class="modalDialog button">
+			<div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+				<h2>Linux</h2>
+				<section class="tabsection">
+				<input id="tab-1" name="distroOpt" checked="checked" type="radio">
+					<!--default option shows nothing-->
+				<input id="tab-2" name="distroOpt" type="radio">
+					<label for="tab-2" class="tablabel"><span class="icon-debian"></span></label>
+					<div class="tabdiv">
+						<p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
-                        <p>And to install (for example) qTox:</p>
-                        <pre>sudo apt-get install qtox</pre>
-                        <p>Or, if you have Ubuntu with Unity:</p>
-                        <pre>sudo apt-get install qtox-unity</pre>
-                    </div>
-                <input id="tab-3" name="distroOpt" type="radio">
-                    <label for="tab-3" class="tablabel"><span class="icon-gentoo"></span></label>
-                    <div class="tabdiv">
-                        <p>The Tox overlay is now in the official layman list.</p>
-                        <p>To add it:</p>
-                        <pre>layman -a tox-overlay</pre>
-                        <p>More info <a href="https://github.com/Tox/gentoo-overlay-tox">here</a>.</p>
-                    </div>
-                <input id="tab-4" name="distroOpt" type="radio">
-                    <label for="tab-4" class="tablabel"><span class="icon-arch"></span></label>
-                    <div class="tabdiv">
-                        <p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
-                        <p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
-                    </div>
-                </section>
-            </div>
-        </div>
-    
-    <div id="fdroid" class="modalDialog button">
-        <div>   <a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-            <h2>F-droid</h2>
-            <p>Add the repo to F-droid:</p>
-            <pre>https://antox.me/fdroid/repo</pre>
-            <p>Then search for Antox, and enjoy.</p>
-        </div>
-    </div>
-    
-    </section>
+						<p>And to install (for example) qTox:</p>
+						<pre>sudo apt-get install qtox</pre>
+						<p>Or, if you have Ubuntu with Unity:</p>
+						<pre>sudo apt-get install qtox-unity</pre>
+					</div>
+				<input id="tab-3" name="distroOpt" type="radio">
+					<label for="tab-3" class="tablabel"><span class="icon-gentoo"></span></label>
+					<div class="tabdiv">
+						<p>The Tox overlay is now in the official layman list.</p>
+						<p>To add it:</p>
+						<pre>layman -a tox-overlay</pre>
+						<p>More info <a href="https://github.com/Tox/gentoo-overlay-tox">here</a>.</p>
+					</div>
+				<input id="tab-4" name="distroOpt" type="radio">
+					<label for="tab-4" class="tablabel"><span class="icon-arch"></span></label>
+					<div class="tabdiv">
+						<p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
+						<p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	
+	<div id="fdroid" class="modalDialog button">
+		<div>   <a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+			<h2>F-droid</h2>
+			<p>Add the repo to F-droid:</p>
+			<pre>https://antox.me/fdroid/repo</pre>
+			<p>Then search for Antox, and enjoy.</p>
+		</div>
+	</div>
+	
+	</section>
 
 	<footer id="footer">
 		<div class="container-fluid limit-width">
@@ -205,7 +205,7 @@ sudo apt-get update</pre>
 		</div>
 	</footer>
 
-    <script src="js/osdetect.js"></script>
+	<script src="js/osdetect.js"></script>
 </body>
 
 </html>
