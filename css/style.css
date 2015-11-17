@@ -364,3 +364,7 @@ input[type=radio]:checked + label {
 input[type=radio]:checked + label.tablabel + div {
 	display: block;
 }
+iframe {
+	border: none;
+	width: 100%;
+}

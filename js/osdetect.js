@@ -32,28 +32,34 @@ if (window.navigator.userAgent.indexOf("Windows")!=-1 && arch==0) {
 if (window.navigator.userAgent.indexOf("Mac")!=-1) {
     OSName="Mac"; title=["Download uTox"]; 
     desc=["(OS X 10.7+)"];
+    longDesc=["<iframe src='clients/utox.html'>"];
     dlLink=["https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg"];}
 if (window.navigator.userAgent.indexOf("iPad")!=-1) {
     OSName="iOS"; title=["Install Antidote"];
     desc=["(iOS 8+)"];
+    longDesc=["<iframe src='clients/antidote.html'>"];
     dlLink=["http://antidote.im"];}
 if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
     OSName="iOS"; title=["Install Antidote"];
     desc=["(iOS 8+)"];
+    longDesc=["<iframe src='clients/antidote.html'>"];
     dlLink=["http://antidote.im"];}
 
 if (window.navigator.userAgent.indexOf("Linux")!=-1) {
     if (arch==32) {
         OSName="Linux"; title=["Install Repo", "qTox 32-bit", "uTox 32-bit", "Toxic 32-bit"];
         desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
+        longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD.", "<iframe src='clients/qtox.html'>", "<iframe src='clients/utox.html'>", "<iframe src='clients/toxic.html'>"];
         dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz"];
     } else if (arch==64) {
         OSName="Linux"; title=["Install Repo", "qTox 64-bit", "uTox 64-bit", "Toxic 64-bit"];
         desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
+        longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD.", "<iframe src='clients/qtox.html'>", "<iframe src='clients/utox.html'>", "<iframe src='clients/toxic.html'>"];
         dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86-64_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86-64_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz"];
     } else {
         OSName="Linux"; title=["Install Repo"];
         desc=["For apt, Gentoo, and Arch."];
+        longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD."];
         dlLink=["#gnulinux"];
     }
 }
@@ -61,20 +67,25 @@ if (window.navigator.userAgent.indexOf("Linux")!=-1) {
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; title=["Install qTox", "Install uTox", "Install Toxic"];
     desc=["Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
+    longDesc=["<iframe src='clients/qtox.html'>", "<iframe src='clients/utox.html'>", "<iframe src='clients/toxic.html'>"];
     dlLink=["https://www.freshports.org/net-im/qTox", "https://freshports.org/net-im/uTox/", "https://freshports.org/net-im/toxic/"];}
+
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
     OSName="Android"; title=["Install Antox", "Get Antox APK"];
     desc=["Requires F-droid.", "You'll need to update manually."];
+    longDesc=["<h5>F-droid is a package manager for Android. <a href='https://f-droid.org/' target='_blank'>Get F-droid here.</a></h5><br/><iframe src='clients/antox.html'>", "<h5>You'll have to update manually later if you download the raw APK.</h5><br/><iframe src='clients/antox.html'>"];
     dlLink=["#fdroid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
 
 if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     if (arch==64) {
         OSName="Windows"; title=["qTox 64-bit", "uTox 64-bit"/*, "Toxy 64-bit"*/];
         desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy."/*, "Metro-style."*/];
+        longDesc=["<iframe src='clients/qtox.html'>", "<iframe src='clients/utox.html'>"];
         dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip"/*, "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"*/];
     } else {
         OSName="Windows"; title=["qTox 32-bit", "uTox 32-bit"/*, "Toxy 32-bit"*/];
         desc=["Recommended, most user-friendly.", "Might run more lightly. A little glitchy."/*, "Metro-style."*/];
+        longDesc=["<iframe src='clients/qtox.html'>", "<iframe src='clients/utox.html'>"];
         dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"/*, "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip"*/];
     }
 }
@@ -92,11 +103,12 @@ document.getElementById("defaultButton").innerHTML="";
 if (OSName=="Unknown") {
     document.getElementById("buttonArea").innerHTML = "<a id='link' href='http://wiki.tox.chat/binaries' class='button download'><span class='fa fa-download'>&nbsp;</span>Download</a>"
 } else {
-    //loop through all links and make buttons
+    //loop through all links and make buttons and info modals
     var arlen=dlLink.length;
     for (var i=0; i < arlen; i++) {
         var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + "</a>";
-        var blurb = "<span class='button' style='background:#353535;box-shadow:none;cursor:default;'>" + desc[i] + "</span>"
+        var blurb = "<span class='button' style='background:#353535;box-shadow:none;cursor:default;'>" + desc[i] + "&nbsp;&nbsp;<a href='#info-" + title[i].replace(" ", "-") + "-" + OSName + "'><span class='fa fa-info-circle'></span></a></span>"
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + blurb + "<br/>";
+        document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "<div id='info-" + title[i].replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div><a href='#close' title='Close' class='close'><span class='fa fa-close'>&nbsp;</span></a><h2>" + title[i] + "</h2><p>" + longDesc[i] + "</p></div></div>";
     }
 }
