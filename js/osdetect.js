@@ -43,9 +43,21 @@ if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
     dlLink=["http://antidote.im"];}
 
 if (window.navigator.userAgent.indexOf("Linux")!=-1) {
-    OSName="Linux"; title=["Install Tox"];
-    desc=["We have packages for most major distros."];
-    dlLink=["#gnulinux"];}
+    if (arch==32) {
+        OSName="Linux"; title=["Install Repo", "qTox 32-bit", "uTox 32-bit", "Toxic 32-bit"];
+        desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
+        dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz"];
+    } else if (arch==64) {
+        OSName="Linux"; title=["Install Repo", "qTox 64-bit", "uTox 64-bit", "Toxic 64-bit"];
+        desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
+        dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86-64_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86-64_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz"];
+    } else {
+        OSName="Linux"; title=["Install Repo"];
+        desc=["For apt, Gentoo, and Arch."];
+        dlLink=["#gnulinux"];
+    }
+}
+    
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; title=["Install qTox", "Install uTox", "Install Toxic"];
     desc=["Qt 5, prioritizes UX", "uses its own toolkit, more minimal", "ncurses, cli"];
