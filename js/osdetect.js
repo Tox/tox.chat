@@ -10,9 +10,12 @@ function getModalContent(client) {
     xhr.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200 || this.status == 304) {
         console.log("received " + client);
-        document.getElementById(client).innerHTML = this.responseText;
+        var thisarlen=document.getElementsByName(client).length;
+        for (var j=0; j < thisarlen; j++) {
+            document.getElementsByName(client)[j].innerHTML = this.responseText;
+        }
     } else if (this.status == 404) { 
-        document.getElementById(client).innerHTML = " ";
+        document.getElementsByName(client).every.innerHTML = " ";
         console.log("404 " + client);
     }
     };
@@ -139,7 +142,7 @@ if (OSName=="Unknown") {
         
         
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + blurb + "<br/>";
-        document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "<div id='info-" + title[i].replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div><a href='#close' title='Close' class='close'><span class='fa fa-close'>&nbsp;</span></a><h2>" + title[i] + "</h2><div id='" + clientName[i] + "'>&nbsp;</div></div></div>";
+        document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "<div id='info-" + title[i].replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div><a href='#close' title='Close' class='close'><span class='fa fa-close'>&nbsp;</span></a><h2>" + title[i] + "</h2><div name='" + clientName[i] + "'>&nbsp;</div></div></div>";
     
         getModalContent(clientName[i]);
         console.log("just did " + clientName[i]);
