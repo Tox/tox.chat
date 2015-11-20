@@ -391,3 +391,6 @@ input[type=checkbox]:checked + label + .tinynav {
 input[type=checkbox]:checked ~ #hamlabel:before {
 	content: '\000d7';
 }
+.social {
+	font-size: 98px;
+}
