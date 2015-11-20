@@ -106,6 +106,9 @@ section {
 	.dl {
 		max-height: 600px!important;
 	}
+	.tinynav > ul {
+		display: none;
+		}
 }
 
 #cover-line img {
@@ -367,7 +370,15 @@ input[type=radio]:checked + label {
 input[type=radio]:checked + label.tablabel + div {
 	display: block;
 }
-iframe {
-	border: none;
-	width: 100%;
+#hamlabel {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+input[type=checkbox], .tinynav {
+	display:none;
+}
+
+input[type=checkbox]:checked + .tinynav {
+	display: inline-block;
 }
