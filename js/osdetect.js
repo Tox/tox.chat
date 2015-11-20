@@ -126,7 +126,7 @@ if (window.navigator.userAgent.indexOf("Windows Phone")!=-1) {
     OSName="Unknown"; title=["Download"];
     dlLink=["http://wiki.tox.chat/binaries"];}
 
-//set image
+//set platform toxlock
 document.getElementById("platImg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
 
 //remove normal button
