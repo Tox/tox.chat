@@ -385,6 +385,9 @@ input[type=checkbox], .tinynav {
 	display:none;
 }
 
-input[type=checkbox]:checked + .tinynav {
+input[type=checkbox]:checked + label + .tinynav {
 	display: inline-block;
+}
+input[type=checkbox]:checked ~ #hamlabel:before {
+	content: '\000d7';
 }
