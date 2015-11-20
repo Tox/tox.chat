@@ -378,6 +378,9 @@ input[type=radio]:checked + label.tablabel + div {
 	float: none;
 	font-weight: 400;
 }
+.tinynav > ul > li > a {
+	line-height: 1.8em;
+}
 input[type=checkbox], .tinynav {
 	display:none;
 }
