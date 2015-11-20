@@ -103,6 +103,9 @@ section {
 		align-items: center;
 		align-content: center;
 	}
+	.dl {
+		max-height: 600px!important;
+	}
 }
 
 #cover-line img {
