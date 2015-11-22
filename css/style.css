@@ -391,6 +391,72 @@ input[type=checkbox]:checked + label + .tinynav {
 input[type=checkbox]:checked ~ #hamlabel:before {
 	content: '\000d7';
 }
-.social {
-	font-size: 98px;
+.socialbutton {
+	font-weight: 400;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px 1em;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 2.3em;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+	transition: 0.4s;
+	float: left;
+}
+.socialbutton:active {
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+}
+.socialbutton.tweet {
+	background: #00B0ED;
+	color: #fff;
+}
+.socialbutton.facebook {
+	background: #3A5795;
+	color: #fff;
+}
+.socialbutton.diaspora {
+	background: #414141;
+	color: #fff;
+}
+.socialquote {
+	position: relative;
+	background: #ffffff;
+	border: 2px solid #ddd;
+	padding: 5px;
+	border-radius: 3px;
+	font-style: italic;
+	margin-bottom: 15px;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.socialquote:after, .socialquote:before {
+	top: 100%;
+	left: 31px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.socialquote:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.socialquote:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 13px;
+	margin-left: -13px;
 }
