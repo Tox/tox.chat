@@ -424,7 +424,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 }
 .socialquote {
 	position: relative;
-	background: #ffffff;
+	background: #ddd;
 	border: 2px solid #ddd;
 	padding: 5px;
 	border-radius: 3px;
@@ -450,7 +450,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 }
 .socialquote:after {
 	border-color: rgba(255, 255, 255, 0);
-	border-top-color: #ffffff;
+	border-top-color: #ddd;
 	border-width: 10px;
 	margin-left: -10px;
 }
