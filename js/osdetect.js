@@ -143,7 +143,7 @@ if (OSName=="Unknown") {
         var blurb = "<span class='button' style='background:#353535;box-shadow:none;cursor:default;'>" + desc[i] + "&nbsp;&nbsp;<a href='#info-" + title[i].replace(" ", "-") + "-" + OSName + "'><span class='fa fa-info-circle'></span></a></span>"
         
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + blurb + "<br/>";
-        document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "<div id='info-" + title[i].replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div><a href='#close' title='Close' class='close'><span class='fa fa-close'>&nbsp;</span></a><h2>" + title[i] + "</h2><div>" + longDesc[i] + "</div><div name='" + clientName[i] + "'>&nbsp;</div></div></div>";
+        document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "<div id='info-" + title[i].replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div><a href='#close' title='Close' class='close'><span class='fa fa-close'>&nbsp;</span></a><h2>" + title[i] + "</h2><br/><div>" + longDesc[i] + "</div><br/><div><img style='width:100%;' src='img/client/" + clientName[i] + "_" + OSName.toLowerCase() + ".png'></div><br/><div name='" + clientName[i] + "'>&nbsp;</div></div></div>";
     
         getModalContent(clientName[i]);
         console.log("just did " + clientName[i]);
