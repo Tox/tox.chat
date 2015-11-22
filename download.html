@@ -177,7 +177,7 @@
 				<input id="tab-1" name="distroOpt" checked="checked" type="radio">
 					<!--default option shows nothing-->
 				<input id="tab-2" name="distroOpt" type="radio">
-					<label for="tab-2" class="tablabel"><span class="icon-debian"></span></label>
+					<label for="tab-2" class="tablabel" title="Debian/Ubuntu/Mint"><span class="icon-debian"></span></label>
 					<div class="tabdiv">
 						<p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
 						<pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
@@ -192,7 +192,7 @@ sudo apt-get update</pre>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 				<input id="tab-3" name="distroOpt" type="radio">
-					<label for="tab-3" class="tablabel"><span class="icon-gentoo"></span></label>
+					<label for="tab-3" class="tablabel" title="Gentoo"><span class="icon-gentoo"></span></label>
 					<div class="tabdiv">
 						<p>The Tox overlay is now in the official layman list.</p>
 						<p>To add it:</p>
@@ -200,7 +200,7 @@ sudo apt-get update</pre>
 						<p>More info <a href="https://github.com/Tox/gentoo-overlay-tox">here</a>.</p>
 					</div>
 				<input id="tab-4" name="distroOpt" type="radio">
-					<label for="tab-4" class="tablabel"><span class="icon-arch"></span></label>
+					<label for="tab-4" class="tablabel" title="Arch"><span class="icon-arch"></span></label>
 					<div class="tabdiv">
 						<p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
 						<p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
@@ -219,18 +219,30 @@ sudo apt-get update</pre>
 	</div>
 	
 	<div id="social" class="modalDialog button">
-		<div>   <a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-			<h2>Share the Love</h2>
-			<p>This is where you tell your friends how great Tox is. (These are manual sharing links, no creepy widgets.)</p>
-			<p><a href="https://twitter.com/home?status=Tired%20of%20worrying%20if%20someone%27s%20reading%20your%20conversations?%20Ditch%20Skype%20and%20other%20unsafe%20chat%20programs%20for%20%23Tox!%20https://tox.chat/"><span class="social fa fa-twitter"></span></a></p>
-			<p><a href=""><span class="social fa fa-facebook"></span></a></p>
-			<p>
-				<a href="http://sharetodiaspora.github.io/?title=Join me on Tox, a distributed, encrypted messenger&url=http://tox.chat" target="_blank">
-				<img src="img/diaspora.svg"/>
-				</a>
-			</p>
+			<div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+				<h2>Share the Love</h2>
+				<p>This is where you tell your friends how awesome Tox is.</p>
+				<section class="tabsection">
+				<input id="tab-10" name="shareOpt" checked="checked" type="radio">
+					<!--default option shows nothing-->
+				<input id="tab-20" name="shareOpt" type="radio">
+					<label for="tab-20" class="tablabel"><span class="icon-twitter"></span></label>
+					<div class="tabdiv">
+						<p>Tweet your friends</p>
+					</div>
+				<input id="tab-30" name="shareOpt" type="radio">
+					<label for="tab-30" class="tablabel"><span class="icon-facebook"></span></label>
+					<div class="tabdiv">
+						<p>Facebook your friends</p>
+					</div>
+				<input id="tab-40" name="shareOpt" type="radio">
+					<label for="tab-40" class="tablabel"><span class="icon-diaspora"></span></label>
+					<div class="tabdiv">
+						<p>Diaspora your friends</p>
+					</div>
+				</section>
+			</div>
 		</div>
-	</div>
 	
 	</section>
 
