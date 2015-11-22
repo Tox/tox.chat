@@ -461,6 +461,3 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	border-width: 13px;
 	margin-left: -13px;
 }
-.socialquote:before:before {
-	content: "sadsad";
-}
