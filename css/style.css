@@ -380,6 +380,7 @@ input[type=radio]:checked + label.tablabel + div {
 }
 .tinynav > ul > li > a {
 	line-height: 1.8em;
+	text-align: left;
 }
 input[type=checkbox], .tinynav {
 	display:none;
