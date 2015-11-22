@@ -52,6 +52,9 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-arch:before{content:'\0041';}
-.icon-debian:before{content:'\0042';}
-.icon-gentoo:before{content:'\0043';}
+.icon-debian:before{content:'\0041';}
+.icon-gentoo:before{content:'\0042';}
+.icon-arch:before{content:'\0043';}
+.icon-diaspora:before{content:'\0044';}
+.icon-facebook:before{content:'\0045';}
+.icon-twitter:before{content:'\0046';}
