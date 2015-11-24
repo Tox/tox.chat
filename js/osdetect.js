@@ -51,6 +51,7 @@ if (window.navigator.userAgent.indexOf("Windows")!=-1 && arch==0) {
  * OSName: platform name
  * title: displayed on button
  * clientName: the client the button links to, used for images and abouts
+ * icon: fa-<icon>, displayed on button
  * desc: the glance description next to each button
  * longDesc: platform specific information about that client, placed in the 
  * 	about modal above the image and general info
@@ -60,18 +61,21 @@ if (window.navigator.userAgent.indexOf("Windows")!=-1 && arch==0) {
 if (window.navigator.userAgent.indexOf("Mac")!=-1) {
     OSName="Mac"; title=["Download uTox"]; 
     clientName=["utox"];
+    icon=["download"];
     desc=["(OS X 10.7+)"];
     longDesc=["uTox is currently the only client regularly and officially compiled for OS X."];
     dlLink=["https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg"];}
 if (window.navigator.userAgent.indexOf("iPad")!=-1) {
     OSName="iOS"; title=["Install Antidote"];
     clientName=["antidote"];
+    icon=["external-link"];
     desc=["(iOS 8+)"];
     longDesc=["(not yet iPad-optimized)"];
     dlLink=["http://antidote.im"];}
 if (window.navigator.userAgent.indexOf("iPhone")!=-1) {
     OSName="iOS"; title=["Install Antidote"];
     clientName=["antidote"];
+    icon=["external-link"];
     desc=["(iOS 8+)"];
     longDesc=[""];
     dlLink=["http://antidote.im"];}
@@ -80,18 +84,21 @@ if (window.navigator.userAgent.indexOf("Linux")!=-1) {
     if (arch==32) {
         OSName="Linux"; title=["Install Repo", "qTox 32-bit", "uTox 32-bit", "Toxic 32-bit"];
         clientName=["repo", "qtox", "utox", "toxic"];
+        icon=["list", "download", "download", "download"];
         desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "Uses its own toolkit, more minimal", "ncurses, cli"];
         longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD.", "There are different versions available in the repo, using different versions of Qt and with different compilation settings.", "", ""];
         dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz"];
     } else if (arch==64) {
         OSName="Linux"; title=["Install Repo", "qTox 64-bit", "uTox 64-bit", "Toxic 64-bit"];
         clientName=["repo", "qtox", "utox", "toxic"];
+        icon=["list", "download", "download", "download"];
         desc=["For apt, Gentoo, and Arch.", "Qt 5, prioritizes UX", "Uses its own toolkit, more minimal", "ncurses, cli"];
         longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD.", "There are different versions available in the repo, using different versions of Qt and with different compilation settings.", "uTox doesn't support GTK/Qt themes.", "There is a version without X11 <a href='https://build.tox.chat/search/?q=toxic' target='_blank'>available on Jenkins</a>."];
         dlLink=["#gnulinux", "https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86-64_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86-64_release.tar.xz", "https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz", "https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz"];
     } else {
         OSName="Linux"; title=["Install Repo"];
         clientName=["repo"];
+        icon=["list"];
         desc=["For apt, Gentoo, and Arch."];
         longDesc=["We have an apt repo for Ubuntu and other Debian derivatives, plus a Gentoo overlay and an Arch PKGBUILD."];
         dlLink=["#gnulinux"];
@@ -101,6 +108,7 @@ if (window.navigator.userAgent.indexOf("Linux")!=-1) {
 if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
     OSName="FreeBSD"; title=["Install qTox", "Install uTox", "Install Toxic"];
     clientName=["qtox", "utox", "toxic"];
+    icon=["external-link", "external-link", "external-link"];
     desc=["Qt 5, prioritizes UX", "Uses its own toolkit, more minimal", "ncurses, cli"];
     longDesc=["", "", ""];
     dlLink=["https://www.freshports.org/net-im/qTox", "https://freshports.org/net-im/uTox/", "https://freshports.org/net-im/toxic/"];}
@@ -108,6 +116,7 @@ if (window.navigator.userAgent.indexOf("FreeBSD")!=-1) {
 if (window.navigator.userAgent.indexOf("Android")!=-1) { 
     OSName="Android"; title=["Install Antox", "Get Antox APK"];
     clientName=["antox", "antox"];
+    icon=["list", "download"];
     desc=["Requires F-droid.", "You'll need to update manually."];
     longDesc=["F-droid is a package manager for Android. <a href='https://f-droid.org/' target='_blank'>Get F-droid here.</a>", "You'll have to update manually later if you download the raw APK."];
     dlLink=["#fdroid", "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk"];}
@@ -116,12 +125,14 @@ if (window.navigator.userAgent.indexOf("Windows")!=-1) {
     if (arch==64) {
         OSName="Windows"; title=["qTox 64-bit", "uTox 64-bit"/*, "Toxy 64-bit"*/];
         clientName=["qtox", "utox"];
+        icon=["download", "download"];
         desc=["Recommended, most user-friendly.", "Lighter client, still in early development."/*, "Metro-style."*/];
         longDesc=["qTox should look native on most versions of Windows. Change the appearance in Settings.", "", ""];
         dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip"/*, "https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip"*/];
     } else {
         OSName="Windows"; title=["qTox 32-bit", "uTox 32-bit"/*, "Toxy 32-bit"*/];
         clientName=["qtox", "utox"];
+        icon=["download", "download"];
         desc=["Recommended, most user-friendly.", "Lighter client, still in early development."/*, "Metro-style."*/];
         longDesc=["qTox should look native on most versions of Windows. Change the appearance in Settings.", "", ""];
         dlLink=["https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip", "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"/*, "https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip"*/];
@@ -144,7 +155,7 @@ if (OSName=="Unknown") {
     //loop through all links and make buttons and info modals
     var arlen=dlLink.length;
     for (var i=0; i < arlen; i++) {
-        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-download'>&nbsp;</span>" + title[i] + "</a>";
+        var button = "<a id='link" + i + "' href='" + dlLink[i] + "' class='button download'><span class='fa fa-" + icon[i] + "'>&nbsp;</span>" + title[i] + "</a>";
         var blurb = "<span class='button' style='background:#353535;box-shadow:none;cursor:default;'>" + desc[i] + "&nbsp;&nbsp;<a href='#info-" + title[i].replace(" ", "-") + "-" + OSName + "' title='More info'><span class='fa fa-info-circle'></span></a></span>"
         
         document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + blurb + "<br/>";
