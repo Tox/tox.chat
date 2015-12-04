@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>A New Kind of Instant Messaging</title>
+
+	<link href="css/fonts.css" rel="stylesheet">
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<meta property="og:title" content="A New Kind of Instant Messaging"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://tox.chat"/>
+	<meta property="og:image" content="https://tox.chat/img/toxvert.png"/>
+	<meta property="og:site_name" content="Project Tox"/>
+	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever."/>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="container-fluid limit-width">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/logo.svg"></a>
+				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
+				<span class="tinynav navbar-toggle collapsed">
+					<ul class="nav navbar-nav">
+					<li>
+						<a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span> Wiki
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span> Code
+						</a>
+					</li>
+					<li>
+						<a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span> Mailing lists
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span> IRC
+						</a>
+					</li>
+					<li>
+						<a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span> Blog
+						</a>
+					</li>
+				</ul>
+				</span>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span> Wiki
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span> Code
+						</a>
+					</li>
+					<li>
+						<a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span> Mailing lists
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span> IRC
+						</a>
+					</li>
+					<li>
+						<a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span> Blog
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="cover" class="dl">
+		<div class="container-fluid limit-width">
+			<div id="cover-line">
+				<div class="col-sm-4"><img id="platImg" src="img/icon.svg" alt=""></div>
+				<div class="col-sm-8">
+					<h1 class="header">Thanks for downloading!</h1>
+					<p class="lead">
+						You're helping to make the world more free, secure, and fun! Seriously, <a href="https://en.wikipedia.org/wiki/Network_effect">every bit counts</a>.
+						<br/>
+						After you've installed, try <a href="tox:56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5">adding GroupBot</a>, and then <a href="#social">invite some friends</a>!
+					</p>
+
+					<h6>Note: Tox is still under heavy development — expect to run into some bugs.</h6>
+
+					<span id="defaultButton">
+						<a href="https://wiki.tox.chat/binaries" class="button download">
+							<span class="fa fa-download">&nbsp;</span>Download
+						</a>
+					</span>
+
+					<span id="buttonArea">
+					
+					</span>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="oses" class="features">
+		<h1>All Platforms:</h1>
+		<br/>
+		<div class="container-fluid limit-width">
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<img src="img/plat/windows_dark.svg">
+					<h2>Windows</h2>
+					<p class="lead"><a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip">qTox 32 bit</a> | <a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"> uTox 32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
+					<!--toxy isn't ready -impyy
+					<p class="lead" style="margin-top:-15px;"><a href="https://jenkins.impy.me/job/Toxy%20x86/lastSuccessfulBuild/artifact/toxy_x86.zip">32 bit</a> | <a href="https://jenkins.impy.me/job/Toxy%20x64/lastSuccessfulBuild/artifact/toxy_x64.zip">64 bit</a></p>-->
+				</div>
+
+				<div class="col-sm-4 feature">
+					<img src="img/plat/mac_dark.svg">
+					<h2>OS X</h2>
+					<p class="lead"><a href="https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg">uTox 64 bit (OS X 10.7+)</a></p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<img src="img/plat/linux_dark.svg">
+					<h2>Linux</h2>
+					<p class="lead"><a href="#gnulinux">Repo (Apt, Gentoo, Arch)</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86_release.tar.xz">qTox 32 bit</a> | <a href="https://build.tox.chat/job/qTox-qt5.4.2_build_linux_x86-64_release/lastSuccessfulBuild/artifact/qTox-qt5.4.2_build_linux_x86-64_release.tar.xz">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz">uTox 32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">Toxic 32 bit</a> | <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
+
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<img src="img/plat/freebsd_dark.svg">
+					<h2>FreeBSD</h2>
+					<p class="lead"><a href="https://www.freshports.org/net-im/qTox">qTox on Freshports</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/uTox">uTox on Freshports</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/toxic">Toxic on Freshports</a></p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<img src="img/plat/ios_dark.svg">
+					<h2>iOS</h2>
+					<p class="lead"><a href="https://antidote.im/">Antidote (iOS 8+)</a></p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<img src="img/plat/android_dark.svg">
+					<h2>Android</h2>
+					<p class="lead"><a href="#fdroid">Antox (F-droid)</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk">Antox (APK)</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="modals">
+		<div id="gnulinux" class="modalDialog button">
+			<div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+				<h2>Linux</h2>
+				<section class="tabsection">
+				<input id="tab-1" name="distroOpt" checked="checked" type="radio">
+					<!--default option shows nothing-->
+				<input id="tab-2" name="distroOpt" type="radio">
+					<label for="tab-2" class="tablabel" title="Debian/Ubuntu/Mint"><span class="icon-debian"></span></label>
+					<div class="tabdiv">
+						<p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
+wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
+sudo apt-get install apt-transport-https
+sudo apt-get update</pre>
+						<p>And to install (for example) qTox:</p>
+						<pre>sudo apt-get install qtox</pre>
+						<p>Or, if you have Ubuntu with Unity:</p>
+						<pre>sudo apt-get install qtox-unity</pre>
+						<p>To see all available clients, do:</p>
+						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+					</div>
+				<input id="tab-3" name="distroOpt" type="radio">
+					<label for="tab-3" class="tablabel" title="Gentoo"><span class="icon-gentoo"></span></label>
+					<div class="tabdiv">
+						<p>The Tox overlay is now in the official layman list.</p>
+						<p>To add it:</p>
+						<pre>layman -a tox-overlay</pre>
+						<p>More info <a href="https://github.com/Tox/gentoo-overlay-tox">here</a>.</p>
+					</div>
+				<input id="tab-4" name="distroOpt" type="radio">
+					<label for="tab-4" class="tablabel" title="Arch"><span class="icon-arch"></span></label>
+					<div class="tabdiv">
+						<p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
+						<p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
+					</div>
+				</section>
+			</div>
+		</div>
+	
+	<div id="fdroid" class="modalDialog button">
+		<div>   <a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+			<h2>F-droid</h2>
+			<p>Add the repo to <a href='https://f-droid.org/' target='_blank'>F-droid:</a></p>
+			<pre>https://antox.me/fdroid/repo</pre>
+			<p>Then search for Antox, and enjoy.</p>
+		</div>
+	</div>
+	
+	<div id="social" class="modalDialog button">
+			<div>	<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+				<h2>Share the Love</h2>
+				<p>This is where you tell your friends how awesome Tox is.</p>
+				<p>(These are all manual sharing links, no creepy tracking widgets.)</p>
+				<section class="tabsection">
+				<input id="tab-10" name="shareOpt" checked="checked" type="radio">
+					<!--default option shows nothing-->
+				<input id="tab-20" name="shareOpt" type="radio">
+					<label for="tab-20" class="tablabel"><span class="icon-dramabird"></span></label>
+					<div class="tabdiv">
+						<p>Tweet your friends:</p>
+						<p class="socialquote">Tired of worrying if someone's reading your conversations? Ditch Skype and other unsafe chat programs for Tox! </p>
+						<a href="http://twitter.com/home?status=Tired%20of%20worrying%20if%20someone%27s%20reading%20your%20conversations?%20Ditch%20Skype%20and%20other%20unsafe%20chat%20programs%20for%20%23Tox!%20https://tox.chat/" target="_blank" class="socialbutton tweet">
+							<span class="fa fa-twitter">&nbsp;</span>Tweet
+						</a>
+					</div>
+				<input id="tab-30" name="shareOpt" type="radio">
+					<label for="tab-30" class="tablabel"><span class="icon-minionbook"></span></label>
+					<div class="tabdiv">
+						<p>Post on Facebook:</p>
+						<p class="socialquote">Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever.</p>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=tox.chat" target="_blank" class="socialbutton facebook">
+							<span class="fa fa-facebook">&nbsp;&nbsp;</span>Share
+						</a>
+					</div>
+				<input id="tab-40" name="shareOpt" type="radio">
+					<label for="tab-40" class="tablabel"><span class="icon-diaspora"></span></label>
+					<div class="tabdiv">
+						<p>Share on Diaspora:</p>
+						<p class="socialquote">Join me on Tox, a distributed, encrypted, multimedia messenger!</p>
+						<a href="http://sharetodiaspora.github.io/?title=Join me on Tox, a distributed, encrypted, multimedia messenger!&url=http://tox.chat" target="_blank" class="socialbutton diaspora">
+							<span class="fa">d*&nbsp;</span>Post
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	
+	</section>
+
+	<footer id="footer">
+		<div class="container-fluid limit-width">
+			<div class="languages">
+
+			</div>
+
+			<div class="soc-med pull-left">
+				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
+				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
+				<a class="button" href="https://blog.tox.chat/" title="Subscribe to our blog"><span class="icon fa fa-rss"></span></a>
+			</div>
+			<div class="cc pull-right">
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="img/CC.png"></a>
+				<br>
+				<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/osdetect.js"></script>
+</body>
+
+</html>
+

@@ -13,19 +13,52 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 
+	<meta property="og:title" content="A New Kind of Instant Messaging"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://tox.chat"/>
+	<meta property="og:image" content="https://tox.chat/img/toxvert.png"/>
+	<meta property="og:site_name" content="Project Tox"/>
+	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever."/>
+
 </head>
+
 
 <body>
 	<nav class="navbar">
 		<div class="container-fluid limit-width">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><img src="img/logo.svg"></a>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
+				<span class="tinynav navbar-toggle collapsed">
+					<ul class="nav navbar-nav">
+					<li>
+						<a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span> Wiki
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span> Code
+						</a>
+					</li>
+					<li>
+						<a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span> Mailing lists
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span> IRC
+						</a>
+					</li>
+					<li>
+						<a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span> Blog
+						</a>
+					</li>
+				</ul>
+				</span>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -69,7 +102,7 @@
 
 					<h6>Note: Tox is still under heavy development — expect to run into some bugs.</h6>
 
-					<a href="#download" class="button download">
+					<a href="download.html" class="button download">
 						<span class="fa fa-download">&nbsp;</span>Download
 					</a>
 
@@ -83,8 +116,8 @@
 
 	<section id="screenshot">
 		<div class="container-fluid limit-width">
-			<img src="img/desktop_screenshot.png" class="screenshot"></img>
-			<img src="img/mobile_screenshot.png" class="screenshot mobile"></img>
+			<img src="img/desktop_screenshot.png" class="screenshot"/>
+			<img src="img/mobile_screenshot.png" class="screenshot mobile"/>
 		</div>
 	</section>
 
@@ -137,7 +170,7 @@
 			<div id="about-line">
 				<h2 class="header">What makes Tox different?</h2>
 				<p class="lead">Tox is made by the people who use it &mdash; people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating.</p>
-				<p class="lead">There are no corporate interests, and no hidden agendas. Just a relentless focus on simplicity and secure connectivity.</p>
+				<p class="lead">There are no corporate interests, and no hidden agendas. Just the simplicity and functionality that are set free when people truly want to connect.</p>
 			</div>
 		</div>
 	</section>
@@ -185,9 +218,6 @@
 		</div>
 	</footer>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
 </body>
 
 </html>
