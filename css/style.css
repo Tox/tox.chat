@@ -161,6 +161,7 @@ section {
 #cover-line .button.download {
 	background: #FFBA2B;
 	color: #fff;
+	width: 190px;
 }
 
 #cover-line .button.download:hover {
