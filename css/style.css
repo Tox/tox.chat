@@ -1,5 +1,5 @@
 body {
-	font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-style: normal;
 	text-rendering: optimizelegibility;
 	font-weight: 300;
@@ -104,11 +104,11 @@ section {
 		align-content: center;
 	}
 	.dl {
-		max-height: 600px!important;
+		max-height: 600px !important;
 	}
 	.tinynav > ul {
 		display: none;
-		}
+	}
 }
 
 #cover-line img {
@@ -282,46 +282,46 @@ section {
 	}
 }
 .modalDialog {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 200ms ease-in;
-    -moz-transition: opacity 200ms ease-in;
-    transition: opacity 200ms ease-in;
-    pointer-events: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 200ms ease-in;
+	-moz-transition: opacity 200ms ease-in;
+	transition: opacity 200ms ease-in;
+	pointer-events: none;
 }
 .modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
+	opacity:1;
+	pointer-events: auto;
 }
 .modalDialog > div {
-    width: 90%;
-    max-width: 700px;
-    max-height: 90%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    padding: 5px 20px 13px 20px;
-    background: #fff;
-    border-radius: 3px;
-    overflow-y: auto;    
+	width: 90%;
+	max-width: 700px;
+	max-height: 90%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 60px;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+	border-radius: 3px;
+	overflow-y: auto;
 }
 .close {
-    color: #000;
-    line-height: 25px;
-    position: absolute;
-    right: 0px;
-    text-align: center;
-    top: 0px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
+	color: #000;
+	line-height: 25px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	top: 0px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
 }
 section.tabsection {
 	display: -webkit-flex;
