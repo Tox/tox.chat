@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }
 
+.lead > a {
+	color: #368CCA;
+}
+
 .limit-width {
 	max-width: 1170px;
 }
@@ -99,6 +103,12 @@ section {
 		align-items: center;
 		align-content: center;
 	}
+	.dl {
+		max-height: 600px!important;
+	}
+	.tinynav > ul {
+		display: none;
+		}
 }
 
 #cover-line img {
@@ -121,6 +131,7 @@ section {
 	line-height: 2.3em;
 	font-size: 18px;
 	margin-right: 5px;
+	margin-bottom: 10px;
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
 	transition: 0.4s;
@@ -269,4 +280,184 @@ section {
 		top: 30px;
 		margin-top: 0;
 	}
+}
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius: 3px;
+    overflow-y: auto;    
+}
+.close {
+    color: #000;
+    line-height: 25px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+section.tabsection {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding-top: 5px;
+}
+label.tablabel {
+	background-color: #ddd;
+	padding: 3em 3em;
+	cursor: pointer;
+	z-index: 1;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition:.2s ease-out;
+}
+label.tablabel:hover {
+	opacity:0.7;
+	transition:.2s;
+}
+div.tabdiv {
+	width: 100%;
+	padding: 1em;
+	-webkit-order: 1;
+	order: 1;
+	margin-top: 5px;
+}
+input[type=radio], div.tabdiv {
+	display: none;
+}
+input[type=radio]:checked + label {
+	color: #fff;
+	background-color: #414141;
+	opacity:1;
+	cursor: default;
+}
+input[type=radio]:checked + label.tablabel + div {
+	display: block;
+}
+#hamlabel {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+.tinynav {
+	float: none;
+	font-weight: 400;
+}
+.tinynav > ul > li > a {
+	line-height: 1.8em;
+	text-align: left;
+}
+input[type=checkbox], .tinynav {
+	display:none;
+}
+
+input[type=checkbox]:checked + label + .tinynav {
+	display: inline-block;
+}
+input[type=checkbox]:checked ~ #hamlabel:before {
+	content: '\000d7';
+}
+.socialbutton {
+	font-weight: 400;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px 1em;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 2.3em;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+	transition: 0.4s;
+	float: left;
+}
+.socialbutton:active {
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+}
+.socialbutton.tweet {
+	background: #00B0ED;
+	color: #fff;
+}
+.socialbutton.facebook {
+	background: #3A5795;
+	color: #fff;
+}
+.socialbutton.diaspora {
+	background: #414141;
+	color: #fff;
+}
+.socialquote {
+	position: relative;
+	background: #ddd;
+	border: 2px solid #ddd;
+	padding: 5px;
+	border-radius: 3px;
+	font-style: italic;
+	margin-bottom: 15px;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.socialquote:after, .socialquote:before {
+	top: 100%;
+	left: 31px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.socialquote:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ddd;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.socialquote:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 13px;
+	margin-left: -13px;
 }

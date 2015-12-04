@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="108.44"
+   height="108.44"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="gentoo.svg"
+   version="1.0"
+   inkscape:export-filename="gentoo-logo-dark.png"
+   inkscape:export-xdpi="20.885794"
+   inkscape:export-ydpi="20.885794">
+  <title
+     id="title3032">Gentoo Logo Dark v1.0</title>
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568544"
+     inkscape:cx="49.174951"
+     inkscape:cy="49.809111"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     inkscape:window-width="1680"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="20"
+     showgrid="false"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gentoo Logo Dark v1.0</dc:title>
+        <dc:date>2011-06-03</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Sebastian Pipping &lt;sping@gentoo.org&gt;</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Lennart Andre Rolland, Gentoo Foundation Inc.</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Gentoo Foundation Inc.</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Lennart Andre Rolland for original vector version, idea for dark version and specific RGB value by unknown person</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="top"
+     style="fill:#000000;display:inline"
+     transform="translate(-25.69105,-539.58588)">
+    <g
+       id="g3030">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2973"
+         d="m 69.9723,539.89838 c -1.713633,0.0437 -3.402484,0.20214 -5.03125,0.5 -19.580574,3.58085 -33.33325,20.52696 -34.5,31.6875 -0.572459,5.47586 2.371669,9.56588 4,11.375 4.400721,4.88931 13.17329,8.62444 18.8125,11.71875 -8.152534,6.95115 -11.911313,10.35187 -15.59375,14.21875 -5.51024,5.78623 -9.36316,12.15692 -9.375,16.71875 -0.0042,1.4694 -0.255184,6.14493 1.65625,9.84375 0.718812,1.39097 2.777388,6.05535 8.9375,9.53125 3.93722,2.22161 9.539919,3.0337 15.03125,2.25 16.994949,-2.42543 39.757676,-16.85755 56,-30.28125 10.35156,-8.5552 17.90816,-16.82423 20.09375,-20.90625 1.76344,-3.29357 1.96041,-9.19886 0.9375,-12.90625 -2.90611,-10.53285 -26.52996,-32.12944 -45.84375,-40.8125 -4.617259,-2.07582 -9.984101,-3.06852 -15.125,-2.9375 z m 1.6875,0.28125 c 4.91535,0.0922 9.736023,1.31086 14,3.40625 15.59863,7.6654 41.93018,29.22765 43.875,40.0625 2.40354,13.39042 -44.750601,49.62335 -73.4375,55.28125 -11.129178,2.1847 -20.607997,2.78505 -24.9375,-8.96875 -3.753134,-10.18906 3.535922,-17.64503 14.25,-27.4375 4.449007,-4.06631 7.975237,-7.08737 13.3125,-11.59375 0.30701,-0.30701 -25.698798,-9.30007 -26.53125,-19.59375 -0.855666,-10.58073 15.894942,-30.11265 37.34375,-31.125 0.70414,-0.0331 1.422807,-0.0444 2.125,-0.0312 z m -3.0625,10.90625 c -6.045498,0.17245 -11.082168,1.66821 -13.09375,3.90625 -6.45411,7.18077 -2.328257,21.05247 8.375,28.625 12.524088,8.86076 32.807789,10.45849 36.84375,3.625 7.528,-12.74602 -0.6679,-26.20682 -12.9375,-32.21875 -6.062283,-2.97043 -13.142002,-4.10995 -19.1875,-3.9375 z m 7.78125,4.5 c 1.302802,0.007 2.486833,0.16858 3.46875,0.4375 6.271241,1.7175 16.711562,9.18449 15.78125,16 -1.221277,8.94721 -9.032916,12.57193 -18.09375,11.3125 -5.283298,-0.73436 -15.859297,-6.70351 -15.0625,-17 0.622771,-8.04768 8.260777,-10.7798 13.90625,-10.75 z m -0.5,9.4375 c -1.283533,0.0445 -2.289339,0.42544 -2.78125,1.1875 -2.502316,3.87653 -1.376883,6.61603 0.9375,8.375 0.26579,-0.60079 1.23583,-0.83547 2.4375,-0.8125 2.894685,0.0553 7.275445,1.5713 7.25,2.9375 0.093,-0.0437 0.180144,-0.0724 0.25,-0.125 7.830264,-5.89314 -2.531773,-11.75538 -8.09375,-11.5625 z"
+         style="fill:#414141;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" />
+      <path
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cssssssssssscsscsss"
+         id="path2977"
+         d="m 67.808352,542.67487 c -10.533064,1.11001 -12.550346,2.46567 -22.092482,9.68511 -3.198086,2.41962 -9.084193,8.30699 -10.592358,15.29146 -0.574393,2.66006 0.104567,4.95656 2.020347,6.56717 6.134427,5.15727 16.401565,9.34139 24.824771,13.38603 2.467168,1.18468 0.833617,3.33275 -3.144938,6.77709 -10.039338,8.69133 -23.612662,19.27108 -24.56024,27.33281 -0.446522,3.79888 0.854008,8.96081 5.464995,11.60244 5.386359,3.08584 16.56765,1.07175 24.033825,-1.70849 10.910396,-4.0628 25.242269,-13.02933 36.620388,-21.84321 11.83181,-9.16532 22.8328,-20.80652 23.37697,-22.70517 0.66823,-2.33153 0.60162,-4.48499 -0.68797,-6.96092 -2.02514,-3.88809 -4.73262,-6.77718 -7.63974,-10.01096 -7.80029,-8.22345 -16.053467,-15.44933 -25.927875,-20.98659 -7.130685,-3.99867 -13.404507,-7.30053 -21.695693,-6.42677 z m 15.4725,18.43637 c 7.609647,3.67906 15.424179,13.34258 -0.06781,18.90459 -4.212635,1.51244 -17.572733,-3.71443 -17.163747,-10.84748 0.596394,-10.53685 7.94007,-12.5493 17.231557,-8.05711 z"
+         style="fill:#414141;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    </g>
+  </g>
+</svg>
