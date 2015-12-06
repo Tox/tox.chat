@@ -6,7 +6,7 @@ var clients = defClients = [{
 	title: "Wiki Downloads",
 	name: "",
 	icon: "external-link",
-	desc: "",
+	desc: false,
 	dlLink: "http://wiki.tox.chat/binaries",
 }];
 
@@ -74,8 +74,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		title: "Download uTox",
 		name: "utox",
 		icon: "download",
-		desc: "(OS X 10.7+)",
-		longDesc: "uTox is currently the only client regularly and officially compiled for OS X.",
+		desc: true,
 		dlLink: "https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg",
 	}];
 }
@@ -87,7 +86,7 @@ if (window.navigator.userAgent.indexOf("iPad") != -1) {
 		title: "Install Antidote",
 		name: "antidote",
 		icon: "external-link",
-		desc: "",
+		desc: true,
 		dlLink: "http://antidote.im",
 	}];
 }
@@ -99,7 +98,7 @@ if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 		title: "Install Antidote",
 		name: "antidote",
 		icon: "external-link",
-		desc: "",
+		desc: true,
 		dlLink: "http://antidote.im",
 	}];
 }
@@ -111,7 +110,7 @@ if (window.navigator.userAgent.indexOf("Linux") != -1) {
 		title: "Install Repo",
 		name: "repo",
 		icon: "list-ul",
-		desc: "",
+		desc: false,
 		dlLink: "#gnulinux",
 	}];
 }
@@ -123,19 +122,19 @@ if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
 		title: "Install qTox",
 		name: "qtox",
 		icon: "external-link",
-		desc: "Qt 5, prioritizes UX",
+		desc: true,
 		dlLink: "https://www.freshports.org/net-im/qTox",
 	}, {
 		title: "Install uTox",
 		name: "utox",
 		icon: "external-link",
-		desc: "Uses its own toolkit, more minimal",
+		desc: true,
 		dlLink: "https://freshports.org/net-im/uTox/",
 	}, {
 		title: "Install Toxic",
 		name: "toxic",
 		icon: "external-link",
-		desc: "ncurses, cli",
+		desc: true,
 		dlLink: "https://freshports.org/net-im/toxic/",
 	}];
 }
@@ -147,13 +146,13 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 		title: "Install Antox",
 		name: "antox",
 		icon: "external-link",
-		desc: "F-droid is a package manager for Android. <a href='https://f-droid.org/' target='_blank'>Get F-droid here.</a>",
+		desc: true,
 		dlLink: "#fdroid",
 	}, {
 		title: "Antox APK",
 		name: "antox",
 		icon: "download",
-		desc: "You'll have to update manually later if you download the raw APK.",
+		desc: true,
 		dlLink: "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk",
 	}];
 }
@@ -166,13 +165,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			title: "qTox 64-bit",
 			name: "qtox",
 			icon: "download",
-			desc: "qTox should look native on most versions of Windows. Change the appearance in Settings.",
+			desc: true,
 			dlLink: "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip",
 		}, {
 			title: "uTox 64-bit",
 			name: "utox",
 			icon: "download",
-			desc: "",
+			desc: true,
 			dlLink: "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip",
 		}];
 	} else {
@@ -180,13 +179,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			title: "qTox 32-bit",
 			name: "qtox",
 			icon: "download",
-			desc: "qTox should look native on most versions of Windows. Change the appearance in Settings.",
+			desc: true,
 			dlLink: "https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip",
 		}, {
 			title: "uTox 32-bit",
 			name: "utox",
 			icon: "download",
-			desc: "",
+			desc: true,
 			dlLink: "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"
 		}];
 	}
@@ -224,13 +223,11 @@ for (var i = 0; i < clients.length; i++) {
 		</a>\
 		<h2>" + client.title + "</h2>\
 		<br/>\
-		<div>" + client.desc + "</div>\
+		<div name='" + client.name + "'>&nbsp;</div>\
 		<br/>\
 		<div>\
 			<img style='width:100%;' src='img/client/" + client.name + "_" + OSName.toLowerCase() + ".png'>\
 		</div>\
-		<br/>\
-		<div name='" + client.name + "'>&nbsp;</div>\
 		</div>\
 	</div>";
 
