@@ -1,16 +1,25 @@
-// Globals
+/*
+	Globals
+*/
+
 var arch = 0;
 var OSName = "Unknown";
 
-var clients = defClients = [{
+var defClient = {
 	title: "Wiki Downloads",
 	name: "",
 	icon: "external-link",
 	desc: false,
 	dlLink: "http://wiki.tox.chat/binaries",
-}];
+};
 
-// This fetches client about pages and puts them in modals
+var clients = [defClient];
+
+/*
+	Functions
+*/
+
+// Fetches client about pages and puts them in modals
 function getModalContent(clientName) {
 	xhr = new XMLHttpRequest();
 
@@ -40,31 +49,27 @@ function getModalContent(clientName) {
 	console.log("Sent " + clientName);
 }
 
-// Arch detection
+/*
+	Arch detection
+*/
+
+// If 64 is declared
 if (window.navigator.userAgent.indexOf("WOW64") != -1 || window.navigator.userAgent.indexOf("x86_64") != -1 || window.navigator.userAgent.indexOf("x64;") != -1 || window.navigator.userAgent.indexOf("Win64") != -1 || window.navigator.userAgent.indexOf("AMD64") != -1) {
-	// If it declares 64
 	arch = 64;
 }
 
+// If 32 is declared
 if (window.navigator.userAgent.indexOf("i386") != -1 || window.navigator.userAgent.indexOf("i686") != -1) {
-	// If it declares 32
 	arch = 32;
 }
 
+// If the OS is Windows and neither is declared we know it's 32
 if (window.navigator.userAgent.indexOf("Windows") != -1 && arch == 0) {
-	// If it declared neither and it's windows we know it's 32
 	arch = 32;
 }
 
 /*
-*	ID UA -> apply config, which is a bunch of arrays we loop through to
-*		generate buttons
-*	OSName: platform name
-*	title: displayed on button
-*	name: the client the button links to, used for images and abouts
-*	icon: fa-<icon>, displayed on button
-*	desc: client description
-*	dlLink: download link
+	OS detection (order matters)
 */
 
 if (window.navigator.userAgent.indexOf("Mac") != -1) {
@@ -192,8 +197,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 }
 
 if (window.navigator.userAgent.indexOf("Windows Phone") != -1) {
-	clients = defClients;
+	// We don't have a windows phone client?!??
+	clients = [defClient];
 }
+
+/*
+	All the magic stuff the makes the buttons change and stuff
+*/
 
 // Set platform toxlock
 document.getElementById("platImg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
@@ -210,26 +220,25 @@ for (var i = 0; i < clients.length; i++) {
 		<span class='fa fa-" + client.icon + "'>&nbsp;</span>" + client.title + "\
 	</a>";
 
-	var infoButton = client.desc ? "\
+	var infoButton = "";
+	if (client.desc) {
+		infoButton = "\
 		<a class='button' style='box-shadow:none;color:#368CCA;' href='#info-" + client.title.replace(" ", "-") + "-" + OSName + "' title='More info'>\
 			<span class='fa fa-info-circle'></span>\
-		</a>" : "";
+		</a>";
+	}
 
 	document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + infoButton + "<br/>";
 	document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "\
 	<div id='info-" + client.title.replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div>\
-		<a href='#close' title='Close' class='close'>\
-			<span class='fa fa-close'>&nbsp;</span>\
-		</a>\
-		<h2>" + client.title + "</h2>\
-		<br/>\
-		<div name='" + client.name + "'>&nbsp;</div>\
-		<br/>\
-		<div>\
-			<img style='width:100%;' src='img/client/" + client.name + "_" + OSName.toLowerCase() + ".png'>\
-		</div>\
-		</div>\
-	</div>";
+	<a href='#close' title='Close' class='close'>\
+		<span class='fa fa-close'>&nbsp;</span>\
+	</a>\
+	<h2>" + client.title + "</h2>\
+	<br/>\
+	<div name='" + client.name + "'>&nbsp;</div>\
+	<br/>\
+	<img style='width:100%;' src='img/client/" + client.name + "_" + OSName.toLowerCase() + ".png'>";
 
 	getModalContent(client.name);
 	console.log("Just did " + client.name);
