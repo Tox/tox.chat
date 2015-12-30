@@ -197,12 +197,18 @@ section {
 #screenshot .screenshot {
 	width: 100%;
 	max-width: 900px;
+	border-radius: 3px;
+	border: 2px solid #414141;
+	border-top-width: 20px;
+	box-shadow: 0 2px 23px #9E9E9E;
 }
 
 #screenshot .screenshot.mobile {
 	display: none;
 	margin: auto;
 	max-width: 300px;
+	border: 0;
+	box-shadow: none;
 }
 
 @media (max-width: 550px) {
