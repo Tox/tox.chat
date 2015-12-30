@@ -100,6 +100,10 @@ section {
 	color: #DCDCDC;
 }
 
+.section--gray-dark .header {
+	color: #F5AD1A;
+}
+
 .section--gray-light {
 	background-color: #ECF0F1;
 }
@@ -135,10 +139,6 @@ section {
 	height: 280px;
 	width: calc(100% - 5px);
 	margin: 10px;
-}
-
-#cover-line .header {
-	color: #F5AD1A;
 }
 
 #cover-line .button {
@@ -241,7 +241,6 @@ section {
 }
 
 #about .header {
-	color: #F5AD1A;
 	margin-top: 0;
 }
 
