@@ -212,6 +212,10 @@ section {
 	padding: 40px;
 }
 
+.feature h3 {
+	font-size: 23px;
+}
+
 .feature p {
 	font-size: 15px;
 }
