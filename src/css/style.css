@@ -91,6 +91,7 @@ section {
 
 .section--gray-dark {
 	background-color: #414141;
+	color: #DCDCDC;
 }
 
 .section--gray-light {
@@ -98,7 +99,6 @@ section {
 }
 
 #cover {
-	color: #DCDCDC;
 	text-align: center;
 }
 
@@ -227,7 +227,6 @@ section {
 }
 
 #about {
-	color: #DCDCDC;
 	text-align: center;
 }
 
@@ -238,10 +237,6 @@ section {
 #about .header {
 	color: #F5AD1A;
 	margin-top: 0;
-}
-
-#footer {
-	color: #DCDCDC;
 }
 
 #footer .cc {
