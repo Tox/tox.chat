@@ -93,6 +93,7 @@ section {
 	#cover {
 		height: calc(100vh - 70px);
 		max-height: 800px;
+		min-height: 400px;
 		display: flex;
 		align-items: center;
 		text-align: left;
