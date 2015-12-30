@@ -212,6 +212,10 @@ section {
 	padding: 40px;
 }
 
+.feature p {
+	font-size: 15px;
+}
+
 #about {
 	background: #414141;
 	color: #DCDCDC;
