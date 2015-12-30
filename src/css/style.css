@@ -206,6 +206,10 @@ section {
 	cursor: default;
 }
 
+.feature {
+	padding: 40px;
+}
+
 #about {
 	background: #414141;
 	color: #DCDCDC;
