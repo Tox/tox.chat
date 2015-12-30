@@ -147,23 +147,23 @@ section {
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
 }
 
-#cover-line .button.learn-more {
+.button--secondary {
 	background: #5DBA9E;
 	color: #fff;
 }
 
-#cover-line .button.learn-more:hover {
+.button--secondary:hover {
 	background: #69D1B2;
 	color: #fff;
 	text-decoration: none;
 }
 
-#cover-line .button.download {
+.button--primary {
 	background: #FFBA2B;
 	color: #fff;
 }
 
-#cover-line .button.download:hover {
+.button--primary:hover {
 	background: #FFC44C;
 	color: #fff;
 	text-decoration: none;
