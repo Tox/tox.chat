@@ -217,7 +217,7 @@ for (var i = 0; i < clients.length; i++) {
 
 	var button = "\
 	<a id='link" + i + "' href='" + client.dlLink + "' class='button button--primary'>\
-		" + client.title + "\
+		<span class='fa fa-" + client.icon + "'>&nbsp;</span>" + client.title + "\
 	</a>";
 
 	var infoButton = "";
