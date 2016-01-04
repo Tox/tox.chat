@@ -189,6 +189,10 @@ section {
 	text-decoration: none;
 }
 
+#buttonArea > .button--primary {
+	width: 190px;
+}
+
 #screenshot {
 	color: #414141;
 	text-align: center;
