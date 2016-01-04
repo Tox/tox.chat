@@ -5,8 +5,20 @@ body {
 	font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
 	font-weight: 300;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 40px;
+	line-height: 44px;
+}
+
+h2 {
+	font-weight: 200;
+	font-size 36px;
+	line-height: 40px;
 }
 
 .lead {
@@ -83,9 +95,20 @@ section {
 	padding-bottom: 20px;
 }
 
-#cover {
-	background: #414141;
+.section--gray-dark {
+	background-color: #414141;
 	color: #DCDCDC;
+}
+
+.section--gray-dark .header {
+	color: #F5AD1A;
+}
+
+.section--gray-light {
+	background-color: #ECF0F1;
+}
+
+#cover {
 	text-align: center;
 }
 
@@ -93,6 +116,7 @@ section {
 	#cover {
 		height: calc(100vh - 70px);
 		max-height: 800px;
+		min-height: 400px;
 		display: flex;
 		align-items: center;
 		text-align: left;
@@ -115,10 +139,6 @@ section {
 	height: 280px;
 	width: calc(100% - 5px);
 	margin: 10px;
-}
-
-#cover-line .header {
-	color: #F5AD1A;
 }
 
 #cover-line .button {
@@ -147,31 +167,33 @@ section {
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
 }
 
-#cover-line .button.learn-more {
+.button--secondary {
 	background: #5DBA9E;
 	color: #fff;
 }
 
-#cover-line .button.learn-more:hover {
+.button--secondary:hover {
 	background: #69D1B2;
 	color: #fff;
 	text-decoration: none;
 }
 
-#cover-line .button.download {
+.button--primary {
 	background: #FFBA2B;
 	color: #fff;
-	width: 190px;
 }
 
-#cover-line .button.download:hover {
+.button--primary:hover {
 	background: #FFC44C;
 	color: #fff;
 	text-decoration: none;
 }
 
+#buttonArea > .button--primary {
+	width: 190px;
+}
+
 #screenshot {
-	background: #ECF0F1;
 	color: #414141;
 	text-align: center;
 }
@@ -179,12 +201,18 @@ section {
 #screenshot .screenshot {
 	width: 100%;
 	max-width: 900px;
+	border-radius: 3px;
+	border: 2px solid #414141;
+	border-top-width: 20px;
+	box-shadow: 0 2px 23px #9E9E9E;
 }
 
 #screenshot .screenshot.mobile {
 	display: none;
 	margin: auto;
 	max-width: 300px;
+	border: 0;
+	box-shadow: none;
 }
 
 @media (max-width: 550px) {
@@ -202,29 +230,24 @@ section {
 	text-align: center;
 }
 
-.features .icon {
-	font-size: 40px;
-	cursor: default;
+.feature {
+	padding: 40px;
+}
+
+.feature h3 {
+	font-size: 23px;
+}
+
+.feature p {
+	font-size: 15px;
 }
 
 #about {
-	background: #414141;
-	color: #DCDCDC;
 	text-align: center;
 }
 
 #about .container-fluid {
 	max-width: 850px;
-}
-
-#about .header {
-	color: #F5AD1A;
-	margin-top: 0;
-}
-
-#footer {
-	background: #414141;
-	color: #DCDCDC;
 }
 
 #footer .cc {
