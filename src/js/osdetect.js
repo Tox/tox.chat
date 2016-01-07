@@ -16,40 +16,6 @@ var defClient = {
 var clients = [defClient];
 
 /*
-	Functions
-*/
-
-// Fetches client about pages and puts them in modals
-function getModalContent(clientName) {
-	xhr = new XMLHttpRequest();
-
-	xhr.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200 || this.status == 304) {
-			var thisarrlen = document.getElementsByName(clientName).length;
-			for (var j = 0; j < thisarrlen; j++) {
-				document.getElementsByName(clientName)[j].innerHTML = this.responseText;
-			}
-
-			console.log("Received " + clientName);
-		} else if (this.status == 404) {
-			var thisarrlen = document.getElementsByName(clientName).length;
-			for (var j = 0; j < thisarrlen; j++) {
-				document.getElementsByName(clientName)[j].innerHTML = " ";
-			}
-
-			console.log("404 " + clientName);
-		}
-	};
-
-	var clientToGet = "abouts/" + clientName + ".html";
-
-	xhr.open("GET", clientToGet, true);
-	xhr.send();
-
-	console.log("Sent " + clientName);
-}
-
-/*
 	Arch detection
 */
 
@@ -223,23 +189,10 @@ for (var i = 0; i < clients.length; i++) {
 	var infoButton = "";
 	if (client.desc) {
 		infoButton = "\
-		<a class='button' style='box-shadow:none;color:#368CCA;' href='#info-" + client.title.replace(" ", "-") + "-" + OSName + "' title='More info'>\
+		<a class='button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name + "' title='More info'>\
 			<span class='fa fa-info-circle'></span>\
 		</a>";
 	}
 
 	document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + infoButton + "<br/>";
-	document.getElementById("modals").innerHTML = document.getElementById("modals").innerHTML + "\
-	<div id='info-" + client.title.replace(" ", "-") + "-" + OSName + "' class='modalDialog button'><div>\
-	<a href='#close' title='Close' class='close'>\
-		<span class='fa fa-close'>&nbsp;</span>\
-	</a>\
-	<h2>" + client.title + "</h2>\
-	<br/>\
-	<div name='" + client.name + "'>&nbsp;</div>\
-	<br/>\
-	<img style='width:100%;' src='img/client/" + client.name + "_" + OSName.toLowerCase() + ".png'>";
-
-	getModalContent(client.name);
-	console.log("Just did " + client.name);
 }

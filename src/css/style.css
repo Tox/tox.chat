@@ -1,3 +1,4 @@
+/*Body and core element styling*/
 body {
 	font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-style: normal;
@@ -78,15 +79,41 @@ section {
 	}
 }
 
+/*Styling classes*/
 .lead {
 	margin-bottom: 0;
 	padding-bottom: 20px;
 }
 
-#cover {
+.dark {
 	background: #414141;
 	color: #DCDCDC;
+}
+
+.dark .header {
+	color: #F5AD1A;
+}
+
+.center {
 	text-align: center;
+}
+
+/*Element styling*/
+
+#cover .button {
+	font-weight: 400;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0px 1em;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 2.3em;
+	font-size: 18px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
+	transition: 0.4s;
 }
 
 @media (min-width: 768px) {
@@ -103,77 +130,53 @@ section {
 		align-items: center;
 		align-content: center;
 	}
+
 	.dl {
 		max-height: 600px !important;
 	}
+
 	.tinynav > ul {
 		display: none;
 	}
 }
 
-#cover-line img {
+#cover img {
 	height: 280px;
 	width: calc(100% - 5px);
 	margin: 10px;
 }
 
-#cover-line .header {
-	color: #F5AD1A;
-}
-
-#cover-line .button {
-	font-weight: 400;
-	cursor: pointer;
-	display: inline-block;
-	padding: 0px 1em;
-	border-radius: 3px;
-	text-align: center;
-	line-height: 2.3em;
-	font-size: 18px;
-	margin-right: 5px;
-	margin-bottom: 10px;
-	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
-	transition: 0.4s;
-}
-
 @media (max-width: 768px) {
-	#cover-line .button {
+	#cover .button {
 		margin-bottom: 15px;
 	}
 }
 
-#cover-line .button:active {
+#cover .button:active {
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
 }
 
-#cover-line .button.learn-more {
+#cover .button.learn-more {
 	background: #5DBA9E;
 	color: #fff;
 }
 
-#cover-line .button.learn-more:hover {
+#cover .button.learn-more:hover {
 	background: #69D1B2;
 	color: #fff;
 	text-decoration: none;
 }
 
-#cover-line .button.download {
+#cover .button.download {
 	background: #FFBA2B;
 	color: #fff;
 	width: 190px;
 }
 
-#cover-line .button.download:hover {
+#cover .button.download:hover {
 	background: #FFC44C;
 	color: #fff;
 	text-decoration: none;
-}
-
-#screenshot {
-	background: #ECF0F1;
-	color: #414141;
-	text-align: center;
 }
 
 #screenshot .screenshot {
@@ -208,23 +211,42 @@ section {
 }
 
 #about {
-	background: #414141;
-	color: #DCDCDC;
 	text-align: center;
+}
+
+#about .header {
+	margin-top: 0;
 }
 
 #about .container-fluid {
 	max-width: 850px;
 }
 
-#about .header {
-	color: #F5AD1A;
-	margin-top: 0;
+
+#clients .img-container {
+	width: 400px;
 }
 
-#footer {
-	background: #414141;
-	color: #DCDCDC;
+#clients img {
+	max-width: 100%;
+	max-height: 500px;
+	margin: auto;
+	display: block;
+}
+
+@media (min-width: 768px) {
+	#clients .img-container {
+		padding-right: 20px;
+		float: left;
+	}
+}
+
+#os-support tbody th {
+	font-weight: 300;
+}
+
+#os-support tbody th:first-child, thead th {
+	font-weight: 400;
 }
 
 #footer .cc {

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>A New Kind of Instant Messaging</title>
+
+	<link href="css/fonts.css" rel="stylesheet">
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<meta property="og:title" content="A New Kind of Instant Messaging"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://tox.chat"/>
+	<meta property="og:image" content="https://tox.chat/img/toxvert.png"/>
+	<meta property="og:site_name" content="Project Tox"/>
+	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever."/>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="container-fluid limit-width">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/logo.svg"></a>
+				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
+				<span class="tinynav navbar-toggle collapsed">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="https://wiki.tox.chat/">
+								<span class="fa fa-globe"></span> Wiki
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/irungentoo/toxcore">
+								<span class="fa fa-github"></span> Code
+							</a>
+						</li>
+						<li>
+							<a href="https://lists.tox.chat/">
+								<span class="fa fa-envelope"></span> Mailing lists
+							</a>
+						</li>
+						<li>
+							<a href="https://wiki.tox.chat/users/community#irc">
+								<span class="fa fa-comments"></span> IRC
+							</a>
+						</li>
+						<li>
+							<a href="https://blog.tox.chat/">
+								<span class="fa fa-rss"></span> Blog
+							</a>
+						</li>
+					</ul>
+				</span>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span> Wiki
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span> Code
+						</a>
+					</li>
+					<li>
+						<a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span> Mailing lists
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span> IRC
+						</a>
+					</li>
+					<li>
+						<a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span> Blog
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="clients" class="dark">
+		<div class="container-fluid limit-width">
+			<h1 class="center header">Clients list</h1>
+			<hr>
+
+			<div id="qtox" class="row">
+				<div class="img-container"><img src="img/client/qtox_mac.png"></div>
+				<h3 class="header">qTox</h3>
+				<p class="lead">qTox is a Tox client written in Qt.</p>
+			</div>
+
+			<hr>
+
+			<div id="utox" class="row">
+				<div class="img-container"><img src="img/client/utox_mac.png"></div>
+				<h3 class="header">uTox</h3>
+				<p class="lead">uTox is a Tox client written in C. It comes with its own toolkit to avoid bloat.</p>
+			</div>
+
+			<hr>
+
+			<div id="toxic" class="row">
+				<div class="img-container"><img src="img/client/toxic_linux.png"></div>
+
+				<h3 class="header">Toxic</h3>
+				<p class="lead">Toxic is an ncurses-based Tox client written in C.</p>
+			</div>
+
+			<hr>
+
+			<div id="antox" class="row">
+				<div class="img-container"><img src="img/client/antox.png"></div>
+
+				<h3 class="header">Antox</h3>
+				<p class="lead">Antox is a Tox client for Android. Protocol extensions ftw.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="os-support" class="features">
+		<div class="container-fluid limit-width">
+			<h1>OS support:</h1>
+			<hr>
+
+			<table class="table table-bordered" style="margin:auto;width:60%;">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Windows</th>
+						<th>GNU/Linux</th>
+						<th>BSD</th>
+						<th>OSX</th>
+						<th>Android</th>
+						<th>iOS</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<th>qTox:</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="warning">Minimal</th>
+						<th class="danger">No</th>
+					</tr>
+
+					<tr>
+						<th>uTox:</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="warning">Minimal</th>
+						<th class="danger">No</th>
+					</tr>
+
+					<tr>
+						<th>Toxic</th>
+						<th class="danger">No</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="success">Yes</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+					</tr>
+
+					<tr>
+						<th>Antox</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="success">Yes</th>
+						<th class="danger">No</th>
+					</tr>
+
+					<tr>
+						<th>Antidote</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="danger">No</th>
+						<th class="success">Yes</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	
+	<footer id="footer" class="dark">
+		<div class="container-fluid limit-width">
+			<div class="languages">
+
+			</div>
+
+			<div class="soc-med pull-left">
+				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
+				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
+				<a class="button" href="https://blog.tox.chat/" title="Subscribe to our blog"><span class="icon fa fa-rss"></span></a>
+			</div>
+
+			<div class="cc pull-right">
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="img/CC.png"></a>
+				<br>
+				<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
