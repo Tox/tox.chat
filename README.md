@@ -19,6 +19,14 @@ We make use of the Font-Awesome icon pack as a git submodule. In order to make s
  - When fixing an issue, post a comment saying that you are doing so, to save others the confusion.
  - Be sure not to mix up indentation, we try to stick to 4-wide tabs.
 
+### Quick how-to: i18n and l10n
+ - Wrap your english strings in `<tl [some key]></tl>`, where some key is a short string describing how the string is used.
+   Then copy it into the en.json file.
+ - The preferred convention is `k_<topic>_<usage>`, because most sections had a one/two word title then a description.
+ - If HTML would split your sentence (as in, `this <a href="/">sentence</a> has garbage inline`), copy it into en.json as an array:
+   `"key": ["this", "sentence", "has garbage inline"]`. Then use the same key for all the parts, except put an @-sign at the end:
+   `{{ key@ }} <a href="/">{{ key@ }}</a> {{ key@ }}`. This will work as you expect, and saves translators from having to work with HTML fragments.
+
 ### Pull requests
 If you want your pull request to be merged quickly, you need to make it easy to review.
 
