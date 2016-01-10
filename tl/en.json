@@ -1,0 +1,65 @@
+{
+    "multi": {
+        "_lang_native": "English",
+        "_ind": -1,
+
+        "k_hl_title": "A New Kind of Instant Messaging",
+        "k_hl_description": "Whether it's corporations or governments, digital surveillence today is widespread. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is completely free and comes without advertising – forever.",
+
+        "k_irc": "IRC",
+        "k_wiki": "Wiki",
+        "k_download": "Download",
+        "k_sourcecode": "Code",
+        "k_mailinglists": "Mailing lists",
+        "k_blog": "Blog",
+
+        "k_in_another_language": "In another language:",
+        "k_language_sep": ",",
+
+        "k_cc_license": [
+            "This work is licensed under a",
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ]
+    },
+    "index.html": {
+        "k_encrypted_description": "Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with.",
+        "k_audio_description": "Keep in touch with friends and family using Tox's completely free and encrypted voice calls.",
+        "k_group_description": "Chat, call, and share video and files with the whole gang in Tox's group chats.",
+        "k_screenshare_description": "Share your desktop with your friends with Tox's screen sharing.",
+        "k_audio_title": "Voice",
+        "k_distributed_title": "Distributed",
+        "k_fileshare_description": "Trade files, with no artificial limits or caps.",
+        "k_group_title": "Groups",
+        "k_freedom_description": [
+            "Tox is free software. That's",
+            "free as in freedom",
+            "as well as in price. This means Tox is yours – to use, modify, and share – because Tox is developed by and for the users."
+        ],
+        "k_learnmore": "Learn more",
+        "k_im_description": "Chat instantly across the globe with Tox's secure messages.",
+        "k_distributed_description": "Tox has no central servers that can be raided, shut down, or forced to turn over data – the network is made up of its users. Say goodbye to server outages!",
+        "k_freedom_title": "Free",
+        "k_video_description": "Catch up face to face, over Tox's secure video calls.",
+        "k_video_title": "Video",
+        "k_screenshare_title": "Screen sharing",
+        "k_different_title": "What makes Tox different?",
+        "k_im_title": "Instant messaging",
+        "k_encrypted_title": "Encrypted",
+        "k_fileshare_title": "File sharing",
+        "k_different_content": [
+            "Tox is made by the people who use it – people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating.",
+            "There are no corporate interests, and no hidden agendas. Just the simplicity and functionality that are set free when people truly want to connect."
+        ]
+    },
+    "download.html": {
+        "k_thanks_description": [
+            "After you've installed, try",
+            "adding GroupBot",
+            ", and then",
+            "invite some friends",
+            "!"
+        ],
+        "k_warning_bugs": "Note: Tox is still under heavy development — expect to run into some bugs.",
+        "k_thanks_title": "Thanks for downloading!"
+    }
+}
