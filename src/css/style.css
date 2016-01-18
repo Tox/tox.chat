@@ -1,4 +1,4 @@
-/*Body and core element styling*/
+/* Body and core element styling */
 body {
 	font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-style: normal;
@@ -10,12 +10,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
-.lead {
-	font-weight: 200;
+a {
+	color: #368CCA;
 }
 
-.lead > a {
-	color: #368CCA;
+.lead {
+	font-weight: 200;
 }
 
 .limit-width {
@@ -79,7 +79,15 @@ section {
 	}
 }
 
-/*Styling classes*/
+tbody th {
+	font-weight: 300;
+}
+
+tbody th:first-child, thead th {
+	font-weight: 400;
+}
+
+/* Styling classes */
 .lead {
 	margin-bottom: 0;
 	padding-bottom: 20px;
@@ -90,6 +98,14 @@ section {
 	color: #DCDCDC;
 }
 
+.dark a {
+	color: #F5AD1A;
+}
+
+.dark a:hover {
+	color: #FFC44C;
+}
+
 .dark .header {
 	color: #F5AD1A;
 }
@@ -98,7 +114,7 @@ section {
 	text-align: center;
 }
 
-/*Element styling*/
+/* Specific styling */
 
 #cover .button {
 	font-weight: 400;
@@ -241,12 +257,15 @@ section {
 	}
 }
 
-#os-support tbody th {
-	font-weight: 300;
+#who-is-tox table {
+	width: 40%;
+	min-width: 220px;
 }
 
-#os-support tbody th:first-child, thead th {
-	font-weight: 400;
+@media (max-width: 768px) {
+	#who-is-tox table {
+		margin: auto;
+	}
 }
 
 #footer .cc {
@@ -260,25 +279,8 @@ section {
 	margin-bottom: 5px;
 }
 
-#footer .cc a {
-	color: #F5AD1A;
-}
-
-#footer .cc a:hover {
-	color: #FFC44C;
-	text-decoration: none;
-}
-
 #footer .soc-med {
 	margin-top: 30px;
-}
-
-#footer .soc-med a {
-	color: #F5AD1A;
-}
-
-#footer .soc-med a:hover {
-	color: #FFC44C;
 }
 
 #footer .languages {
@@ -304,6 +306,7 @@ section {
 		margin-top: 0;
 	}
 }
+
 .modalDialog {
 	position: fixed;
 	top: 0;
@@ -318,10 +321,12 @@ section {
 	transition: opacity 200ms ease-in;
 	pointer-events: none;
 }
+
 .modalDialog:target {
 	opacity:1;
 	pointer-events: auto;
 }
+
 .modalDialog > div {
 	width: 90%;
 	max-width: 700px;
@@ -335,6 +340,7 @@ section {
 	border-radius: 3px;
 	overflow-y: auto;
 }
+
 .close {
 	color: #000;
 	line-height: 25px;
@@ -346,6 +352,7 @@ section {
 	text-decoration: none;
 	font-weight: bold;
 }
+
 section.tabsection {
 	display: -webkit-flex;
 	display: flex;
@@ -353,6 +360,7 @@ section.tabsection {
 	flex-wrap: wrap;
 	padding-top: 5px;
 }
+
 label.tablabel {
 	background-color: #ddd;
 	padding: 3em 3em;
@@ -370,10 +378,12 @@ label.tablabel {
 	user-select: none;
 	transition:.2s ease-out;
 }
+
 label.tablabel:hover {
 	opacity:0.7;
 	transition:.2s;
 }
+
 div.tabdiv {
 	width: 100%;
 	padding: 1em;
@@ -384,27 +394,33 @@ div.tabdiv {
 input[type=radio], div.tabdiv {
 	display: none;
 }
+
 input[type=radio]:checked + label {
 	color: #fff;
 	background-color: #414141;
 	opacity:1;
 	cursor: default;
 }
+
 input[type=radio]:checked + label.tablabel + div {
 	display: block;
 }
+
 #hamlabel {
 	font-size: 1.5em;
 	cursor: pointer;
 }
+
 .tinynav {
 	float: none;
 	font-weight: 400;
 }
+
 .tinynav > ul > li > a {
 	line-height: 1.8em;
 	text-align: left;
 }
+
 input[type=checkbox], .tinynav {
 	display:none;
 }
@@ -412,9 +428,11 @@ input[type=checkbox], .tinynav {
 input[type=checkbox]:checked + label + .tinynav {
 	display: inline-block;
 }
+
 input[type=checkbox]:checked ~ #hamlabel:before {
 	content: '\000d7';
 }
+
 .socialbutton {
 	font-weight: 400;
 	cursor: pointer;
@@ -431,21 +449,26 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	transition: 0.4s;
 	float: left;
 }
+
 .socialbutton:active {
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.10em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
 }
+
 .socialbutton.tweet {
 	background: #00B0ED;
 	color: #fff;
 }
+
 .socialbutton.facebook {
 	background: #3A5795;
 	color: #fff;
 }
+
 .socialbutton.diaspora {
 	background: #414141;
 	color: #fff;
 }
+
 .socialquote {
 	position: relative;
 	background: #ddd;
@@ -462,6 +485,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	-ms-user-select: none;
 	user-select: none;
 }
+
 .socialquote:after, .socialquote:before {
 	top: 100%;
 	left: 31px;
@@ -472,12 +496,14 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	position: absolute;
 	pointer-events: none;
 }
+
 .socialquote:after {
 	border-color: rgba(255, 255, 255, 0);
 	border-top-color: #ddd;
 	border-width: 10px;
 	margin-left: -10px;
 }
+
 .socialquote:before {
 	border-color: rgba(221, 221, 221, 0);
 	border-top-color: #ddd;

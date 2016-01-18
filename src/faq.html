@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<title>A New Kind of Instant Messaging</title>
+
+	<link href="css/fonts.css" rel="stylesheet">
+	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<meta property="og:title" content="A New Kind of Instant Messaging"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://tox.chat"/>
+	<meta property="og:image" content="https://tox.chat/img/toxvert.png"/>
+	<meta property="og:site_name" content="Project Tox"/>
+	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever."/>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="container-fluid limit-width">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/logo.svg"></a>
+				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
+				<span class="tinynav navbar-toggle collapsed">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="https://wiki.tox.chat/">
+								<span class="fa fa-globe"></span> Wiki
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/irungentoo/toxcore">
+								<span class="fa fa-github"></span> Code
+							</a>
+						</li>
+						<li>
+							<a href="https://lists.tox.chat/">
+								<span class="fa fa-envelope"></span> Mailing lists
+							</a>
+						</li>
+						<li>
+							<a href="https://wiki.tox.chat/users/community#irc">
+								<span class="fa fa-comments"></span> IRC
+							</a>
+						</li>
+						<li>
+							<a href="https://blog.tox.chat/">
+								<span class="fa fa-rss"></span> Blog
+							</a>
+						</li>
+					</ul>
+				</span>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="https://wiki.tox.chat/">
+							<span class="fa fa-globe"></span> Wiki
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/irungentoo/toxcore">
+							<span class="fa fa-github"></span> Code
+						</a>
+					</li>
+					<li>
+						<a href="https://lists.tox.chat/">
+							<span class="fa fa-envelope"></span> Mailing lists
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.tox.chat/users/community#irc">
+							<span class="fa fa-comments"></span> IRC
+						</a>
+					</li>
+					<li>
+						<a href="https://blog.tox.chat/">
+							<span class="fa fa-rss"></span> Blog
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="faqintro" class="dark center">
+		<div class="container-fluid limit-width">
+			<h1 class="header">FAQ</h1>
+
+			<p class="lead">The most common questions we get are answered here. If you have a question for us that you think should appear in this list that doesn't, send an email to the support mailing list with your suggestion: support@lists.tox.chat</p>
+		</div>
+	</section>
+
+	<section id="faq">
+		<div class="container-fluid limit-width">
+			<h1 class="center header">User FAQ</h1>
+			<h5 class="center"><a href="#techfaq">Skip to technical FAQ (advanced)</a></h5>
+
+			<ul class="lead">
+				<li><a href="#how-tox-protects">How does Tox Protect My Privacy?</a></li>
+				<li><a href="#how-add-friend">How do I add Someone?</a></li>
+				<li><a href="#what-when-remove">What happens when I remove someone?</a></li>
+				<li><a href="#tox-plugin-support">Does Tox have plugin support?</a></li>
+				<li><a href="#tox-leak-ip">Does Tox leak my IP address?</a></li>
+			</ul>
+			<hr>
+			<div id="how-tox-privacy">
+				<h3>How does Tox Protect My Privacy?</h3>
+
+				<p class="lead">Tox protects your privacy by removing the need to rely on central authorities to provide messenger services, concealing your identity(In the form of meta-data, your IP address) from people who are not your authorized friends, enforcing Off-The-Record Messaging as the default and only mode of operation for all messages, and by making your identity impossible to forge without stealing your personal private key on your own computer.</p>
+			</div>
+			<hr>
+			<div id="how-add-friend">
+				<h3>How do I add Someone?</h3>
+
+				<p class="lead">Look in the profile or settings panel of your client to get your Tox ID which should look something like:</p>
+				<pre>56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5</pre>
+
+				<p class="lead">Give yours to your friend and get your friend to add it. That's it.</p>
+
+				<p class="lead">If you want a shorter more memorable ID, be sure to read and understand the <a href="#add-friend-warning">WARNING</a>.</p>
+
+				<p class="lead">There are various possibilities like ToxDNS which make the contact easier - unfortunately at the unavoidable price of lost protection. Even if you decide to trust the service owner, you still access highly unreliable data supplied by third parties. You may call a contact via a name service and recognize his/her face on the screen but you will not know whether someone else is participating in your conversation behind the scenes. In other words, you lose the confidentiality which Tox otherwise offers.</p>
+
+				<p class="lead">The same applies to sharing/getting the Tox IDs via mail or web pages (https is somewhat better). If you want to embed a link to your Tox ID on a web page or in your email signature, check out Tox: URIs. Go here for more general information on sharing ID's.</p>
+			</div>
+			<hr>
+			<div id="what-when-remove">
+				<h3>What happens when I remove someone?</h3>
+
+				<p class="lead">If you remove someone, they will see you go offline, as if you closed client normally. They can't communicate with you any longer until you add them to your friend list again.</p>
+			</div>
+			<hr>
+			<div id="tox-plugin-support">
+				<h3>Does Tox have plugin support?</h3>
+
+				<p class="lead">Currently Tox does not support plugins, though this feature may be added later on.</p>
+			</div>
+			<hr>
+			<div id="tox-leak-ip">
+				<h3>Does Tox leak my IP address?</h3>
+
+				<p class="lead">Tox makes no attempt to cloak your IP address when communicating with other users, as the whole point of peer-to-peer is to connect you directly to your friends. A workaround does exist in the form of tunneling your Tox connections through Tor. However, a user cannot uncover another user's IP address using only a Tox ID to find the user in the DHT, the IP address will only be discernible when the users become “friends.”</p>
+
+				<p class="lead">See Also: <a href="#tox-tracking-dht">What is stopping people from tracking me through the public DHT (advanced)</a>.</p>
+			</div>
+
+			<hr>
+
+			<h1 id="techfaq" class="center">Technical FAQ (advanced)</h1>
+			<h5 class="center"><a href="#faq">Back to user FAQ</a></h5>
+
+			<ul class="lead">
+				<li><a href="#what-is-tox-advanced">What is Tox? (Advanced)</a></li>
+				<li><a href="#tox-central-servers">Does Tox Rely on Central Servers?</a></li>
+				<li><a href="#encryption">Encryption</a></li>
+				<li><a href="#tox-encryption-algorithm">Which encryption algorithms does Tox employ?</a></li>
+				<li><a href="#tox-encryption-otr">How does Tox's Encryption compare to OTR?</a></li>
+				<li><a href="#tox-over-tor">Can I use Tox over Tor?</a></li>
+				<li><a href="#bootstrap-node-list">Where can I find a public DHT node to bootstrap with?</a></li>
+				<li><a href="#tox-av-used">What is used for A/V?</a></li>
+				<li><a href="#tox-data-corrupted">Can data sent through Tox be corrupted?</a></li>
+				<li><a href="#tox-tracking-dht">What is stopping people from tracking me through the public DHT</a></li>
+			</ul>
+			<hr>
+			<div id="what-is-tox-advanced">
+				<h3>What is Tox? (Advanced)</h3>
+
+				<p class="lead">Have a look at our <a href="about.html">About page</a>.</p>
+			</div>
+			<hr>
+			<div id="tox-central-servers">
+				<h3>Does Tox Rely on Central Servers?</h3>
+
+				<p class="lead">No. That said, in some situations a client will choose to use central node to jump onto the distributed network.</p>
+			</div>
+			<hr>
+			<div id="encryption">
+				<h3>Encryption</h3>
+
+				<p class="lead">Encryption makes it impossible for anyone who is not the sender or recipient of a message to know content of message. All Tox communications (text, audio, video, file transfers, etc) are encrypted. That includes <a href="https://en.wikipedia.org/wiki/Forward_secrecy">perfect forward secrecy</a>, so all other Tox sessions (including those with the same friend) are safe in the case that someone manages to decrypt one session. This is not negotiable; it is the only mode Tox will operate in.</p>
+
+				<p class="lead">Thanks to public key cryptography, it is also impossible to pretend to be another Tox user, unless you were to steal that user's private key.</p>
+			</div>
+			<hr>
+			<div id="tox-encryption-algorithm">
+				<h3>Which encryption algorithms does Tox employ?</h3>
+
+
+				<p class="lead">Tox uses the encryption algorithms present in the NaCl crypto library, via libsodium</p>
+
+				<pre>&lt;irungentoo&gt; (…) curve25519 for the key exchange, xsalsa20 for the encryption and poly1305 for the MAC></pre>
+
+				<p class="lead">More info: <a href="https://github.com/irungentoo/toxcore/blob/master/docs/updates/Crypto.md">https://github.com/irungentoo/toxcore/blob/master/docs/updates/Crypto.md</a></p>
+			</div>
+			<hr>
+			<div id="tox-encryption-otr">
+				<h3>How does Tox's Encryption compare to OTR?</h3>
+
+				<p class="lead">The encryption used in Tox not only provides same features as OTR, but is also the default, and only operation mode of Tox.</p>
+			</div>
+			<hr>
+			<div id="tox-over-tor">
+				<h3>Can I use Tox over Tor?</h3>
+
+				<p class="lead"> Yes! See <a href="https://wiki.tox.chat/users/tox_over_tor_tot">Tox over Tor (ToT)</a>.</p>
+			</div>
+			<hr>
+			<div id="bootstrap-node-list">
+				<h3>Where can I find a public DHT node to bootstrap with?</h3>
+
+				<p class="lead">Check out <a href="https://nodes.tox.chat">nodes</a> for an updated list. </p>
+			</div>
+			<hr>
+			<div id="tox-av-used">
+				<h3>What is used for A/V?</h3>
+
+				<p class="lead">Opus for audio and VPX (currently 8) for video.</p>
+				<p class="lead">SIP is not being used.</p>
+			</div>
+			<hr>
+			<div id="tox-data-corrupted">
+				<h3>Can data sent through Tox be corrupted?</h3>
+
+				<pre>&lt;irungentoo&gt; toxcore packets are encrypted with MACed crypto so data will never be corrupted in transit</pre>
+				<p class="lead">It basically means that data won't ever be corrupted when sending between Tox clients</p>
+			</div>
+			<hr>
+			<div id="tox-tracking-dht">
+				<h3>What is stopping people from tracking me through the public DHT</h3>
+
+				<p class="lead">Tox generates a temporary public/private key pair used to make connections to peers in the DHT. Onion routing is used to store and locate Tox IDs, to make it more difficult to, for example, associate Alice and Bob together by who they are looking for in the network.</p>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="dark">
+		<div class="container-fluid limit-width">
+			<div class="languages">
+
+			</div>
+
+			<div class="soc-med pull-left">
+				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
+				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
+				<a class="button" href="https://blog.tox.chat/" title="Subscribe to our blog"><span class="icon fa fa-rss"></span></a>
+			</div>
+
+			<div class="cc pull-right">
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="img/CC.png"></a>
+				<br>
+				<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
