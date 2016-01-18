@@ -177,15 +177,15 @@
 				<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
 
 				<h2>Linux</h2>
-
+                <p>Note: support for more distros is coming soon. Experienced package maintainers wanted. Contact infrastructure@tox.chat for more info.</p>
 				<section class="tabsection">
 					<input id="tab-1" name="distroOpt" checked="checked" type="radio">
 					<!--default option shows nothing-->
 					<input id="tab-2" name="distroOpt" type="radio">
 					<label for="tab-2" class="tablabel" title="Debian/Ubuntu/Mint"><span class="icon-debian"></span></label>
 					<div class="tabdiv">
-						<p>For Debian, Ubuntu, Mint, and other apt-based distros:</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly release" | sudo tee /etc/apt/sources.list.d/tox.list
+						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository. Replace <b>$CODENAME</b> with the codename for the appropriate version of your distro (e.g jessie, stretch, trusty, vivid, etc.):</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly $CODENAME" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
@@ -193,16 +193,18 @@ sudo apt-get update</pre>
 						<pre>sudo apt-get install qtox</pre>
 						<p>Or, if you have Ubuntu with Unity:</p>
 						<pre>sudo apt-get install qtox-unity</pre>
-						<p>To see all available clients, do:</p>
+						<p>To see all available packages:</p>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 					<input id="tab-3" name="distroOpt" type="radio">
 					<label for="tab-3" class="tablabel" title="Gentoo"><span class="icon-gentoo"></span></label>
 					<div class="tabdiv">
-						<p>The Tox overlay is now in the official layman list.</p>
+						<p>The Tox Project overlay is in the official Layman list.</p>
 						<p>To add it:</p>
 						<pre>layman -a tox-overlay</pre>
-						<p>More info <a href="https://github.com/Tox/gentoo-overlay-tox">here</a>.</p>
+                        <p>Then install your client of choice:</p>
+                        <pre>emerge --ask <client_name></pre>
+						<p>If you'd like to submit changes, or report issues, you can <a href="https://github.com/Tox/gentoo-overlay-tox">find the overlay on Github</a>.</p>
 					</div>
 					<input id="tab-4" name="distroOpt" type="radio">
 					<label for="tab-4" class="tablabel" title="Arch"><span class="icon-arch"></span></label>
@@ -254,7 +256,7 @@ sudo apt-get update</pre>
 					<label for="tab-20" class="tablabel"><span class="icon-dramabird"></span></label>
 					<div class="tabdiv">
 						<p>Tweet your friends:</p>
-						<p class="socialquote">Tired of worrying if someone's reading your conversations? Ditch Skype and other unsafe chat programs for Tox! </p>
+						<p class="socialquote">Tired of worrying if someone's reading your conversations? Ditch Skype and other unsafe chat programs for #tox! </p>
 						<a href="http://twitter.com/home?status=Tired%20of%20worrying%20if%20someone%27s%20reading%20your%20conversations?%20Ditch%20Skype%20and%20other%20unsafe%20chat%20programs%20for%20%23Tox!%20https://tox.chat/" target="_blank" class="socialbutton tweet">
 							<span class="fa fa-twitter">&nbsp;</span>Tweet
 						</a>
@@ -263,7 +265,7 @@ sudo apt-get update</pre>
 					<label for="tab-30" class="tablabel"><span class="icon-minionbook"></span></label>
 					<div class="tabdiv">
 						<p>Post on Facebook:</p>
-						<p class="socialquote">Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever.</p>
+						<p class="socialquote">Whether it's corporations or governments, there's just too much digital spying going on today. Tox is easy-to-use software that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever.</p>
 						<a href="https://www.facebook.com/sharer/sharer.php?u=tox.chat" target="_blank" class="socialbutton facebook">
 							<span class="fa fa-facebook">&nbsp;&nbsp;</span>Share
 						</a>
