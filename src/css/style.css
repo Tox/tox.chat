@@ -127,13 +127,13 @@ tbody th:first-child, thead th {
 	margin-bottom: 10px;
 	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0.1em 0px rgba(255, 255, 255, 0.1) inset, 0px -0.15em 0px rgba(0, 0, 0, 0.2) inset, 0px 0.15em 0px rgba(0, 0, 0, 0.075);
-	transition: 0.4s;
+	transition: 0.2s;
 }
 
 /* Image slideshow */
 .slider {
-	height: 320px;
-	min-width: 200px;
+	max-height: 450px;
+	min-width: 300px;
 	margin: auto;
 	margin-top: 20px;
 	position: relative;
@@ -149,10 +149,10 @@ tbody th:first-child, thead th {
 	width: 500%;
 	position: relative;
 	padding-left: 0;
-	-webkit-transition: left .8s ease-out;
-	-moz-transition: left .8s ease-out;
-	-o-transition: left .8s ease-out;
-	transition: left .8s ease-out;
+	-webkit-transition: left 0.2s ease-out;
+	-moz-transition: left 0.2s ease-out;
+	-o-transition: left 0.2s ease-out;
+	transition: left 0.2s ease-out;
 }
 
 .sliderinner > ul > li {
@@ -169,7 +169,7 @@ tbody th:first-child, thead th {
 .sliderinner > ul > li > div > img {
 	position: relative;
 	left: -50%;
-	height: 320px;
+	max-height: 450px;
 }
 
 .slider input[type=radio] {
@@ -195,10 +195,10 @@ tbody th:first-child, thead th {
 	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
 	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.8);
 	box-shadow: 0px 0px 3px rgba(0,0,0,.8);
-	-webkit-transition: background-color .2s;
-	-moz-transition: background-color .2s;
-	-o-transition: background-color .2s;
-	transition: background-color .2s;
+	-webkit-transition: background-color 0.2s;
+	-moz-transition: background-color 0.2s;
+	-o-transition: background-color 0.2s;
+	transition: background-color 0.2s;
 }
 
 .slider input:checked label { background-color: #333; }
@@ -332,7 +332,7 @@ tbody th:first-child, thead th {
 
 #clients img {
 	max-width: 100%;
-	max-height: 500px;
+	max-height: 450px;
 	margin: auto;
 	display: block;
 }
@@ -403,9 +403,9 @@ tbody th:first-child, thead th {
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 99999;
 	opacity:0;
-	-webkit-transition: opacity 200ms ease-in;
-	-moz-transition: opacity 200ms ease-in;
-	transition: opacity 200ms ease-in;
+	-webkit-transition: opacity 0.2s ease-in;
+	-moz-transition: opacity 0.2s ease-in;
+	transition: opacity 0.2s ease-in;
 	pointer-events: none;
 }
 
@@ -416,7 +416,7 @@ tbody th:first-child, thead th {
 
 .modalDialog > div {
 	width: 90%;
-	max-width: 700px;
+	max-width: 900px;
 	max-height: 90%;
 	position: relative;
 	margin-left: auto;
@@ -463,12 +463,12 @@ label.tablabel {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	transition:.2s ease-out;
+	transition: 0.2s ease-out;
 }
 
 label.tablabel:hover {
 	opacity:0.7;
-	transition:.2s;
+	transition: 0.2s;
 }
 
 div.tabdiv {
