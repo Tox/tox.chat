@@ -182,14 +182,14 @@ for (var i = 0; i < clients.length; i++) {
 	var client = clients[i];
 
 	var button = "\
-	<a id='link" + i + "' href='" + client.dlLink + "' class='button download'>\
+	<a id='link" + i + "' href='" + client.dlLink + "' class='button large-button download'>\
 		<span class='fa fa-" + client.icon + "'>&nbsp;</span>" + client.title + "\
 	</a>";
 
 	var infoButton = "";
 	if (client.desc) {
 		infoButton = "\
-		<a class='button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name + "' title='More info'>\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name + "' title='More info'>\
 			<span class='fa fa-info-circle'></span>\
 		</a>";
 	}
