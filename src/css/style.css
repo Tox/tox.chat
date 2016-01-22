@@ -372,7 +372,7 @@ tbody th:first-child, thead th {
 	margin-bottom: 5px;
 }
 
-#footer .soc-med {
+#footer .ext-med {
 	margin-top: 30px;
 }
 
@@ -380,7 +380,7 @@ tbody th:first-child, thead th {
 	margin-bottom: 25px;
 }
 
-.soc-med .icon {
+#footer .ext-med .icon {
 	font-size: 30px;
 	margin-right: 10px;
 }
@@ -394,7 +394,7 @@ tbody th:first-child, thead th {
 		display: none;
 	}
 
-	#footer .soc-med {
+	#footer .ext-med {
 		top: 30px;
 		margin-top: 0;
 	}
@@ -444,6 +444,16 @@ tbody th:first-child, thead th {
 	width: 24px;
 	text-decoration: none;
 	font-weight: bold;
+}
+
+.close-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	z-index: -1;
 }
 
 section.tabsection {
