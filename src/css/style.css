@@ -339,7 +339,13 @@ tbody th:first-child, thead th {
 
 @media (min-width: 768px) {
 	#clients .img-container {
-		padding-right: 20px;
+		margin-right: 20px;
+		float: left;
+	}
+
+	#clients table {
+		width: 0;
+		margin-right: 20px;
 		float: left;
 	}
 }
