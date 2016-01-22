@@ -487,6 +487,12 @@ label.tablabel:hover {
 	transition: 0.2s;
 }
 
+label.tablabel > .text {
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
+}
+
 div.tabdiv {
 	width: 100%;
 	padding: 1em;

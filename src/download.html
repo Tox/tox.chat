@@ -164,7 +164,7 @@
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">Toxic 32 bit</a> | <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
 
 				</div>
-			</div>
+			</div>l
 
 			<div class="row">
 				<div class="col-sm-4 feature">
@@ -203,7 +203,10 @@
 					<input id="tab-1" name="distroOpt" checked="checked" type="radio">
 					<!--default option shows nothing-->
 					<input id="tab-2" name="distroOpt" type="radio">
-					<label for="tab-2" class="tablabel" title="Debian/Ubuntu/Mint"><span class="icon-debian"></span></label>
+					<label for="tab-2" class="tablabel" title="Debian/Ubuntu">
+						<span class="icon-debian"></span>
+						<div class="text">Debian/Ubuntu</div>
+					</label>
 					<div class="tabdiv">
 						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository. Replace <b>$CODENAME</b> with the codename for the appropriate version of your distro (e.g jessie, stretch, trusty, vivid, etc.):</p>
 						<pre>echo "deb https://pkg.tox.chat/debian nightly $CODENAME" | sudo tee /etc/apt/sources.list.d/tox.list
@@ -217,18 +220,26 @@ sudo apt-get update</pre>
 						<p>To see all available packages:</p>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
+
 					<input id="tab-3" name="distroOpt" type="radio">
-					<label for="tab-3" class="tablabel" title="Gentoo"><span class="icon-gentoo"></span></label>
+					<label for="tab-3" class="tablabel" title="Gentoo">
+						<span class="icon-gentoo"></span>
+						<div class="text">Gentoo</div>
+					</label>
 					<div class="tabdiv">
 						<p>The Tox Project overlay is in the official Layman list.</p>
 						<p>To add it:</p>
 						<pre>layman -a tox-overlay</pre>
-                        <p>Then install your client of choice:</p>
-                        <pre>emerge --ask <client_name></pre>
+						<p>Then install your client of choice:</p>
+						<pre>emerge --ask <client_name></pre>
 						<p>If you'd like to submit changes, or report issues, you can <a href="https://github.com/Tox/gentoo-overlay-tox">find the overlay on Github</a>.</p>
 					</div>
+
 					<input id="tab-4" name="distroOpt" type="radio">
-					<label for="tab-4" class="tablabel" title="Arch"><span class="icon-arch"></span></label>
+					<label for="tab-4" class="tablabel" title="Arch">
+						<span class="icon-arch"></span>
+						<div class="text">Arch</div>
+					</label>
 					<div class="tabdiv">
 						<p>To install (for example) µTox:</p>
 						<pre>yaourt -S utox</pre>
