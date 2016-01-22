@@ -293,17 +293,17 @@ tbody th:first-child, thead th {
 	max-width: 900px;
 }
 
-#screenshot .screenshot.mobile {
+#screenshot #mobile-slider {
 	display: none;
 	margin: auto;
 	max-width: 300px;
 }
 
 @media (max-width: 550px) {
-	#screenshot .screenshot {
+	#screenshot #desktop-slider {
 		display: none;
 	}
-	#screenshot .screenshot.mobile {
+	#screenshot #mobile-slider {
 		display: block;
 	}
 }
