@@ -499,6 +499,7 @@ label.tablabel:hover {
 
 label.tablabel > .text {
 	width: 100%;
+	display: block;
 	text-align: center;
 	font-weight: 400;
 }

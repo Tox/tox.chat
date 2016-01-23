@@ -28,7 +28,7 @@
 				<a class="navbar-brand" href="index.html"><img src="img/logo.svg"></a>
 				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
 				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
-				<span class="tinynav navbar-toggle collapsed">
+				<div class="tinynav navbar-toggle collapsed">
 					<ul class="nav navbar-nav">
 						<li>
 							<a href="download.html">
@@ -66,7 +66,7 @@
 							</a>
 						</li>
 					</ul>
-				</span>
+				</div>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
@@ -205,7 +205,7 @@
 					<input id="tab-2" name="distroOpt" type="radio">
 					<label for="tab-2" class="tablabel" title="Debian/Ubuntu">
 						<span class="icon-debian"></span>
-						<div class="text">Debian/Ubuntu</div>
+						<span class="text">Debian/Ubuntu</span>
 					</label>
 					<div class="tabdiv">
 						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository. Replace <b>$CODENAME</b> with the codename for the appropriate version of your distro (e.g jessie, stretch, trusty, vivid, etc.):</p>
@@ -224,21 +224,21 @@ sudo apt-get update</pre>
 					<input id="tab-3" name="distroOpt" type="radio">
 					<label for="tab-3" class="tablabel" title="Gentoo">
 						<span class="icon-gentoo"></span>
-						<div class="text">Gentoo</div>
+						<span class="text">Gentoo</span>
 					</label>
 					<div class="tabdiv">
 						<p>The Tox Project overlay is in the official Layman list.</p>
 						<p>To add it:</p>
 						<pre>layman -a tox-overlay</pre>
 						<p>Then install your client of choice:</p>
-						<pre>emerge --ask <client_name></pre>
+						<pre>emerge --ask &lt;client_name&gt;</pre>
 						<p>If you'd like to submit changes, or report issues, you can <a href="https://github.com/Tox/gentoo-overlay-tox">find the overlay on Github</a>.</p>
 					</div>
 
 					<input id="tab-4" name="distroOpt" type="radio">
 					<label for="tab-4" class="tablabel" title="Arch">
 						<span class="icon-arch"></span>
-						<div class="text">Arch</div>
+						<span class="text">Arch</span>
 					</label>
 					<div class="tabdiv">
 						<p>To install (for example) µTox:</p>
