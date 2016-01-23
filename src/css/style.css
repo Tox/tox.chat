@@ -199,11 +199,13 @@ tbody th:first-child, thead th {
 
 .slider input:checked label { background-color: #333; }
 
-.slider label[for=cover-images-control1] { margin-left: -18px }
-.slider label[for=cover-images-control3] { margin-left: 18px }
-.slider input[type=radio]#cover-images-control1:checked ~ .sliderinner > ul { left: 0 }
-.slider input[type=radio]#cover-images-control2:checked ~ .sliderinner > ul { left: -100% }
-.slider input[type=radio]#cover-images-control3:checked ~ .sliderinner > ul { left: -200% }
+.slider label[for=desktop-images-control1] { margin-left: -18px }
+.slider label[for=desktop-images-control3] { margin-left: 18px }
+.slider input[type=radio]#desktop-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider input[type=radio]#desktop-images-control2:checked ~ .sliderinner > ul { left: -100% }
+.slider input[type=radio]#desktop-images-control3:checked ~ .sliderinner > ul { left: -200% }
+
+.slider input[type=radio]#mobile-images-control1:checked ~ .sliderinner > ul { left: 0 }
 
 .slider label[for=qtox-images-control1] { margin-left: -9px }
 .slider label[for=qtox-images-control2] { margin-left: 9px }
