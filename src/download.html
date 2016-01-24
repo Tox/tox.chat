@@ -208,8 +208,8 @@
 						<span class="text">Debian/Ubuntu</span>
 					</label>
 					<div class="tabdiv">
-						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository. Replace <b>$CODENAME</b> with the codename for the appropriate version of your distro (e.g jessie, stretch, trusty, vivid, etc.):</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $CODENAME" | sudo tee /etc/apt/sources.list.d/tox.list
+						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository.</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
