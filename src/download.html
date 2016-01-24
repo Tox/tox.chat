@@ -120,7 +120,7 @@
 						After you've installed, try <a href="tox:56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5">adding GroupBot</a>, and then <a href="#social">invite some friends</a>! Want to know more about the different clients? See our <a href="clients.html">clients list</a>.
 					</p>
 
-					<h6><a href="#warning">Note: Tox is still under heavy development — expect to run into some bugs.</a></h6>
+					<h5><a href="#warning">Note: Tox is still under heavy development — expect to run into some bugs.</a></h5>
 
 					<span id="defaultButton">
 						<a href="#oses" class="button large-button download">
@@ -145,7 +145,7 @@
 				<div class="col-sm-4 feature">
 					<img src="img/plat/windows_dark.svg">
 					<h2>Windows</h2>
-					<p class="lead"><a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip">qTox 32 bit</a> | <a href="https://build.tox.chat/view/Clients/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip">64 bit</a></p>
+					<p class="lead"><a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">qTox 32 bit</a> | <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">64 bit</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"> uTox 32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
 				</div>
 
@@ -208,8 +208,8 @@
 						<span class="text">Debian/Ubuntu</span>
 					</label>
 					<div class="tabdiv">
-						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository. Replace <b>$CODENAME</b> with the codename for the appropriate version of your distro (e.g jessie, stretch, trusty, vivid, etc.):</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $CODENAME" | sudo tee /etc/apt/sources.list.d/tox.list
+						<p>For Debian, Ubuntu, Mint, and other distros using the apt package manager, you'll need to run the following commands to add our repository.</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
