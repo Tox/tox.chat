@@ -128,7 +128,7 @@ tbody th:first-child, thead th {
 
 /* Image slideshow */
 .slider {
-	max-height: 450px;
+	max-height: 500px;
 	min-width: 300px;
 	margin: auto;
 	margin-top: 20px;
@@ -165,7 +165,7 @@ tbody th:first-child, thead th {
 .sliderinner > ul > li > div > img {
 	position: relative;
 	left: -50%;
-	max-height: 450px;
+	max-height: 500px;
 }
 
 .slider input[type=radio] {
