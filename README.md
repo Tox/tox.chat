@@ -1,5 +1,5 @@
 # tox.chat
-The future website for Tox!
+The Tox Project's official website!
 
 ## Contributing
 
