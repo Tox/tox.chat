@@ -26,6 +26,12 @@ We make use of the Font-Awesome icon pack as a git submodule. In order to make s
  - If HTML would split your sentence (as in, `this <a href="/">sentence</a> has garbage inline`), copy it into en.json as an array:
    `"key": ["this", "sentence", "has garbage inline"]`. Then use the same key for all the parts, except put an @-sign at the end:
    `{{ key@ }} <a href="/">{{ key@ }}</a> {{ key@ }}`. This will work as you expect, and saves translators from having to work with HTML fragments.
+ - JSON file reserved tables:
+   - `multi` is used for strings used on multiple templates like the top bar. 
+     File-specific sections are overlaid on `multi` as needed.
+ - JSON file reserved keys:
+   - `multi -> _ind`: Not used yet
+   - `multi -> lang_native`: Name of the language in that native language. e.g.: Français, 日本語.
 
 ### Pull requests
 If you want your pull request to be merged quickly, you need to make it easy to review.
