@@ -1,0 +1,65 @@
+{
+    "multi": {
+        "_lang_native": "French",
+        "_ind": -1,
+
+        "k_hl_title": "Un nouveau genre de messagerie instantanée",
+        "k_hl_description": "Que ce soit des sociétés ou des gouvernements, la surveillance numérique est aujourd'hui très répandue. Tox est une application facile à utiliser qui vous permet de rester en contact avec votre famille et vos amis sans que personne d'autre ne puisse espionner. Alors que les autres services de renom vous imposent de payer pour ces fonctionnalités, Tox est totalement gratuit et est livré sans publicité – pour toujours.",
+
+        "k_irc": "IRC",
+        "k_wiki": "Documentation",
+        "k_download": "Télécharger",
+        "k_sourcecode": "Code source",
+        "k_mailinglists": "Listes de diffusion",
+        "k_blog": "Blog",
+
+        "k_in_another_language": "Dans un autre langage :",
+        "k_language_sep": ",",
+
+        "k_cc_license": [
+            "Ce site web est sous license",
+            "Creative Commons Attribution-ShareAlike 4.0 International License"
+        ]
+    },
+    "index.html": {
+        "k_encrypted_description": "Tout ce que vous faites sur Tox est chiffré avec des librairies sous license libre. Les seules personnes qui peuvent lire vos messages sont vous et la personne à qui vous parlez.",
+        "k_audio_description": "Restez en contact avec vos amis et votre famille en utilisant les appels vocaux et vidéos, chiffrés et gratuits, de Tox.",
+        "k_group_description": "Discutez, apellez, partagez des videos et des fichiers avec tout le monde dans les groupes Tox.",
+        "k_screenshare_description": "Partagez votre écran avec vos amis.",
+        "k_audio_title": "Voix",
+        "k_distributed_title": "Distribué",
+        "k_fileshare_description": "Partagez des fichiers, sans aucune restriction.",
+        "k_group_title": "Groupes",
+        "k_freedom_description": [
+            "Tox est un logiciel libre. Il est",
+            "libre comme dans liberté",
+            "mais également gratuit. C'est votre Tox – pour discuter, envoyer des fichiers, passer un appel video – parce que Tox est développé par et pour les utilisateurs."
+        ],
+        "k_learnmore": "En savoir plus",
+        "k_im_description": "Parlez avec vos amis, où que vous soyez, avec la messagerie sécurisé Tox.",
+        "k_distributed_description": "Tox n'a aucun serveur central qui peut être attaqué, fermé ou forcé de transmettre vos données privées – le réseau est composé de ses utilisateurs. Vous profitez d'une application qui sera toujours en ligne !",
+        "k_freedom_title": "Gratuit",
+        "k_video_description": "Parlez en tête-à-tête, grâce aux appels vidéos de Tox.",
+        "k_video_title": "Video",
+        "k_screenshare_title": "Partage d'écran",
+        "k_different_title": "Qu'est-ce qui rend Tox différent ?",
+        "k_im_title": "Messagerie instantanée",
+        "k_encrypted_title": "Chiffré",
+        "k_fileshare_title": "Partage de fichier",
+        "k_different_content": [
+            "Tox est développé par les gens qui l'utilisent – des gens qui ont dit non aux systèmes qui les espionnent, les censurent, les traquent et qui les empêchent d'innover.",
+            "Tox n'a aucun but commercial. Juste la simplicité et la fonctionnalité qui sont libérées quand les gens veulent vraiment se connecter."
+        ]
+    },
+    "download.html": {
+        "k_thanks_description": [
+            "Après avoir installé Tox, essayez",
+            "d'ajouter GroupBot",
+            ", et ensuite",
+            "invitez quelques amis",
+            "!"
+        ],
+        "k_warning_bugs": "NB: Tox est toujours en cours de développement — des bugs peuvent survenir.",
+        "k_thanks_title": "Merci d'avoir téléchargé !"
+    }
+}
