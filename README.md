@@ -31,7 +31,7 @@ We make use of the Font-Awesome icon pack as a git submodule. In order to make s
      File-specific sections are overlaid on `multi` as needed.
  - JSON file reserved keys:
    - `multi -> _ind`: Not used yet
-   - `multi -> lang_native`: Name of the language in that native language. e.g.: Français, 日本語.
+   - `multi -> _lang_native`: Name of the language in that native language. e.g.: Français, 日本語.
 
 ### Pull requests
 If you want your pull request to be merged quickly, you need to make it easy to review.
