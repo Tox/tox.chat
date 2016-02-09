@@ -124,6 +124,8 @@ class Langs(object):
 def main():
     if len(sys.argv) >= 2:
         act = sys.argv[1]
+    else:
+        act = None
 
     cache = Langs()
 
