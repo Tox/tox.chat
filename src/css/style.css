@@ -292,6 +292,10 @@ tbody th:first-child, thead th {
 	text-decoration: none;
 }
 
+#clients .row {
+	margin: 0px;
+}
+
 #screenshot .screenshot {
 	width: 100%;
 	max-width: 900px;
