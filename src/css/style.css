@@ -312,6 +312,11 @@ tbody th:first-child, thead th {
 	}
 }
 
+.hr-long {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .features {
 	background: #fff;
 	color: #414141;
