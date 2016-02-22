@@ -439,13 +439,13 @@ tbody th:first-child, thead th {
 	margin-right: auto;
 	margin-top: 60px;
 	padding: 5px 20px 13px 20px;
-	background: #fff;
+	background: transparent;
 	border-radius: 3px;
 	overflow-y: auto;
 }
 
 .close {
-	color: #000;
+	color: #fff;
 	line-height: 25px;
 	position: absolute;
 	right: 0px;
@@ -455,7 +455,9 @@ tbody th:first-child, thead th {
 	text-decoration: none;
 	font-weight: bold;
 }
-
+.close:focus, .close:hover {
+	color: #fff;
+}
 .close-overlay {
 	position: fixed;
 	top: 0;
