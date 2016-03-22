@@ -57,6 +57,14 @@ a {
 	margin-left: 10px;
 }
 
+.button img {
+	vertical-align:bottom;
+}
+
+.do-button {
+	margin-left:20px;
+}
+
 section {
 	padding: 45px 25px;
 }
