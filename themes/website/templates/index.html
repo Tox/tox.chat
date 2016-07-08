@@ -1,0 +1,129 @@
+{% extends '_base.html' %}
+{% block content %}
+	<section id="cover" class="center dark">
+		<div class="container-fluid limit-width">
+			<div id="cover-line">
+				<div class="col-sm-4"><img src="theme/img/icon.svg" alt=""></div>
+				<div class="col-sm-8">
+					<h1 class="header">A New Kind of Instant Messaging</h1>
+					<p class="lead">Whether it's corporations or governments, digital surveillance today is widespread. Tox is easy-to-use software that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is completely free and comes without advertising &mdash; forever.</p>
+
+					<a href="download.html" class="button large-button download">
+						<span class="fa fa-download">&nbsp;</span>Download
+					</a>
+
+					<a href="about.html" class="button large-button learn-more">
+						<span class="fa fa-info-circle">&nbsp;</span>Learn more
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="screenshot" class="center">
+		<div class="container-fluid limit-width">
+			<div id="desktop-slider" class="slider">
+				<input type="radio" id="desktop-images-control1" name="desktop-images-controls" checked="checked">
+				<label for="desktop-images-control1"></label>
+				<input type="radio" id="desktop-images-control2" name="desktop-images-controls">
+				<label for="desktop-images-control2"></label>
+				<input type="radio" id="desktop-images-control3" name="desktop-images-controls">
+				<label for="desktop-images-control3"></label>
+
+				<div class="sliderinner">
+					<ul>
+						<li><div><img src="theme/img/client/qtox_mac.png"></div></li>
+						<li><div><img src="theme/img/client/utox_mac.png"></div></li>
+						<li><div><img src="theme/img/client/toxic_linux.png"></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="mobile-slider" class="slider">
+				<input type="radio" id="mobile-images-control1" name="mobile-images-controls" checked="checked">
+				<label for="mobile-images-control1"></label>
+
+				<div class="sliderinner">
+					<ul>
+						<li><div><img src="theme/img/client/antox.png"></div></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="client-features" class="features">
+		<div class="container-fluid limit-width">
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-comment"></span>
+					<h2>Instant messaging</h2>
+					<p class="lead">Chat instantly across the globe with Tox's secure messages.</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-phone"></span>
+					<h2>Voice</h2>
+					<p class="lead">Keep in touch with friends and family using Tox's completely free and encrypted voice calls.</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-video-camera"></span>
+					<h2>Video</h2>
+					<p class="lead">Catch up face to face, over Tox's secure video calls.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-desktop"></span>
+					<h2>Screen sharing</h2>
+					<p class="lead">Share your desktop with your friends with Tox's screen sharing.</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-file-text"></span>
+					<h2>File sharing</h2>
+					<p class="lead">Trade files, with no artificial limits or caps.</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-group"></span>
+					<h2>Groups</h2>
+					<p class="lead">Chat, call, and share video and files with the whole gang in Tox's group chats.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="about" class="center dark">
+		<div class="container-fluid limit-width">
+			<h2 class="header">What makes Tox different?</h2>
+			<p class="lead">Tox is made by the people who use it &mdash; people fed up with the existing options that spy on us, track us, censor us, and keep us from innovating.</p>
+			<p class="lead">There are no corporate interests, and no hidden agendas. Just the simplicity and functionality that are set free when people truly want to connect.</p>
+		</div>
+	</section>
+
+	<section id="features" class="features">
+		<div class="container-fluid limit-width">
+			<div class="row">
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-shield"></span>
+					<h2>Encrypted</h2>
+					<p class="lead">Everything you do with Tox is encrypted using open-source libraries. The only people who can see your conversations are the people you're talking with.</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<img src="theme/img/distributed.svg" style="height:1em;pointer-events:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;" class="icon fa">
+					<h2>Distributed</h2>
+					<p class="lead">Tox has no central servers that can be raided, shut down, or forced to turn over data &mdash; the network is made up of its users. Say goodbye to server outages!</p>
+				</div>
+
+				<div class="col-sm-4 feature">
+					<span class="icon fa fa-heart"></span>
+					<h2>Free</h2>
+					<p class="lead">Tox is free software. That's <a href="https://www.gnu.org/philosophy/free-sw.html">free as in freedom</a>, as well as in price. This means Tox is yours &mdash; to use, modify, and share &mdash; because Tox is developed by and for the users.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
