@@ -1,119 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<title>A New Kind of Instant Messaging</title>
-
-	<link href="css/fonts.css" rel="stylesheet">
-	<link href="Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-
-	<meta property="og:title" content="A New Kind of Instant Messaging"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://tox.chat"/>
-	<meta property="og:image" content="https://tox.chat/img/toxvert.png"/>
-	<meta property="og:site_name" content="Project Tox"/>
-	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising — forever."/>
-</head>
-
-<body>
-	<nav class="navbar">
-		<div class="container-fluid limit-width">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/logo.svg"></a>
-				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
-				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
-				<div class="tinynav navbar-toggle collapsed">
-					<ul class="nav navbar-nav">
-						<li>
-							<a href="download.html">
-								<span class="fa fa-download"></span> Download
-							</a>
-						</li>
-						<li>
-							<a href="about.html">
-								<span class="fa fa-align-left"></span> About
-							</a>
-						</li>
-						<li>
-							<a href="faq.html">
-								<span class="fa fa-info-circle"></span> FAQ
-							</a>
-						</li>
-						<li>
-							<a href="clients.html">
-								<span class="fa fa-list-ul"></span> Clients
-							</a>
-						</li>
-						<li>
-							<a href="https://wiki.tox.chat/">
-								<span class="fa fa-globe"></span> Wiki
-							</a>
-						</li>
-						<li>
-							<a href="https://lists.tox.chat/">
-								<span class="fa fa-envelope"></span> Mailing lists
-							</a>
-						</li>
-						<li>
-							<a href="https://blog.tox.chat/">
-								<span class="fa fa-rss"></span> Blog
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="download.html">
-							<span class="fa fa-download"></span> Download
-						</a>
-					</li>
-					<li>
-						<a href="about.html">
-							<span class="fa fa-align-left"></span> About
-						</a>
-					</li>
-					<li>
-						<a href="faq.html">
-							<span class="fa fa-info-circle"></span> FAQ
-						</a>
-					</li>
-					<li>
-						<a href="clients.html">
-							<span class="fa fa-list-ul"></span> Clients
-						</a>
-					</li>
-					<li>
-						<a href="https://wiki.tox.chat/">
-							<span class="fa fa-globe"></span> Wiki
-						</a>
-					</li>
-					<li>
-						<a href="https://lists.tox.chat/">
-							<span class="fa fa-envelope"></span> Mailing lists
-						</a>
-					</li>
-					<li>
-						<a href="https://blog.tox.chat/">
-							<span class="fa fa-rss"></span> Blog
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
+{% extends '_base.html' %}
+{% block title %}Download{% endblock %}
+{% block content %}
 	<section id="cover" class="dl center dark">
 		<div class="container-fluid limit-width">
 			<div id="cover-line">
-				<div class="col-sm-4"><img id="platImg" src="img/icon.svg" alt=""></div>
+				<div class="col-sm-4"><img id="platImg" src="theme/img/icon.svg" alt=""></div>
 				<div class="col-sm-8">
 					<h1 class="header">Thanks for downloading!</h1>
 					<p class="lead">
@@ -143,32 +34,32 @@
 		<div class="container-fluid limit-width">
 			<div class="row">
 				<div class="col-sm-4 feature">
-					<img src="img/plat/windows_dark.svg">
+					<img src="theme/img/plat/windows_dark.svg">
 					<h2>Windows</h2>
 					<p class="lead"><a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">qTox 32 bit</a> | <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">64 bit</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"> uTox 32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="img/plat/mac_dark.svg">
+					<img src="theme/img/plat/mac_dark.svg">
 					<h2>OS X</h2>
 					<p class="lead"><a href="https://github.com/GrayHatter/uTox/releases/download/v0.7.0/uTox-0.7.0.dmg">uTox 64 bit (OS X 10.7+)</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="img/plat/linux_dark.svg">
+					<img src="theme/img/plat/linux_dark.svg">
 					<h2>Linux</h2>
 					<p class="lead"><a href="#gnulinux">Repo (Apt, Gentoo, Arch)</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="#gnulinux">qTox package</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz">uTox 32 bit</a> | <a href="https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz">64 bit</a></p>
--					<p class="lead" style="margin-top:-15px;"><a href="#gnulinux">Toxic package</a>|<a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit binary</a> | <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit binary</a></p>
+					<p class="lead" style="margin-top:-15px;"><a href="#gnulinux">Toxic package</a>|<a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit binary</a> | <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit binary</a></p>
 
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-sm-4 feature">
-					<img src="img/plat/freebsd_dark.svg">
+					<img src="theme/img/plat/freebsd_dark.svg">
 					<h2>FreeBSD</h2>
 					<p class="lead"><a href="https://www.freshports.org/net-im/qTox">qTox on Freshports</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/uTox">uTox on Freshports</a></p>
@@ -176,13 +67,13 @@
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="img/plat/ios_dark.svg">
+					<img src="theme/img/plat/ios_dark.svg">
 					<h2>iOS</h2>
 					<p class="lead"><a href="https://antidote.im/">Antidote (iOS 8+)</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="img/plat/android_dark.svg">
+					<img src="theme/img/plat/android_dark.svg">
 					<h2>Android</h2>
 					<p class="lead"><a href="#fdroid">Antox (F-droid)</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk">Antox (APK)</a></p>
@@ -322,29 +213,5 @@ sudo apt-get update</pre>
 		</div>
 	</section>
 
-	<footer id="footer" class="dark">
-		<div class="container-fluid limit-width">
-			<div class="languages">
-
-			</div>
-
-			<div class="ext-med pull-left">
-				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
-				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
-				<a class="button" href="https://github.com/irungentoo/toxcore" title="Star us on Github"><span class="icon fa fa-github"></span></a>
-				<a class="button" href="https://wiki.tox.chat/users/community#irc" title="Chat with us on IRC"><span class="icon fa fa-comments"></span></a>
-				<a class="button do-button" href="https://www.digitalocean.com/" title="Proudly hosted by DigitalOcean"><img class="button" src="img/do.svg" /></a>
-			</div>
-
-			<div class="cc pull-right">
-				<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="img/CC.png"></a>
-				<br>
-				<p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a></p>
-			</div>
-		</div>
-	</footer>
-
-	<script src="js/osdetect.js"></script>
-</body>
-
-</html>
+	<script src="theme/js/osdetect.js"></script>
+{% endblock %}

@@ -172,7 +172,7 @@ if (window.navigator.userAgent.indexOf("Windows Phone") != -1) {
 */
 
 // Set platform toxlock
-document.getElementById("platImg").src = "img/plat/" + OSName.toLowerCase() + ".svg";
+document.getElementById("platImg").src = "theme/img/plat/" + OSName.toLowerCase() + ".svg";
 
 // Remove normal button
 document.getElementById("defaultButton").innerHTML = "";

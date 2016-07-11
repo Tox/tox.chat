@@ -1,3 +1,3 @@
 [submodule "Font-Awesome"]
-	path = src/Font-Awesome
+	path = themes/website/static/Font-Awesome
 	url = https://github.com/FortAwesome/Font-Awesome
