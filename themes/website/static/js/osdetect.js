@@ -124,7 +124,7 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 		name: "antox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://build.tox.chat/job/antox_build_android_arm_release/lastSuccessfulBuild/artifact/antox.apk",
+		dlLink: "https://pkg.tox.chat/fdroid/repo/antox.apk",
 	}];
 }
 
