@@ -101,16 +101,31 @@
 					<div class="tabdiv">
 						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
 						<p>Please note that only Debian (Sid, Jessie and Stretch) and Ubuntu (Vivid and Wily) are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
-wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
-sudo apt-get install apt-transport-https
+						<p>For <b>Ubuntu</b> run the following in a terminal:</p>
+
+						<pre>sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/antonbatenev:/tox/xUbuntu_$(lsb_release -rs)/ /' >> /etc/apt/sources.list.d/qtox.list"
+sudo apt-get update
+sudo apt-get install qtox</pre>
+
+						<p>To verify downloaded packages, you can add the repository key to apt. Keep in mind that the Tox Foundation may distribute updates, packages and repositories that your system will trust (<a href="https://help.ubuntu.com/community/SecureApt">more information</a>). To add the key, run:</p>
+
+						<pre>wget http://download.opensuse.org/repositories/home:antonbatenev:tox/xUbuntu_$(lsb_release -rs)/Release.key
+sudo apt-key add - < Release.key
 sudo apt-get update</pre>
-						<p>And to install (for example) qTox:</p>
-						<pre>sudo apt-get install qtox</pre>
-						<p>Or, if you have Ubuntu with Unity:</p>
-						<pre>sudo apt-get install qtox-unity</pre>
-						<p>To see all available packages:</p>
-						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+
+						<p>For <b>Debian</b> run the following as <b>root</b>:</p>
+
+						<pre>echo 'deb http://download.opensuse.org/repositories/home:/antonbatenev:/tox/Debian_$(echo $(lsb_release -rs) | awk '{print int($1)}').0/ /' >> /etc/apt/sources.list.d/qtox.list
+apt-get update
+apt-get install qtox</pre>
+
+						<p>To verify downloaded packages, you can add the repository key to apt. Keep in mind that the Tox Foundation may distribute updates, packages and repositories that your system will trust (<a href="https://wiki.debian.org/SecureApt">more information</a>). To add the key, run:</p>
+
+						<pre>wget http://download.opensuse.org/repositories/home:antonbatenev:tox/Debian_$(echo $(lsb_release -rs) | awk '{print int($1)}').0/Release.key
+apt-key add - < Release.key
+apt-get update</pre>
+
+
 					</div>
 
 					<input id="tab-3" name="distroOpt" type="radio">
