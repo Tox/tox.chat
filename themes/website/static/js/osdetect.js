@@ -42,7 +42,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 	OSName = "Mac";
 
 	clients = [{
-		title: "Download uTox",
+		title: "uTox 64-bit",
 		name: "utox",
 		icon: "download",
 		desc: true,
@@ -54,7 +54,7 @@ if (window.navigator.userAgent.indexOf("iPad") != -1) {
 	OSName = "iOS";
 
 	clients = [{
-		title: "Install Antidote",
+		title: "Antidote",
 		name: "antidote",
 		icon: "external-link",
 		desc: true,
@@ -66,7 +66,7 @@ if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 	OSName = "iOS";
 
 	clients = [{
-		title: "Install Antidote",
+		title: "Antidote",
 		name: "antidote",
 		icon: "external-link",
 		desc: true,
@@ -78,11 +78,17 @@ if (window.navigator.userAgent.indexOf("Linux") != -1) {
 	OSName = "Linux";
 
 	clients = [{
-		title: "Install Repo",
+		title: "Our repository",
 		name: "repo",
 		icon: "list-ul",
 		desc: false,
 		dlLink: "#gnulinux",
+	},  {
+		title: "qTox repository",
+		name: "qtox",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://software.opensuse.org/download.html?project=home%3Aantonbatenev%3Atox&package=qtox",
 	}];
 }
 
@@ -114,11 +120,17 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 	OSName = "Android";
 
 	clients = [{
-		title: "Install Antox",
+		title: "Antox F-Droid",
 		name: "antox",
 		icon: "external-link",
 		desc: true,
 		dlLink: "#fdroid",
+	}, {
+		title: "Antox Google Play",
+		name: "antox",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://play.google.com/store/apps/details?id=chat.tox.antox",
 	}, {
 		title: "Antox APK",
 		name: "antox",
