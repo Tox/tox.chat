@@ -46,7 +46,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "utox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://zodiaclabs.org/storage/c1/uTox-0.4.2.dmg",
+		dlLink: "https://github.com/uTox/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg",
 	}];
 }
 
