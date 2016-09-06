@@ -6,7 +6,7 @@
 			<div id="cover-line">
 				<div class="col-sm-4"><img id="platImg" src="theme/img/icon.svg" alt=""></div>
 				<div class="col-sm-8">
-					<h1 class="header">Thanks for downloading!</h1>
+					<h1 class="header">Thanks for choosing Tox!</h1>
 					<p class="lead">
 						After you've installed, try <a href="tox:56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5">adding GroupBot</a>, and then <a href="#social">invite some friends</a>! Want to know more about the different clients? See our <a href="clients.html">clients list</a>.
 					</p>
@@ -29,61 +29,68 @@
 	</section>
 
 	<section id="oses" class="features">
-		<h1>All Platforms:</h1>
+		<h1><a onClick="toggle_visibility('clients'); return false;">Downloads for all platforms</a></h1>
 		<br>
-		<div class="container-fluid limit-width">
-			<div class="row">
+		<div class="container-fluid limit-width" id="clients">
+			{% set i = 0 %}
+			<!--list of clients with download links-->
+			{% for client in CLIENTS %}
+				{% if i % 3 == 0 %}
+					<div class="row">
+				{% endif %}
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/windows_dark.svg">
-					<h2>Windows</h2>
-					<p class="lead">qTox stable: <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">32 bit</a> / <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">64 bit</a></p>
-					<p class="lead" style="margin-top:-15px;">qTox nightly: <a href="https://build.tox.chat/view/qtox/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip">32 bit</a> / <a href="https://build.tox.chat/view/qtox/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip">64 bit</a></p>
-					<p class="lead" style="margin-top:-15px;">uTox stable: <a href="https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"> 32 bit</a> / <a href="https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip">64 bit</a></p>
+					<img src="{{ client.logo }}" alt="{{ client.name }}" height="200">
+					<h2>{{ client.name }}</h2>
+					<p class="lead">|
+					{% for OS in client.platforms %}
+						<a href="#{{ client.name }}_{{ OS }}">{{ OS }}</a> |
+					{% endfor %}
+					</p>
 				</div>
-
-				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/mac_dark.svg">
-					<h2>OS X</h2>
-					<p class="lead"><a href="https://github.com/uTox/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg">uTox 64 bit (OS X 10.7+)</a></p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/linux_dark.svg">
-					<h2>Linux</h2>
-					<p class="lead"><a href="#gnulinux">Ricin, Toxic, Toxygen and uTox Debian/Ubuntu repo</a></p>
-					<p class="lead" style="margin-top:-15px;"><a href="https://software.opensuse.org/download.html?project=home%3Aantonbatenev%3Atox&package=qtox">qTox repo (Arch, CentOS, Debian, Fedora, openSUSE, Ubuntu)</a></p>
-					<p class="lead" style="margin-top:-15px;"><a href="#gnulinux">Arch and Gentoo repos (not maintained)</a></p>
-					<p class="lead" style="margin-top:-15px;">uTox static: <a href="https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz">64 bit</a></p>
-					<p class="lead" style="margin-top:-15px;">Toxic static: <a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
-
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/freebsd_dark.svg">
-					<h2>FreeBSD</h2>
-					<p class="lead"><a href="https://www.freshports.org/net-im/qTox">qTox on Freshports</a></p>
-					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/uTox">uTox on Freshports</a></p>
-					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/toxic">Toxic on Freshports</a></p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/ios_dark.svg">
-					<h2>iOS</h2>
-					<p class="lead"><a href="https://antidote.im/">Antidote (iOS 8+)</a></p>
-				</div>
-
-				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/android_dark.svg">
-					<h2>Android</h2>
-					<p class="lead">Antox: <a href="#fdroid">F-Droid</a> / <a href="https://play.google.com/store/apps/details?id=chat.tox.antox">Google Play</a> / <a href="https://pkg.tox.chat/fdroid/repo/antox.apk">APK</a></p>
-				</div>
-			</div>
+				{% if i % 3 == 2 %}
+					</div>
+				{% endif %}
+				{% set i = i + 1 %}
+			{% endfor %}
 		</div>
 	</section>
 
 	<section id="modals">
+		<!--modal windows for clients-->
+		{% for client in CLIENTS %}
+			{% for OS, value in client.iteritems() %}
+				{% if OS in client.platforms %}
+					<div id="{{ client.name }}_{{ OS }}" class="modalDialog button">
+						<div>
+							<a href="#close" class="close-overlay"></a>
+							<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+
+							<h2>{{ client.name }}</h2>
+							<section class="tabsection">
+								{% for download_type, download_links in value.iteritems() %} <!--download_type - stable, nightly, packages, download_links - array of links-->
+									{% for link, href in download_links.iteritems() %}
+										<label class="tablabel" title="{{ link }}">
+											{% if link != 'tox.chat' %}
+												<a href="{{ href }}">
+											{% else %}
+												<a href="#gnulinux" onClick="modifyModalWindow({{ client.name }});return true;">
+											{% endif %}
+												<span class="text">{{ link }}
+													{% if download_type != 'link' %}
+														({{ download_type }})
+													{% endif %}
+												</span>
+											</a>
+										</label>
+									{% endfor %}
+								{% endfor %}
+							</section>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% endfor %}
+
 		<div id="gnulinux" class="modalDialog button">
 			<div>
 				<a href="#close" class="close-overlay"></a>
@@ -97,23 +104,37 @@
 					<input id="tab-2" name="distroOpt" type="radio">
 					<label for="tab-2" class="tablabel" title="Debian/Ubuntu">
 						<span class="icon-debian"></span>
-						<span class="text">Debian/Ubuntu</span>
+						<span class="text">Debian</span>
 					</label>
 					<div class="tabdiv">
 						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
-						<p>Please note that only Debian (8/Jessie, 9/Stretch and Sid) and Ubuntu (15.04/Vivid, 15.10/Wily and 16.04/Xenial) are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<p>For stable client releases, use the following commands:</p>
-						<pre>echo "deb https://pkg.tox.chat/debian stable $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
-wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
-sudo apt-get install apt-transport-https
-sudo apt-get update</pre>
-						<p>For nightly client releases, use the following commands:</p>
+						<p>Please note that only Debian Sid, Jessie and Stretch are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
 						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
-						<p>And to install (for example) uTox:</p>
-						<pre>sudo apt-get install utox</pre>
+						<p id="install">And to install (for example) uTox:</p>
+						<pre id="install_script">sudo apt-get install utox</pre>
+						<p>To see all available packages:</p>
+						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+					</div>
+
+					<input id="tab-2" name="distroOpt" type="radio">
+					<label for="tab-2" class="tablabel" title="Ubuntu">
+						<span class="icon-ubuntu"></span>
+						<span class="text">Ubuntu</span>
+					</label>
+					<div class="tabdiv">
+						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
+
+						<p>Please note that only Ubuntu Vivid and Wily are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
+						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
+wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
+sudo apt-get install apt-transport-https
+sudo apt-get update</pre>
+						<p>And to install (for example) Toxygen:</p>
+						<pre>sudo apt-get install toxygen</pre>
+
 						<p>To see all available packages:</p>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
@@ -146,31 +167,6 @@ sudo apt-get update</pre>
 						<p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
 					</div>
 				</section>
-			</div>
-		</div>
-
-		<div id="fdroid" class="modalDialog button">
-			<div>
-				<a href="#close" class="close-overlay"></a>
-				<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-
-				<h2>F-Droid</h2>
-
-				<p>Add our F-Droid repo in the <a href='https://f-droid.org/' target='_blank'>F-Droid app</a></p>
-				<pre>https://pkg.tox.chat/fdroid/repo</pre>
-				<p>Then search for Antox, and enjoy.</p>
-			</div>
-		</div>
-
-		<div id="warning" class="modalDialog button">
-			<div>
-				<a href="#close" class="close-overlay"></a>
-				<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-
-				<h2>Warning!</h2>
-
-				<p>This page contains links to the most recently built binaries for each Tox client. Keep in mind that these clients are alpha software under heavy development, and are probably not ready for day-to-day use. Because of how significantly the code is still changing, a professional audit hasn't yet been started. You will probably run into various usability bugs, and may even encounter dangerous security vulnerabilities.</p>
-				<p>That having been said, hundreds of people around the world have devoted time, effort, and resources to the project in an effort to make Tox as secure as possible. While open source projects are not immune to serious longstanding security vulnerabilities, their threat is greatly reduced, as the code is open for anyone to review. Over time, as Tox gets closer to being stable, a proper security audit will be conducted, and the code will be checked thoroughly for any possible security concerns.</p>
 			</div>
 		</div>
 
@@ -219,4 +215,50 @@ sudo apt-get update</pre>
 	</section>
 
 	<script src="theme/js/osdetect.js"></script>
+	<script>
+		function toggle_visibility(id) {
+			var e = document.getElementById(id);
+			if(e.style.display == '')
+				e.style.display = 'none';
+	 		else
+				e.style.display = '';
+    	}
+
+    	function modifyModalWindow(client_name){
+    		package_name = client_name.toLowerCase();
+
+    	}
+
+		// Set platform toxlock
+		OSName = get_os();
+		arch = get_arch() + '-bit';
+		document.getElementById("platImg").src = "theme/img/plat/" + OSName.toLowerCase() + ".svg";
+
+		// Remove normal button
+		document.getElementById("defaultButton").innerHTML = "";
+		// Loop through all links and make buttons and info modals
+		clients = {{ CLIENTS }};
+		for (var i = 0; i < clients.length; i++){
+			obj = clients[i];
+			try {
+				var link = obj[OSName]['stable'][arch] || obj[OSName].link[0];
+			} catch (e) {
+				continue;
+			}
+			if (link){
+				var button = "\
+				<a id='link" + i + "' href='" + link + "' class='button large-button download'>\
+					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + ' ' + arch + "\
+				</a>";
+				var infoButton = "\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
+			<span class='fa fa-info-circle'></span>\
+		</a>";
+				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+			}
+		}
+		if (OSName !== 'Unknown'){
+			toggle_visibility('clients');
+		}
+	</script>
 {% endblock %}
