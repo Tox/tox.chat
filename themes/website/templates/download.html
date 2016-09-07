@@ -29,7 +29,7 @@
 	</section>
 
 	<section id="oses" class="features">
-		<h1><a onClick="toggle_visibility('clients'); return false;">Downloads for all platforms</a></h1>
+		<h1 class="def-cursor"><a onClick="toggle_visibility('clients'); return false;">See downloads for all platforms</a></h1>
 		<br>
 		<div class="container-fluid limit-width" id="clients">
 			{% set i = 0 %}
@@ -73,7 +73,7 @@
 											{% if link != 'tox.chat' %}
 												<a href="{{ href }}">
 											{% else %}
-												<a href="#gnulinux" onClick="modifyModalWindow({{ client.name }});return true;">
+												<a href="#gnulinux" onclick="modifyModalWindow('{{ client.name }}');return true;">
 											{% endif %}
 												<span class="text">{{ link }}
 													{% if download_type != 'link' %}
@@ -102,7 +102,7 @@
 					<input id="tab-1" name="distroOpt" checked="checked" type="radio">
 					<!--default option shows nothing-->
 					<input id="tab-2" name="distroOpt" type="radio">
-					<label for="tab-2" class="tablabel" title="Debian/Ubuntu">
+					<label for="tab-2" class="tablabel" title="Debian">
 						<span class="icon-debian"></span>
 						<span class="text">Debian</span>
 					</label>
@@ -113,8 +113,8 @@
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
-						<p id="install">And to install (for example) uTox:</p>
-						<pre id="install_script">sudo apt-get install utox</pre>
+						<p id="install_debian">And to install (for example) uTox:</p>
+						<pre id="install_script_debian">sudo apt-get install utox</pre>
 						<p>To see all available packages:</p>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
@@ -132,10 +132,11 @@ sudo apt-get update</pre>
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
-						<p>And to install (for example) Toxygen:</p>
-						<pre>sudo apt-get install toxygen</pre>
 
-						<p>To see all available packages:</p>
+						<p>And to install (for example) uTox:</p>
+						<p id="install_ubuntu">And to install (for example) uTox:</p>
+						<pre id="install_script_ubuntu">sudo apt-get install utox</pre>
+
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 
@@ -220,14 +221,17 @@ sudo apt-get update</pre>
 			var e = document.getElementById(id);
 			if(e.style.display == '')
 				e.style.display = 'none';
-	 		else
+			else
 				e.style.display = '';
-    	}
+		}
 
-    	function modifyModalWindow(client_name){
-    		package_name = client_name.toLowerCase();
-
-    	}
+		function modifyModalWindow(client_name){
+			package_name = client_name.toLowerCase();
+			document.getElementById("install_debian").innerHTML = 'Install ' + client_name + ':';
+			document.getElementById("install_script_debian").innerHTML = 'sudo apt get install ' + package_name;
+			document.getElementById("install_ubuntu").innerHTML = 'Install ' + client_name + ':';
+			document.getElementById("install_script_ubuntu").innerHTML = 'sudo apt get install ' + package_name;
+		}
 
 		// Set platform toxlock
 		OSName = get_os();
@@ -240,6 +244,7 @@ sudo apt-get update</pre>
 		clients = {{ CLIENTS }};
 		for (var i = 0; i < clients.length; i++){
 			obj = clients[i];
+
 			try {
 				var link = obj[OSName]['stable'][arch] || obj[OSName].link[0];
 			} catch (e) {
@@ -249,6 +254,31 @@ sudo apt-get update</pre>
 				var button = "\
 				<a id='link" + i + "' href='" + link + "' class='button large-button download'>\
 					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + ' ' + arch + "\
+				</a>";
+				var infoButton = "\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
+			<span class='fa fa-info-circle'></span>\
+		</a>";
+				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+			}
+
+			var tox_chat_packages = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['tox.chat'];
+			if (tox_chat_packages){
+				var button = "\
+				<a id='link" + i + "' href='#gnulinux' onclick='modifyModalWindow(\"" + obj.name + "\");return true;' class='button large-button download'>\
+					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + " (package)\
+				</a>";
+				var infoButton = "\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
+			<span class='fa fa-info-circle'></span>\
+		</a>";
+				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+			}
+			var OBS = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['OBS'];
+			if (OBS){
+				var button = "\
+				<a id='link" + i + "' href='{{ OBS }}' class='button large-button download'>\
+					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + " (OBS package)\
 				</a>";
 				var infoButton = "\
 		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
