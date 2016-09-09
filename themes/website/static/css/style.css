@@ -656,3 +656,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	border-width: 13px;
 	margin-left: -13px;
 }
+
+.def-cursor {
+	cursor: pointer;
+}

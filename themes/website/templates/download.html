@@ -225,6 +225,18 @@ sudo apt-get update</pre>
 				e.style.display = '';
 		}
 
+		function addClient(arch, client, link, text=''){
+			var button = "\
+				<a id='link" + i + "' href='" + link + "'" + text + " class='button large-button download'>\
+					<span class='fa fa-" + client.logo + "'>&nbsp;</span>" + client.name + ' ' + arch + "\
+				</a>";
+				var infoButton = "\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name.toLowerCase() + "' title='More info'>\
+			<span class='fa fa-info-circle'></span>\
+		</a>";
+				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+		}
+
 		function modifyModalWindow(client_name){
 			package_name = client_name.toLowerCase();
 			document.getElementById("install_debian").innerHTML = 'Install ' + client_name + ':';
@@ -245,46 +257,22 @@ sudo apt-get update</pre>
 		for (var i = 0; i < clients.length; i++){
 			obj = clients[i];
 
+			var link = '';
 			try {
-				var link = obj[OSName]['stable'][arch] || obj[OSName].link[0];
-			} catch (e) {
-				continue;
-			}
+				link = obj[OSName]['stable'][arch] || obj[OSName].link[0];
+			} catch (e) {}
 			if (link){
-				var button = "\
-				<a id='link" + i + "' href='" + link + "' class='button large-button download'>\
-					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + ' ' + arch + "\
-				</a>";
-				var infoButton = "\
-		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
-			<span class='fa fa-info-circle'></span>\
-		</a>";
-				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+				addClient(arch, obj, link);
 			}
 
 			var tox_chat_packages = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['tox.chat'];
 			if (tox_chat_packages){
-				var button = "\
-				<a id='link" + i + "' href='#gnulinux' onclick='modifyModalWindow(\"" + obj.name + "\");return true;' class='button large-button download'>\
-					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + " (package)\
-				</a>";
-				var infoButton = "\
-		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
-			<span class='fa fa-info-circle'></span>\
-		</a>";
-				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+				addClient(arch, obj, '#gnulinux', " onclick='modifyModalWindow(\"" + obj.name + "\");return true;' ");
 			}
+
 			var OBS = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['OBS'];
 			if (OBS){
-				var button = "\
-				<a id='link" + i + "' href='{{ OBS }}' class='button large-button download'>\
-					<span class='fa fa-" + obj.logo + "'>&nbsp;</span>" + obj.name + " (OBS package)\
-				</a>";
-				var infoButton = "\
-		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + obj.name.toLowerCase() + "' title='More info'>\
-			<span class='fa fa-info-circle'></span>\
-		</a>";
-				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+				addClient(arch, obj, OBS);
 			}
 		}
 		if (OSName !== 'Unknown'){
