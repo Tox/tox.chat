@@ -119,8 +119,8 @@ sudo apt-get update</pre>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 
-					<input id="tab-2" name="distroOpt" type="radio">
-					<label for="tab-2" class="tablabel" title="Ubuntu">
+					<input id="tab-3" name="distroOpt" type="radio">
+					<label for="tab-3" class="tablabel" title="Ubuntu">
 						<span class="icon-ubuntu"></span>
 						<span class="text">Ubuntu</span>
 					</label>
@@ -133,15 +133,14 @@ wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
 
-						<p>And to install (for example) uTox:</p>
 						<p id="install_ubuntu">And to install (for example) uTox:</p>
 						<pre id="install_script_ubuntu">sudo apt-get install utox</pre>
 
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 
-					<input id="tab-3" name="distroOpt" type="radio">
-					<label for="tab-3" class="tablabel" title="Gentoo">
+					<input id="tab-4" name="distroOpt" type="radio">
+					<label for="tab-4" class="tablabel" title="Gentoo">
 						<span class="icon-gentoo"></span>
 						<span class="text">Gentoo</span>
 					</label>
@@ -154,8 +153,8 @@ sudo apt-get update</pre>
 						<p>If you'd like to submit changes, or report issues, you can <a href="https://github.com/Tox/gentoo-overlay-tox">find the overlay on Github</a>.</p>
 					</div>
 
-					<input id="tab-4" name="distroOpt" type="radio">
-					<label for="tab-4" class="tablabel" title="Arch">
+					<input id="tab-5" name="distroOpt" type="radio">
+					<label for="tab-5" class="tablabel" title="Arch">
 						<span class="icon-arch"></span>
 						<span class="text">Arch</span>
 					</label>
@@ -225,10 +224,10 @@ sudo apt-get update</pre>
 				e.style.display = '';
 		}
 
-		function addClient(arch, client, link, text=''){
+		function addClient(arch, client, link, btype='', text=''){
 			var button = "\
 				<a id='link" + i + "' href='" + link + "'" + text + " class='button large-button download'>\
-					<span class='fa fa-" + client.logo + "'>&nbsp;</span>" + client.name + ' ' + arch + "\
+					<span class='fa fa-" + btype + "'>&nbsp;</span>" + client.name + ' ' + arch + "\
 				</a>";
 				var infoButton = "\
 		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name.toLowerCase() + "' title='More info'>\
@@ -267,12 +266,12 @@ sudo apt-get update</pre>
 
 			var tox_chat_packages = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['tox.chat'];
 			if (tox_chat_packages){
-				addClient(arch, obj, '#gnulinux', " onclick='modifyModalWindow(\"" + obj.name + "\");return true;' ");
+				addClient(arch, obj, '#gnulinux', "list-ul", " onclick='modifyModalWindow(\"" + obj.name + "\");return true;' ");
 			}
 
 			var OBS = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['OBS'];
 			if (OBS){
-				addClient(arch, obj, OBS);
+				addClient(arch, obj, OBS, 'external-link');
 			}
 		}
 		if (OSName !== 'Unknown'){
