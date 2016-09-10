@@ -107,9 +107,14 @@
 						<span class="text">Debian</span>
 					</label>
 					<div class="tabdiv">
+						<div align='center'>
+							<a class='button large-button' onclick='updateDistro("Jessie")'>Debian 8 (Jessie)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Stretch")'>Debian 9 (Stretch)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Sid")'>Debian Unstable (Sid)</a><br/>
+						</div>
 						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
 						<p>Please note that only Debian Sid, Jessie and Stretch are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
+						<pre id="debian_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
@@ -125,17 +130,22 @@ sudo apt-get update</pre>
 						<span class="text">Ubuntu</span>
 					</label>
 					<div class="tabdiv">
+						<div align='center'>
+							<a class='button large-button' onclick='updateDistro("Jessie")'>Ubuntu 15.04 (Vivid)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Stretch")'>Ubuntu 15.10 (Wily)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Sid")'>Ubuntu 16.04 (Xenial)</a><br/>
+						</div>
 						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
 
-						<p>Please note that only Ubuntu Vivid and Wily are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
+						<p>Please note that only Ubuntu Vivid, Wily and Xenial are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
+						<pre id="ubuntu_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
 
 						<p id="install_ubuntu">And to install (for example) uTox:</p>
 						<pre id="install_script_ubuntu">sudo apt-get install utox</pre>
-
+						<p>To see all available packages:</p>
 						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
 					</div>
 
@@ -234,6 +244,11 @@ sudo apt-get update</pre>
 			<span class='fa fa-info-circle'></span>\
 		</a>";
 				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+		}
+
+		function updateDistro(name){
+			document.getElementById("debian_v").innerHTML = document.getElementById("debian_v").innerHTML.replace("$(lsb_release -cs)", name.toLowerCase());
+			document.getElementById("ubuntu_v").innerHTML = document.getElementById("ubuntu_v").innerHTML.replace("$(lsb_release -cs)", name.toLowerCase());
 		}
 
 		function modifyModalWindow(client_name){
