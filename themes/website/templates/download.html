@@ -20,9 +20,7 @@
 					</span>
 
 					<span id="buttonArea">
-
 					</span>
-
 				</div>
 			</div>
 		</div>
@@ -131,9 +129,9 @@ sudo apt-get update</pre>
 					</label>
 					<div class="tabdiv">
 						<div align='center'>
-							<a class='button large-button' onclick='updateDistro("Jessie")'>Ubuntu 15.04 (Vivid)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Stretch")'>Ubuntu 15.10 (Wily)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Sid")'>Ubuntu 16.04 (Xenial)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Vivid")'>Ubuntu 15.04 (Vivid)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Wily")'>Ubuntu 15.10 (Wily)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Xenial")'>Ubuntu 16.04 (Xenial)</a><br/>
 						</div>
 						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
 
@@ -234,21 +232,33 @@ sudo apt-get update</pre>
 				e.style.display = '';
 		}
 
-		function addClient(arch, client, link, btype='', text=''){
+		function addButton(arch, client, link, btype='', text=''){
 			var button = "\
 				<a id='link" + i + "' href='" + link + "'" + text + " class='button large-button download'>\
 					<span class='fa fa-" + btype + "'>&nbsp;</span>" + client.name + ' ' + arch + "\
 				</a>";
-				var infoButton = "\
+				document.getElementById("buttonArea").innerHTML += button;
+		}
+
+		function addInfoButton(client){
+			var infoButton = "\
 		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name.toLowerCase() + "' title='More info'>\
 			<span class='fa fa-info-circle'></span>\
 		</a>";
-				document.getElementById("buttonArea").innerHTML += button + infoButton + "<br/>";
+			document.getElementById("buttonArea").innerHTML += infoButton + "<br/>"
 		}
 
 		function updateDistro(name){
-			document.getElementById("debian_v").innerHTML = document.getElementById("debian_v").innerHTML.replace("$(lsb_release -cs)", name.toLowerCase());
-			document.getElementById("ubuntu_v").innerHTML = document.getElementById("ubuntu_v").innerHTML.replace("$(lsb_release -cs)", name.toLowerCase());
+			var text = document.getElementById("debian_v").innerHTML
+			if (text.indexOf("$(lsb_release -cs)") + 1){
+				text = text.replace("$(lsb_release -cs)", name.toLowerCase());
+			}
+			else {
+				var arr = text.split(' ');
+				arr[4] = name.toLowerCase();
+				text = arr.join(' ');
+			}
+			document.getElementById("debian_v").innerHTML = document.getElementById("ubuntu_v").innerHTML = text;
 		}
 
 		function modifyModalWindow(client_name){
@@ -276,19 +286,24 @@ sudo apt-get update</pre>
 				link = obj[OSName]['stable'][arch] || obj[OSName].link[0];
 			} catch (e) {}
 			if (link){
-				addClient(arch, obj, link);
+				addButton(arch, obj, link);
 			}
 
 			var tox_chat_packages = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['tox.chat'];
 			if (tox_chat_packages){
-				addClient(arch, obj, '#gnulinux', "list-ul", " onclick='modifyModalWindow(\"" + obj.name + "\");return true;' ");
+				addButton(arch, obj, '#gnulinux', "list-ul", " onclick='modifyModalWindow(\"" + obj.name + "\");return true;' ");
 			}
 
 			var OBS = obj[OSName] && obj[OSName]['packages'] && obj[OSName]['packages']['OBS'];
 			if (OBS){
-				addClient(arch, obj, OBS, 'external-link');
+				addButton(arch, obj, OBS, 'external-link');
+			}
+			// Now add info button for client with download links
+			if (link || tox_chat_packages || OBS){
+				addInfoButton(obj);
 			}
 		}
+		// Hide all clients list if os is detected
 		if (OSName !== 'Unknown'){
 			toggle_visibility('clients');
 		}

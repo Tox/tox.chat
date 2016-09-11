@@ -1,9 +1,9 @@
 def get_clients():
-    return [
+    clients = [
         {
             'name': 'qTox', 
             'logo': 'theme/img/client/qtox_mac.png', 
-            'platforms': ['Windows', 'Linux', 'OSX'], 
+            'platforms': ['Windows', 'Linux', 'OSX', 'FreeBSD'], 
             'Windows': 
             {
                 'nightly': 
@@ -31,11 +31,18 @@ def get_clients():
                     '64-bit': 'https://github.com/qTox/qTox/releases/download/v1.5.1/qTox.dmg'
                 }
             },
+            'FreeBSD': 
+            {
+                'link':
+                {
+                    'Experimental port': 'https://www.freshports.org/net-im/qTox'
+                }
+            }
         },
         {
             'name': 'uTox',
             'logo': 'theme/img/client/utox_mac.png',
-            'platforms': ['Windows', 'Linux', 'OSX'],
+            'platforms': ['Windows', 'Linux', 'OSX', 'FreeBSD'],
             'Windows':
             {
                 'stable': 
@@ -79,6 +86,13 @@ def get_clients():
                 'stable':
                 {
                     '64-bit': 'https://github.com/GrayHatter/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg'
+                }
+            },
+            'FreeBSD': 
+            {
+                'link':
+                {
+                    'Experimental port': 'https://www.freshports.org/net-im/uTox'
                 }
             }
         },
@@ -174,3 +188,4 @@ def get_clients():
             }
         },
     ]
+    return clients
