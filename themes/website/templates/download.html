@@ -71,7 +71,7 @@
 											{% if link != 'tox.chat' %}
 												<a href="{{ href }}">
 											{% else %}
-												<a href="#gnulinux" onclick="modifyModalWindow('{{ client.name }}');return true;">
+												<a href="#gnulinux" onclick="modifyModalWindow('{{ client.name }}'); return true;">
 											{% endif %}
 												<span class="text">{{ link }}
 													{% if download_type != 'link' %}
@@ -99,52 +99,56 @@
 				<section class="tabsection">
 					<input id="tab-1" name="distroOpt" checked="checked" type="radio">
 					<!--default option shows nothing-->
-					<input id="tab-2" name="distroOpt" type="radio">
+					<input id="tab-2" name="distroOpt" type="radio" onclick="hideInstructions(); return true;">
 					<label for="tab-2" class="tablabel" title="Debian">
 						<span class="icon-debian"></span>
 						<span class="text">Debian</span>
 					</label>
 					<div class="tabdiv">
-						<div align='center'>
+						<div align="center" id="distros_debian" class="hidden">
 							<a class='button large-button' onclick='updateDistro("Jessie")'>Debian 8 (Jessie)</a><br/>
 							<a class='button large-button' onclick='updateDistro("Stretch")'>Debian 9 (Stretch)</a><br/>
 							<a class='button large-button' onclick='updateDistro("Sid")'>Debian Unstable (Sid)</a><br/>
 						</div>
-						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
-						<p>Please note that only Debian Sid, Jessie and Stretch are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<pre id="debian_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
+						<div id="instructions_debian">
+							<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
+							<p>Please note that only Debian Sid, Jessie and Stretch are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
+							<pre id="debian_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
-						<p id="install_debian">And to install (for example) uTox:</p>
-						<pre id="install_script_debian">sudo apt-get install utox</pre>
-						<p>To see all available packages:</p>
-						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+							<p id="install_debian">And to install (for example) uTox:</p>
+							<pre id="install_script_debian">sudo apt-get install utox</pre>
+							<p>To see all available packages:</p>
+							<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+						</div>
 					</div>
 
-					<input id="tab-3" name="distroOpt" type="radio">
+					<input id="tab-3" name="distroOpt" type="radio" onclick="hideInstructions(); return true;">
 					<label for="tab-3" class="tablabel" title="Ubuntu">
 						<span class="icon-ubuntu"></span>
 						<span class="text">Ubuntu</span>
 					</label>
 					<div class="tabdiv">
-						<div align='center'>
+						<div align='center' id="distros_ubuntu" class="hidden">
 							<a class='button large-button' onclick='updateDistro("Vivid")'>Ubuntu 15.04 (Vivid)</a><br/>
 							<a class='button large-button' onclick='updateDistro("Wily")'>Ubuntu 15.10 (Wily)</a><br/>
 							<a class='button large-button' onclick='updateDistro("Xenial")'>Ubuntu 16.04 (Xenial)</a><br/>
 						</div>
-						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
+						<div id="instructions_ubuntu">
+							<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
 
-						<p>Please note that only Ubuntu Vivid, Wily and Xenial are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
-						<pre id="ubuntu_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
+							<p>Please note that only Ubuntu Vivid, Wily and Xenial are officially supported. If your distribution is not supported you can find compilation instructions on client repos (check <a href="clients.html">the clients page</a>).</p>
+							<pre id="ubuntu_v">echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
 wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
 sudo apt-get install apt-transport-https
 sudo apt-get update</pre>
 
-						<p id="install_ubuntu">And to install (for example) uTox:</p>
-						<pre id="install_script_ubuntu">sudo apt-get install utox</pre>
-						<p>To see all available packages:</p>
-						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+							<p id="install_ubuntu">And to install (for example) uTox:</p>
+							<pre id="install_script_ubuntu">sudo apt-get install utox</pre>
+							<p>To see all available packages:</p>
+							<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
+						</div>
 					</div>
 
 					<input id="tab-4" name="distroOpt" type="radio">
@@ -224,12 +228,20 @@ sudo apt-get update</pre>
 
 	<script src="theme/js/osdetect.js"></script>
 	<script>
-		function toggle_visibility(id) {
+		function toggleVisibility(id) {
 			var e = document.getElementById(id);
 			if(e.style.display == '')
 				e.style.display = 'none';
 			else
 				e.style.display = '';
+		}
+
+		function hideInstructions(){
+			document.getElementById('instructions_debian').className = document.getElementById('instructions_ubuntu').className = "hidden";
+		}
+
+		function showInstructions(){
+			document.getElementById('instructions_debian').className = document.getElementById('instructions_ubuntu').className = "";
 		}
 
 		function addButton(arch, client, link, btype='', text=''){
@@ -259,6 +271,7 @@ sudo apt-get update</pre>
 				text = arr.join(' ');
 			}
 			document.getElementById("debian_v").innerHTML = document.getElementById("ubuntu_v").innerHTML = text;
+			showInstructions();
 		}
 
 		function modifyModalWindow(client_name){
@@ -305,7 +318,10 @@ sudo apt-get update</pre>
 		}
 		// Hide all clients list if os is detected
 		if (OSName !== 'Unknown'){
-			toggle_visibility('clients');
+			toggleVisibility('clients');
 		}
+		// hide buttons and show instllation instructions
+		hideInstructions();
+		document.getElementById('distros_debian').className = document.getElementById('distros_ubuntu').className = "";
 	</script>
 {% endblock %}
