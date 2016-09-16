@@ -254,7 +254,7 @@ sudo apt-get update</pre>
 
 		function addInfoButton(client){
 			var infoButton = "\
-		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name.toLowerCase() + "' title='More info'>\
+		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name.toLowerCase() + "' title='More info about " + client.name + "'>\
 			<span class='fa fa-info-circle'></span>\
 		</a>";
 			document.getElementById("buttonArea").innerHTML += infoButton + "<br/>"
@@ -277,9 +277,9 @@ sudo apt-get update</pre>
 		function modifyModalWindow(client_name){
 			package_name = client_name.toLowerCase();
 			document.getElementById("install_debian").innerHTML = 'Install ' + client_name + ':';
-			document.getElementById("install_script_debian").innerHTML = 'sudo apt get install ' + package_name;
+			document.getElementById("install_script_debian").innerHTML = 'sudo apt-get install ' + package_name;
 			document.getElementById("install_ubuntu").innerHTML = 'Install ' + client_name + ':';
-			document.getElementById("install_script_ubuntu").innerHTML = 'sudo apt get install ' + package_name;
+			document.getElementById("install_script_ubuntu").innerHTML = 'sudo apt-get install ' + package_name;
 		}
 
 		// Set platform toxlock
