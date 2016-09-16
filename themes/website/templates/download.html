@@ -27,7 +27,7 @@
 	</section>
 
 	<section id="oses" class="features">
-		<h1 class="def-cursor"><a onClick="toggle_visibility('clients'); return false;">See downloads for all platforms</a></h1>
+		<h1 class="def-cursor"><a onClick="toggleVisibility('clients'); return false;">See downloads for all platforms</a></h1>
 		<br>
 		<div class="container-fluid limit-width" id="clients">
 			{% set i = 0 %}
@@ -230,10 +230,10 @@ sudo apt-get update</pre>
 	<script>
 		function toggleVisibility(id) {
 			var e = document.getElementById(id);
-			if(e.style.display == '')
-				e.style.display = 'none';
+			if(e.className == 'hidden')
+				e.className = '';
 			else
-				e.style.display = '';
+				e.className = 'hidden';
 		}
 
 		function hideInstructions(){
@@ -316,11 +316,11 @@ sudo apt-get update</pre>
 				addInfoButton(obj);
 			}
 		}
-		// Hide all clients list if os is detected
+		// Hide clients list if os is detected
 		if (OSName !== 'Unknown'){
-			toggleVisibility('clients');
+			document.getElementById('clients').className = 'hidden';
 		}
-		// hide buttons and show instllation instructions
+		// Hide buttons for distros and show installation instructions
 		hideInstructions();
 		document.getElementById('distros_debian').className = document.getElementById('distros_ubuntu').className = "";
 	</script>
