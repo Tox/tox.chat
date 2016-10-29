@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+
+from clients import get_clients
 
 AUTHOR = u'Tox'
 SITENAME = u'Tox'
@@ -19,12 +25,14 @@ DEFAULT_PAGINATION = False
 
 THEME = "themes/website"
 
+CLIENTS = get_clients()
 
 # pelican is mainly aimed at blogs and a regular pelican template has only
 # a predefined set of files with predefined names which do blog things.
 # since we don't need blog things, we override that, making pelican process
 # all template files (that don't start with '_') and don't treat them as some
 # special blog templates.
+
 DIRECT_TEMPLATES = []
 
 TEMPLATE_PAGES = {}
