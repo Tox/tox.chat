@@ -85,7 +85,7 @@ def get_clients():
             {
                 'stable':
                 {
-                    '64-bit': 'https://github.com/GrayHatter/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg'
+                    '64-bit': 'https://github.com/uTox/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg'
                 }
             },
             'FreeBSD': 
@@ -104,14 +104,14 @@ def get_clients():
             {
                 'stable':
                 {
-                    '32-bit': 'https://github.com/toxygen-project/toxygen/releases/download/v0.2.4.1/toxygen_windows.zip'
+                    '32-bit': 'https://github.com/toxygen-project/toxygen/releases/download/v0.2.5/toxygen_windows.zip'
                 }
             },
             'Linux':
             {
                 'stable':
                 {
-                    '32-bit': 'https://github.com/toxygen-project/toxygen/releases/download/v0.2.4.1/toxygen_linux.tar.gz'
+                    '32-bit': 'https://github.com/toxygen-project/toxygen/releases/download/v0.2.5/toxygen_linux.tar.gz'
                 },
                 'packages':
                 {
@@ -182,8 +182,8 @@ def get_clients():
                 'link':
                 {
                     'Google Play': 'https://play.google.com/store/apps/details?id=chat.tox.antox',
-                    'APK': 'https://pkg.tox.chat/fdroid/repo/antox.apk'
-
+                    'APK': 'https://pkg.tox.chat/fdroid/repo/antox.apk',
+                    'F-droid': '#fdroid'
                 }
             }
         },

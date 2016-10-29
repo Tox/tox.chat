@@ -89,6 +89,19 @@
 			{% endfor %}
 		{% endfor %}
 
+		<div id="fdroid" class="modalDialog button">
+			<div>
+				<a href="#close" class="close-overlay"></a>
+				<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
+
+				<h2>F-Droid</h2>
+
+				<p>Add our F-Droid repo in the <a href="https://f-droid.org/" target="_blank">F-Droid app</a></p>
+				<pre>https://pkg.tox.chat/fdroid/repo</pre>
+				<p>Then search for Antox, and enjoy.</p>
+			</div>
+		</div>
+
 		<div id="gnulinux" class="modalDialog button">
 			<div>
 				<a href="#close" class="close-overlay"></a>
@@ -106,9 +119,12 @@
 					</label>
 					<div class="tabdiv">
 						<div align="center" id="distros_debian" class="hidden">
-							<a class='button large-button' onclick='updateDistro("Jessie")'>Debian 8 (Jessie)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Stretch")'>Debian 9 (Stretch)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Sid")'>Debian Unstable (Sid)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Jessie", true)'>Debian 8 (Jessie) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Jessie", false)'>Debian 8 (Jessie) (nightly)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Stretch", true)'>Debian 9 (Stretch) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Stretch", false)'>Debian 9 (Stretch) (nightly)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Sid", true)'>Debian Unstable (Sid) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Sid", false)'>Debian Unstable (Sid) (nightly)</a><br/>
 						</div>
 						<div id="instructions_debian">
 							<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
@@ -131,9 +147,12 @@ sudo apt-get update</pre>
 					</label>
 					<div class="tabdiv">
 						<div align='center' id="distros_ubuntu" class="hidden">
-							<a class='button large-button' onclick='updateDistro("Vivid")'>Ubuntu 15.04 (Vivid)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Wily")'>Ubuntu 15.10 (Wily)</a><br/>
-							<a class='button large-button' onclick='updateDistro("Xenial")'>Ubuntu 16.04 (Xenial)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Vivid", true)'>Ubuntu 15.04 (Vivid) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Vivid", false)'>Ubuntu 15.04 (Vivid) (nightly)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Wily", true)'>Ubuntu 15.10 (Wily) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Wily", false)'>Ubuntu 15.10 (Wily) (nightly)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Xenial", true)'>Ubuntu 16.04 (Xenial) (stable)</a><br/>
+							<a class='button large-button' onclick='updateDistro("Xenial", false)'>Ubuntu 16.04 (Xenial) (nightly)</a><br/>
 						</div>
 						<div id="instructions_ubuntu">
 							<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
@@ -260,7 +279,7 @@ sudo apt-get update</pre>
 			document.getElementById("buttonArea").innerHTML += infoButton + "<br/>"
 		}
 
-		function updateDistro(name){
+		function updateDistro(name, is_stable){
 			var text = document.getElementById("debian_v").innerHTML
 			if (text.indexOf("$(lsb_release -cs)") + 1){
 				text = text.replace("$(lsb_release -cs)", name.toLowerCase());
@@ -270,6 +289,14 @@ sudo apt-get update</pre>
 				arr[4] = name.toLowerCase();
 				text = arr.join(' ');
 			}
+			if (is_stable && text.indexOf('nightly') + 1){
+				text = text.replace('nightly', 'stable')
+			}
+			else if (text.indexOf('stable') + 1){
+				text = text.replace('stable', 'nightly')
+			}
+
+
 			document.getElementById("debian_v").innerHTML = document.getElementById("ubuntu_v").innerHTML = text;
 			showInstructions();
 		}
