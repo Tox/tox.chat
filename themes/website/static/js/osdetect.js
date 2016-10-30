@@ -58,7 +58,7 @@ if (window.navigator.userAgent.indexOf("iPad") != -1) {
 		name: "antidote",
 		icon: "external-link",
 		desc: true,
-		dlLink: "http://antidote.im",
+		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
 	}];
 }
 
@@ -70,7 +70,7 @@ if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 		name: "antidote",
 		icon: "external-link",
 		desc: true,
-		dlLink: "http://antidote.im",
+		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
 	}];
 }
 
