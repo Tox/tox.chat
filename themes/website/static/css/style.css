@@ -62,6 +62,7 @@ a {
 }
 
 .do-button {
+	display: inline-block;
 	margin-left:20px;
 }
 
