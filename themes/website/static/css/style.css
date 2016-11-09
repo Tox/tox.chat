@@ -650,6 +650,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	white-space: pre-wrap;
 }
 
+/* woff for most browsers (not IE8) and ttf for Android older than v4.4 */
 @font-face{
 	font-family: "Fira Sans";
 	src: local("Fira Sans UltraLight"),
