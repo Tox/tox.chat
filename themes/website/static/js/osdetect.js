@@ -42,6 +42,12 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 	OSName = "Mac";
 
 	clients = [{
+		title: "qTox",
+		name: "qtox",
+		icon: "download",
+		desc: true,
+		dlLink: "https://github.com/qTox/qTox/releases/download/v1.5.1/qTox.dmg",
+	},  {
 		title: "uTox 64-bit",
 		name: "utox",
 		icon: "download",
