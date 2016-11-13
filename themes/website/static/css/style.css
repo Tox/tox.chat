@@ -171,7 +171,6 @@ tbody th:first-child, thead th {
 .sliderinner > ul > li > div > img {
 	position: relative;
 	left: -50%;
-	max-height: 500px;
 }
 
 .slider input[type=radio] {
@@ -314,20 +313,36 @@ tbody th:first-child, thead th {
 	max-width: 900px;
 }
 
-#screenshot #mobile-slider {
+#mobile-slider {
 	display: none;
-	margin: auto;
-	max-width: 300px;
 }
 
+
 @media (max-width: 550px) {
-	#screenshot #desktop-slider {
+	#desktop-slider {
 		display: none;
 	}
-	#screenshot #mobile-slider {
+	#mobile-slider {
 		display: block;
+		margin: auto;
+		/* Fixes carousel breaking at certain resolutions */
+		min-width: 240px; 
 	}
+	.sliderinner > ul > li > div > img { max-height: 500px;	}
 }
+@media (max-width: 365px ) {
+	.sliderinner > ul > li > div > img { max-height: 432px; }
+}
+@media (min-width: 551px) {
+	.sliderinner > ul > li > div > img { max-height: 316px;	}
+}
+@media (min-width: 768px) {
+	.sliderinner > ul > li > div > img { max-height: 456px;	}
+}
+@media (min-width: 856px) {
+	.sliderinner > ul > li > div > img { max-height: 500px;	}
+}
+/* End of fixes for carousel breaking at certain resolutions */
 
 .features {
 	background: #fff;
