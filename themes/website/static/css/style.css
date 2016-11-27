@@ -275,6 +275,15 @@ tbody th:first-child, thead th {
 	#cover .button {
 		margin-bottom: 15px;
 	}
+
+	/* Infrastructure contributors list */
+	#contact ul {
+		display: inline-block;
+	}
+
+	#contact li {
+		text-align: left;
+	}
 }
 
 #cover .button:active {
