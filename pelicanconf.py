@@ -32,9 +32,9 @@ TEMPLATE_PAGES = {}
 import fnmatch
 import os
 
-templates_dir = THEME + '/templates'
-for root, dirnames, filenames in os.walk(templates_dir):
+TEMPLATES_DIR = THEME + '/templates'
+for root, dirnames, filenames in os.walk(TEMPLATES_DIR):
     for filename in fnmatch.filter(filenames, '*.html'):
         if not filename.startswith("_"):
-            template = os.path.join(root, filename)[len(templates_dir)+1:]
+            template = os.path.join(root, filename)[len(TEMPLATES_DIR)+1:]
             TEMPLATE_PAGES[template] = template
