@@ -161,7 +161,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "utox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://build.tox.chat/job/uTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/utox_windows_x86-64.zip",
+			dlLink: "https://downloads.utox.io/stable/uTox_win64.exe",
 		}];
 	} else {
 		clients = [{
@@ -175,7 +175,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "utox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://build.tox.chat/job/uTox_build_windows_x86_release/lastSuccessfulBuild/artifact/utox_windows_x86.zip"
+			dlLink: "https://downloads.utox.io/stable/uTox_win32.exe"
 		}];
 	}
 }
