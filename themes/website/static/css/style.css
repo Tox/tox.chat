@@ -230,6 +230,11 @@ tbody th:first-child, thead th {
 .slider input[type=radio]#toxygen-images-control2:checked ~ .sliderinner > ul { left: -100% }
 .slider input[type=radio]#toxygen-images-control3:checked ~ .sliderinner > ul { left: -200% }
 
+.slider label[for=isotoxin-images-control1] { margin-left: -9px }
+.slider label[for=isotoxin-images-control2] { margin-left: 9px }
+.slider input[type=radio]#isotoxin-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider input[type=radio]#isotoxin-images-control2:checked ~ .sliderinner > ul { left: -100% }
+
 .slider input[type=radio]#toxic-images-control1:checked ~ .sliderinner > ul { left: 0 }
 
 .slider input[type=radio]#antox-images-control1:checked ~ .sliderinner > ul { left: 0 }
