@@ -46,7 +46,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/qTox/qTox/releases/download/v1.10.2/qTox.dmg",
+		dlLink: "https://github.com/qTox/qTox/releases/download/v1.11.0/qTox.dmg",
 	},  {
 		title: "uTox 64-bit",
 		name: "utox",
@@ -84,17 +84,11 @@ if (window.navigator.userAgent.indexOf("Linux") != -1) {
 	OSName = "Linux";
 
 	clients = [{
-		title: "Our repository",
+		title: "Tox repository",
 		name: "repo",
 		icon: "list-ul",
 		desc: false,
 		dlLink: "#gnulinux",
-	},  {
-		title: "qTox repository",
-		name: "qtox",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://software.opensuse.org/download.html?project=home%3Aantonbatenev%3Atox&package=qtox",
 	}];
 }
 
