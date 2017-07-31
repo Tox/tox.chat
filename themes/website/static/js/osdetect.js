@@ -84,17 +84,11 @@ if (window.navigator.userAgent.indexOf("Linux") != -1) {
 	OSName = "Linux";
 
 	clients = [{
-		title: "Our repository",
+		title: "Tox repository",
 		name: "repo",
 		icon: "list-ul",
 		desc: false,
 		dlLink: "#gnulinux",
-	},  {
-		title: "qTox repository",
-		name: "qtox",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://software.opensuse.org/download.html?project=home%3Aantonbatenev%3Atox&package=qtox",
 	}];
 }
 
