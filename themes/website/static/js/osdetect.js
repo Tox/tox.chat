@@ -52,7 +52,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "utox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/uTox/uTox/releases/download/v0.9.8/uTox-0.9.8.dmg",
+		dlLink: "https://github.com/uTox/uTox/releases/download/v0.16.1/uTox-0.16.1.dmg",
 	}];
 }
 
