@@ -722,6 +722,9 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
+.icon-distro-small:before {
+	font-size: 18px;
+}
 .icon-debian:before{content:"\0041";}
 .icon-gentoo:before{content:"\0042";}
 .icon-arch:before{content:"\0043";}

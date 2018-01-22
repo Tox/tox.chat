@@ -1,0 +1,31 @@
+{% for platform in DOWNLOADS["stable"] %}
+	<div class="col-sm-4 feature">
+	
+	{# convert platform name to image file name #}
+	{% if platform["name"] == "OS X" %}
+		{% set image = "mac" %}
+	{% else %}
+		{% set image = platform["name"].replace(' ', '').lower().replace('gnu/', '') %}
+	{% endif %}
+
+		<img src="theme/img/plat/{{ image }}_dark.svg">
+		<h2>{{ platform["name"] }}</h2>
+		
+		{% for client in platform if client != "name" %}
+			<p class="lead" style="margin-bottom: -15px;">{{ client }}{%if client != "" %}: {% endif %}
+			
+			{% set architectures = platform[client] %}
+			{% set index = 0 %}
+			{% for architecture in architectures %}
+				<a href='{{ architecture["url"] }}'>{{ architecture["name"] }}</a>
+				{% if index != architectures|length - 1 %} / {% endif %}
+				{% set index = index + 1 %}
+			{% endfor %}
+			
+		{% endfor %}
+		
+	</div>
+	
+{% endfor %}
+
+

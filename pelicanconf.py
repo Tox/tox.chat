@@ -19,6 +19,7 @@ DEFAULT_PAGINATION = False
 
 THEME = "themes/website"
 
+DOWNLOADS_JSON_PATH = "downloads.json"
 
 # pelican is mainly aimed at blogs and a regular pelican template has only
 # a predefined set of files with predefined names which do blog things.
@@ -31,6 +32,12 @@ TEMPLATE_PAGES = {}
 
 import fnmatch
 import os
+import json
+
+jsonFile = open(DOWNLOADS_JSON_PATH)
+DOWNLOADS = json.load(jsonFile)
+jsonFile.close()
+
 
 TEMPLATES_DIR = THEME + '/templates'
 for root, dirnames, filenames in os.walk(TEMPLATES_DIR):

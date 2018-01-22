@@ -8,9 +8,9 @@ var OSName = "Unknown";
 var defClient = {
 	title: "Wiki Downloads",
 	name: "",
-	icon: "external-link",
+	faicon: "external-link",
 	desc: false,
-	dlLink: "http://wiki.tox.chat/binaries",
+	dlLink: "http://wiki.tox.chat/binaries"
 };
 
 var clients = [defClient];
@@ -44,13 +44,13 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 	clients = [{
 		title: "qTox",
 		name: "qtox",
-		icon: "download",
+		faicon: "download",
 		desc: true,
 		dlLink: "https://github.com/qTox/qTox/releases/download/v1.13.0/qTox.dmg",
 	},  {
 		title: "uTox 64-bit",
 		name: "utox",
-		icon: "download",
+		faicon: "download",
 		desc: true,
 		dlLink: "https://github.com/uTox/uTox/releases/download/v0.16.1/uTox-0.16.1.dmg",
 	}];
@@ -62,7 +62,7 @@ if (window.navigator.userAgent.indexOf("iPad") != -1) {
 	clients = [{
 		title: "Antidote",
 		name: "antidote",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
 	}];
@@ -74,7 +74,7 @@ if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 	clients = [{
 		title: "Antidote",
 		name: "antidote",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
 	}];
@@ -84,9 +84,23 @@ if (window.navigator.userAgent.indexOf("Linux") != -1) {
 	OSName = "Linux";
 
 	clients = [{
-		title: "Tox repository",
+		title: "Debian",
 		name: "repo",
-		icon: "list-ul",
+		icon: "icon-debian",
+		desc: false,
+		dlLink: "#gnulinux",
+	},
+	{
+		title: "Gentoo",
+		name: "repo",
+		icon: "icon-gentoo",
+		desc: false,
+		dlLink: "#gnulinux"
+	},
+	{
+		title: "Arch",
+		name: "repo",
+		icon: "icon-arch",
 		desc: false,
 		dlLink: "#gnulinux",
 	}];
@@ -98,19 +112,19 @@ if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
 	clients = [{
 		title: "Install qTox",
 		name: "qtox",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://www.freshports.org/net-im/qTox",
 	}, {
 		title: "Install uTox",
 		name: "utox",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://freshports.org/net-im/uTox/",
 	}, {
 		title: "Install Toxic",
 		name: "toxic",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://freshports.org/net-im/toxic/",
 	}];
@@ -122,19 +136,19 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 	clients = [{
 		title: "Antox F-Droid",
 		name: "antox",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "#fdroid",
 	}, {
 		title: "Antox Google Play",
 		name: "antox",
-		icon: "external-link",
+		faicon: "external-link",
 		desc: true,
 		dlLink: "https://play.google.com/store/apps/details?id=chat.tox.antox",
 	}, {
 		title: "Antox APK",
 		name: "antox",
-		icon: "download",
+		faicon: "download",
 		desc: true,
 		dlLink: "https://pkg.tox.chat/fdroid/repo/antox.apk",
 	}];
@@ -147,13 +161,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 		clients = [{
 			title: "qTox 64-bit",
 			name: "qtox",
-			icon: "download",
+			faicon: "download",
 			desc: true,
 			dlLink: "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
 		}, {
 			title: "uTox 64-bit",
 			name: "utox",
-			icon: "download",
+			faicon: "download",
 			desc: true,
 			dlLink: "https://downloads.utox.io/stable/uTox_win64.exe",
 		}];
@@ -161,13 +175,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 		clients = [{
 			title: "qTox 32-bit",
 			name: "qtox",
-			icon: "download",
+			faicon: "download",
 			desc: true,
 			dlLink: "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
 		}, {
 			title: "uTox 32-bit",
 			name: "utox",
-			icon: "download",
+			faicon: "download",
 			desc: true,
 			dlLink: "https://downloads.utox.io/stable/uTox_win32.exe"
 		}];
@@ -183,28 +197,60 @@ if (window.navigator.userAgent.indexOf("Windows Phone") != -1) {
 	All the magic stuff the makes the buttons change and stuff
 */
 
+// Set platform header
+document.getElementById("downloadHeader").innerHTML = "Download Tox for " + OSName;
+
 // Set platform toxlock
 document.getElementById("platImg").src = "theme/img/plat/" + OSName.toLowerCase() + ".svg";
 
 // Remove normal button
 document.getElementById("defaultButton").innerHTML = "";
 
+var buttonArea = document.getElementById("buttonArea");
+
+
 // Loop through all links and make buttons and info modals
-for (var i = 0; i < clients.length; i++) {
+for (var i = 0; i < clients.length; i++) 
+{
 	var client = clients[i];
 
-	var button = "\
-	<a id='link" + i + "' href='" + client.dlLink + "' class='button large-button download'>\
-		<span class='fa fa-" + client.icon + "'>&nbsp;</span>" + client.title + "\
-	</a>";
+	if (!client.icon)
+		client.icon = "";
 
-	var infoButton = "";
+	if (client.faicon)
+		client.faicon = "fa fa-" + client.faicon;
+	else
+		client.faicon = "";
+
+	// create button
+	var button = document.createElement("A");
+	button.id = "link"+i;
+	button.href = client.dlLink;
+	button.className = "button large-button download";
+
+	// create icon
+	var buttonIcon = document.createElement("SPAN");
+	buttonIcon.className = client.faicon + " " + client.icon + " icon-distro-small";
+
+	// append icon and client name to the button
+	button.appendChild(buttonIcon);
+	button.innerHTML += " " + client.title;
+
+
+	// create info button if needed
+	var infoButton;
 	if (client.desc) {
-		infoButton = "\
-		<a class='button large-button' style='box-shadow:none;color:#368CCA;' href='clients.html#" + client.name + "' title='More info'>\
-			<span class='fa fa-info-circle'></span>\
-		</a>";
+		infoButton = document.createElement("A");
+		infoButton.className = "button large-button";
+		infoButton.style = "box-shadow:none;color:#368CCA";
+		infoButton.href = "clients.html#" + client.name;
+		infoButton.title = "More info";
+		infoButton.innerHTML = "<span class='fa fa-info-circle'></span>";
 	}
 
-	document.getElementById("buttonArea").innerHTML = document.getElementById("buttonArea").innerHTML + button + infoButton + "<br/>";
+	// append created button and info button (if created)
+	buttonArea.appendChild (button);
+	if (infoButton)
+		buttonArea.appendChild(infoButton);
+
 }
