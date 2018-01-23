@@ -135,6 +135,11 @@ tbody th:first-child, thead th {
 	transition: 0.2s;
 }
 
+.info-button {
+	box-shadow: none;
+	color: #368CCA !important;
+}
+
 /* Image slideshow */
 .slider {
 	max-height: 500px;

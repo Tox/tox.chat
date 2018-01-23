@@ -110,19 +110,19 @@ if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
 	OSName = "FreeBSD";
 
 	clients = [{
-		title: "Install qTox",
+		title: "qTox",
 		name: "qtox",
 		faicon: "external-link",
 		desc: true,
 		dlLink: "https://www.freshports.org/net-im/qTox",
 	}, {
-		title: "Install uTox",
+		title: "uTox",
 		name: "utox",
 		faicon: "external-link",
 		desc: true,
 		dlLink: "https://freshports.org/net-im/uTox/",
 	}, {
-		title: "Install Toxic",
+		title: "Toxic",
 		name: "toxic",
 		faicon: "external-link",
 		desc: true,
@@ -210,7 +210,8 @@ var buttonArea = document.getElementById("buttonArea");
 
 
 // Loop through all links and make buttons and info modals
-for (var i = 0; i < clients.length; i++) 
+var length = clients.length;
+for (var i = 0; i < length; i++) 
 {
 	var client = clients[i];
 
@@ -224,13 +225,18 @@ for (var i = 0; i < clients.length; i++)
 
 	// create button
 	var button = document.createElement("A");
-	button.id = "link"+i;
+	button.id = "link" + i;
 	button.href = client.dlLink;
 	button.className = "button large-button download";
 
 	// create icon
 	var buttonIcon = document.createElement("SPAN");
-	buttonIcon.className = client.faicon + " " + client.icon + " icon-distro-small";
+	var iconClass = client.faicon;
+
+	if (!client.faicon)
+		iconClass = client.icon + " icon-distro-small";
+	
+	buttonIcon.className = iconClass;
 
 	// append icon and client name to the button
 	button.appendChild(buttonIcon);
@@ -241,8 +247,7 @@ for (var i = 0; i < clients.length; i++)
 	var infoButton;
 	if (client.desc) {
 		infoButton = document.createElement("A");
-		infoButton.className = "button large-button";
-		infoButton.style = "box-shadow:none;color:#368CCA";
+		infoButton.className = "button large-button info-button";
 		infoButton.href = "clients.html#" + client.name;
 		infoButton.title = "More info";
 		infoButton.innerHTML = "<span class='fa fa-info-circle'></span>";
@@ -252,5 +257,7 @@ for (var i = 0; i < clients.length; i++)
 	buttonArea.appendChild (button);
 	if (infoButton)
 		buttonArea.appendChild(infoButton);
+
+	buttonArea.innerHTML += "<br/>";
 
 }
