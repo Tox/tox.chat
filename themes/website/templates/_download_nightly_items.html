@@ -1,0 +1,22 @@
+{% for client in DOWNLOADS["nightly"] %}
+	<div class="col-sm-4" style="float: none; margin: 0 auto;">
+		<p class="lead">{{ client["name"] }}</p>
+
+		{% for platform in client if platform != "name" %}
+			
+			<p style="margin-top: -15px;">{{ platform }}:
+				{% set arch_index = 0 %}
+				{% for architecture in client[platform] %}
+					<a href='{{ architecture["url"] }}'>{{ architecture["name"] }}</a>
+					{% if arch_index != client[platform]|length - 1 %} / {% endif %}
+					{% set arch_index = arch_index + 1 %}
+				{% endfor %}
+			</p>
+			
+		{% endfor %}
+		
+	</div>
+	
+{% endfor %}
+
+

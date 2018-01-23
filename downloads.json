@@ -1,0 +1,195 @@
+{
+	"stable":
+	[
+		{
+			"name": "Windows",
+			"qTox": 
+			[
+				{
+					"name": "32 bit",
+					"url": "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
+					"sha256": "",
+					"gpg": ""
+				},
+				
+				{
+					"name": "64 bit",
+					"url": "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
+					"sha256": "",
+					"gpg": ""
+				}
+			],
+			"uTox":
+			[
+				{
+					"name": "32 bit",
+					"url": "https://downloads.utox.io/stable/uTox_win32.exe",
+					"sha256": "",
+					"gpg": ""
+				},
+
+				{
+					"name": "64 bit",
+					"url": "https://downloads.utox.io/stable/uTox_win64.exe",
+					"sha256": "",
+					"gpg": ""
+				}
+			]
+		},
+		
+		{
+			"name": "OS X",
+			"qTox": 
+			[
+				{
+					"name": "32 bit",
+					"url": "https://github.com/qTox/qTox/releases/download/v1.13.0/qTox.dmg",
+					"sha256": "",
+					"gpg": ""
+				}
+			],
+			"uTox":
+			[
+				{
+					"name": "64 bit (OS X 10.7+)",
+					"url": "https://github.com/uTox/uTox/releases/download/v0.16.1/uTox-0.16.1.dmg",
+					"sha256": "",
+					"gpg": ""
+				}
+			]
+		},
+		
+		{
+			"name": "GNU/Linux",
+			"":
+			[
+				{
+					"name": "Debian",
+					"url": "#gnulinux"
+				},
+
+				{
+					"name": "Gentoo",
+					"url": "#gnulinux"
+				},
+
+				{
+					"name": "Arch",
+					"url": "#gnulinux"
+				}
+			],
+			"uTox mostly static":
+			[
+				{
+					"name": "32 bit",
+					"url": "https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz"
+				},
+				{
+					"name": "64 bit",
+					"url": "https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz"
+				}
+			],
+			"Toxic mostly static":
+			[
+				{
+					"name": "32 bit",
+					"url": "https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz"
+				},
+				{
+					"name": "64 bit",
+					"url": "https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz"
+				}
+			],
+			"Toxic fully static (text chat only)":
+			[
+				{
+					"name": "32 bit",
+					"url": "https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86_release.tar.xz"
+				},
+				{
+					"name": "64 bit",
+					"url": "https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86-64_release.tar.xz"
+				}
+			]
+		},
+		
+		{
+			"name": "FreeBSD",
+			"":
+			[
+				{
+					"name": "qTox",
+					"url": "https://www.freshports.org/net-im/qTox"
+				},
+			
+			
+				{
+					"name": "uTox",
+					"url": "https://www.freshports.org/net-im/uTox"
+				},
+			
+			
+				{
+					"name": "Toxic",
+					"url": "https://www.freshports.org/net-im/toxic"
+				}
+			]
+		},
+		
+		{
+			"name": "iOS",
+			"":
+			[
+				{
+					"name": "Antidote (iOS 8+)",
+					"url": "https://itunes.apple.com/app/antidote-for-tox/id933117605"
+				}
+			]
+		},
+		
+		{
+			"name": "Android",
+			"Antox":
+			[
+				{
+					"name": "F-droid",
+					"url": "#fdroid"
+				},
+				
+				{
+					"name": "Google-Play",
+					"url": "https://play.google.com/store/apps/details?id=chat.tox.antox"
+				},
+				
+				{
+					"name": "APK",
+					"url": "https://pkg.tox.chat/fdroid/repo/antox.apk"
+				}
+			]
+		}
+	],
+	
+	"nightly": 
+	[
+		{
+			"name": "qTox nightly",
+			"Windows":
+			[
+				{
+					"name": "32 bit",
+					"url": "https://build.tox.chat/view/qtox/job/qTox_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86_release.zip",
+					"sha256": "",
+					"gpg": ""
+				},
+				
+				{
+					"name": "64 bit",
+					"url": "https://build.tox.chat/view/qtox/job/qTox_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox_build_windows_x86-64_release.zip",
+					"sha256": "",
+					"gpg": ""
+				}
+			]
+		}
+	]
+
+}
