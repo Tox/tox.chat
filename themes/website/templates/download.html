@@ -51,11 +51,9 @@
 				<div class="col-sm-4 feature">
 					<img src="theme/img/plat/linux_dark.svg">
 					<h2>Linux</h2>
-					<p class="lead"><a href="#gnulinux">Ricin, Toxic, Toxygen and uTox Debian/Ubuntu repo</a></p>
-					<p class="lead" style="margin-top:-15px;"><a href="#gnulinux">Arch and Gentoo repos (not maintained)</a></p>
-					<p class="lead" style="margin-top:-15px;">uTox mostly static: <a href="https://build.tox.chat/job/uTox_build_linux_x86_release/lastSuccessfulBuild/artifact/utox_linux_x86.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/uTox_build_linux_x86-64_release/lastSuccessfulBuild/artifact/utox_linux_x86-64.tar.xz">64 bit</a></p>
-					<p class="lead" style="margin-top:-15px;">Toxic mostly static: <a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
-					<p class="lead" style="margin-top:-15px;">Toxic fully static, text chat only: <a href="https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86-64_release.tar.xz">64 bit</a></p>
+					<p class="lead">Please check in the package repository of your distribution.</p>
+					<p class="lead">Toxic nightly, mostly static: <a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
+					<p class="lead" style="margin-top:-15px;">Toxic nightly, fully static, but without audio/video: <a href="https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic-no-x11-musl_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic-no-x11-musl_build_linux_x86-64_release.tar.xz">64 bit</a></p>
 				</div>
 			</div>
 
@@ -115,71 +113,6 @@
 	</section>
 
 	<section id="modals">
-		<div id="gnulinux" class="modalDialog button">
-			<div>
-				<a href="#close" class="close-overlay"></a>
-				<a href="#close" title="Close" class="close"><span class="fa fa-close">&nbsp;</span></a>
-
-				<h2>Linux</h2>
-				<p>Note: support for more distros is coming soon. Experienced package maintainers wanted. Contact infrastructure@tox.chat for more info.</p>
-				<section class="tabsection">
-					<input id="tab-1" name="distroOpt" checked="checked" type="radio">
-					<!--default option shows nothing-->
-					<input id="tab-2" name="distroOpt" type="radio">
-					<label for="tab-2" class="tablabel" title="Debian/Ubuntu">
-						<span class="icon-debian"></span>
-						<span class="text">Debian/Ubuntu</span>
-					</label>
-					<div class="tabdiv">
-						<p>For distributions utilising the deb package format, you'll need to run the following commands to add our repository.</p>
-						<p>Please note that only Debian (8/Jessie, 9/Stretch, 10/Buster and Sid) and Ubuntu (16.04/Xenial, 16.10/Yakkety and 17.04/Zesty) are officially supported. If your distribution is not supported, you can find compilation instructions in <a href="clients.html">client repositories</a>.</p>
-						<p>For stable client releases, use the following commands:</p>
-						<pre>echo "deb https://pkg.tox.chat/debian stable $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
-wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
-sudo apt-get install apt-transport-https
-sudo apt-get update</pre>
-						<p>For nightly client releases, use the following commands:</p>
-						<pre>echo "deb https://pkg.tox.chat/debian nightly $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/tox.list
-wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add -
-sudo apt-get install apt-transport-https
-sudo apt-get update</pre>
-						<p>And to install (for example) uTox:</p>
-						<pre>sudo apt-get install utox</pre>
-						<p>To see all available packages:</p>
-						<pre>cat /var/lib/apt/lists/pkg.tox.chat* | grep "Package: "</pre>
-					</div>
-
-					<input id="tab-3" name="distroOpt" type="radio">
-					<label for="tab-3" class="tablabel" title="Gentoo">
-						<span class="icon-gentoo"></span>
-						<span class="text">Gentoo</span>
-					</label>
-					<div class="tabdiv">
-						<p>The Tox Project overlay is in the official Layman list.</p>
-						<p>To add it:</p>
-						<pre>layman -a tox-overlay</pre>
-						<p>Then install your client of choice:</p>
-						<pre>emerge --ask &lt;client_name&gt;</pre>
-						<p>If you'd like to submit changes, or report issues, you can <a href="https://github.com/Tox/gentoo-overlay-tox">find the overlay on Github</a>.</p>
-					</div>
-
-					<input id="tab-4" name="distroOpt" type="radio">
-					<label for="tab-4" class="tablabel" title="Arch">
-						<span class="icon-arch"></span>
-						<span class="text">Arch</span>
-					</label>
-					<div class="tabdiv">
-						<p>Toxcore, Toxic, and qTox are available in the Arch community repo. To install (for example) qTox:</p>
-						<pre>pacman -S qtox</pre>
-						<p>Alternatively there are some packages available in the AUR. To install (for example) µTox from the AUR:</p>
-						<pre>yaourt -S utox</pre>
-						<p>Supported PKGBUILDs are located <a href="https://github.com/Tox/arch-repo-tox">here</a>.</p>
-						<p>If you have an issue with Tox and you installed Tox using an AUR package, please compile that package from source before filing a bug report. If the issue appears to be on the Arch maintainer's side (eg: compiles from source fine, but the PKGBUILD fails), please contact the package maintainer and let them know!</p>
-					</div>
-				</section>
-			</div>
-		</div>
-
 		<div id="fdroid" class="modalDialog button">
 			<div>
 				<a href="#close" class="close-overlay"></a>

@@ -5,15 +5,7 @@
 var arch = 0;
 var OSName = "Unknown";
 
-var defClient = {
-	title: "Wiki Downloads",
-	name: "",
-	icon: "external-link",
-	desc: false,
-	dlLink: "http://wiki.tox.chat/binaries",
-};
-
-var clients = [defClient];
+var clients = [];
 
 /*
 	Arch detection
@@ -77,18 +69,6 @@ if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 		icon: "external-link",
 		desc: true,
 		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
-	}];
-}
-
-if (window.navigator.userAgent.indexOf("Linux") != -1) {
-	OSName = "Linux";
-
-	clients = [{
-		title: "Tox repository",
-		name: "repo",
-		icon: "list-ul",
-		desc: false,
-		dlLink: "#gnulinux",
 	}];
 }
 
@@ -176,7 +156,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 
 if (window.navigator.userAgent.indexOf("Windows Phone") != -1) {
 	// We don't have a windows phone client?!??
-	clients = [defClient];
+	clients = [];
 }
 
 /*
