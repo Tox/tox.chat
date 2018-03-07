@@ -722,9 +722,10 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
-.icon-debian:before{content:"\0041";}
-.icon-gentoo:before{content:"\0042";}
-.icon-arch:before{content:"\0043";}
-.icon-diaspora:before{content:"\0044";}
-.icon-minionbook:before{content:"\0045";}
-.icon-dramabird:before{content:"\0046";}
+.icon-debian:before{content:'\0041';}
+.icon-gentoo:before{content:'\0042';}
+.icon-arch:before{content:'\0043';}
+.icon-diaspora:before{content:'\0044';}
+.icon-minionbook:before{content:'\0045';}
+.icon-dramabird:before{content:'\0046';}
+.icon-pclinuxos:before{content:'\0047';}
