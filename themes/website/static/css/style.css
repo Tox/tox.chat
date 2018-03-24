@@ -364,6 +364,24 @@ tbody th:first-child, thead th {
 	cursor: default;
 }
 
+.features .table {
+	margin: auto;
+	width: 60%;
+}
+
+.notes {
+	margin: auto;
+	margin-top: 5px;
+	width: 60%;
+	font-size: small;
+	text-align: left;
+}
+
+.notes p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
 #about {
 	text-align: center;
 }
