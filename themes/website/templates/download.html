@@ -1,10 +1,10 @@
-{% extends '_base.html' %}
+{% extends 'website/templates/_base.html' %}
 {% block title %}Download{% endblock %}
 {% block content %}
 	<section id="cover" class="dl center dark">
 		<div class="container-fluid limit-width">
 			<div id="cover-line">
-				<div class="col-sm-4"><img id="platImg" src="theme/img/icon.svg" alt=""></div>
+				<div class="col-sm-4"><img id="platImg" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/icon.svg" alt=""></div>
 				<div class="col-sm-8">
 					<h1 class="header">Thanks for downloading!</h1>
 					<p class="lead">
@@ -34,7 +34,7 @@
 		<div class="container-fluid limit-width">
 			<div class="row">
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/windows_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/windows_dark.svg">
 					<h2>Windows</h2>
 					<p class="lead">qTox stable: <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">32 bit</a> / <a href="https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe">64 bit</a></p>
 					<p class="lead" style="margin-top:-15px;">qTox nightly: <a href="https://build.tox.chat/view/qtox/job/qTox-cmake-nightly_build_windows_x86_release/lastSuccessfulBuild/artifact/qTox-cmake-nightly_build_windows_x86_release.zip">32 bit</a> / <a href="https://build.tox.chat/view/qtox/job/qTox-cmake-nightly_build_windows_x86-64_release/lastSuccessfulBuild/artifact/qTox-cmake-nightly_build_windows_x86-64_release.zip">64 bit</a></p>
@@ -42,14 +42,14 @@
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/mac_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/mac_dark.svg">
 					<h2>OS X</h2>
 					<p class="lead"><a href="https://github.com/qTox/qTox/releases/download/v1.14.1/qTox.dmg">qTox</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://github.com/uTox/uTox/releases/download/v0.16.1/uTox-0.16.1.dmg">uTox 64 bit (OS X 10.7+)</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/linux_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/linux_dark.svg">
 					<h2>Linux</h2>
 					<p class="lead">Please check in the package repository of your distribution.</p>
 					<p class="lead">Toxic nightly, mostly static: <a href="https://build.tox.chat/job/toxic_build_linux_x86_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86_release.tar.xz">32 bit</a> / <a href="https://build.tox.chat/job/toxic_build_linux_x86-64_release/lastSuccessfulBuild/artifact/toxic_build_linux_x86-64_release.tar.xz">64 bit</a></p>
@@ -59,7 +59,7 @@
 
 			<div class="row">
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/freebsd_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/freebsd_dark.svg">
 					<h2>FreeBSD</h2>
 					<p class="lead"><a href="https://www.freshports.org/net-im/qTox">qTox on Freshports</a></p>
 					<p class="lead" style="margin-top:-15px;"><a href="https://www.freshports.org/net-im/uTox">uTox on Freshports</a></p>
@@ -67,13 +67,13 @@
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/ios_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/ios_dark.svg">
 					<h2>iOS</h2>
 					<p class="lead"><a href="https://itunes.apple.com/app/antidote-for-tox/id933117605">Antidote (iOS 8+)</a></p>
 				</div>
 
 				<div class="col-sm-4 feature">
-					<img src="theme/img/plat/android_dark.svg">
+					<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/plat/android_dark.svg">
 					<h2>Android</h2>
 					<p class="lead">Antox: <a href="#fdroid">F-Droid</a> / <a href="https://play.google.com/store/apps/details?id=chat.tox.antox">Google Play</a> / <a href="https://pkg.tox.chat/fdroid/repo/antox.apk">APK</a></p>
 				</div>
@@ -209,5 +209,5 @@
 		</div>
 	</section>
 
-	<script src="theme/js/osdetect.js"></script>
+	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/osdetect.js"></script>
 {% endblock %}

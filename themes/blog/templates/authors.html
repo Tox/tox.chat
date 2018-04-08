@@ -1,0 +1,16 @@
+{% extends 'blog/templates/_base.html' %}
+
+{% block title %}Authors{% endblock %}
+
+{% block content %}
+<section id="content" class="container">
+	<h1 class="text-center">Authors on {{ SITENAME }}</h1>
+		<div class="center-block text-center">
+	<ul class="center-block">
+	{%- for author, articles in authors|sort %}
+		<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
+	{% endfor %}
+	</ul>
+	</div>
+</section>
+{% endblock %}

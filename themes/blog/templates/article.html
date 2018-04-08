@@ -1,0 +1,9 @@
+{% extends 'blog/templates/_base.html' %}
+
+{% block title %}{{ article.title|escape }}{% endblock %}
+
+{% block content %}
+<section id="content" class="container">
+	{% include 'blog/templates/_article_full.html' %}
+</section>
+{% endblock %}

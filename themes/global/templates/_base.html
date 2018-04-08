@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+	{% block head %}
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/favicon.ico">
+
+	<title>
+	{%- block title %}{% endblock -%}
+	{%- if not self.title() %}{% error "No title specified" %}{% endif %} - Tox{% if self.subtitle() %} {% endif %}{% block subtitle %}{% endblock -%}
+	</title>
+
+	<link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" rel="stylesheet">
+	{% endblock %}
+</head>
+<body>
+	<nav class="navbar">
+		<div class="container-fluid limit-width">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/logo.svg"></a>
+				<input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+				<label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
+				<div class="tinynav navbar-toggle collapsed">
+					<ul class="nav navbar-nav">
+						{% include 'global/templates/_navbar_items.html' %}
+					</ul>
+				</div>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					{% include 'global/templates/_navbar_items.html' %}
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	{% block content %}{% endblock %}
+
+	<footer id="footer" class="dark">
+		<div class="container-fluid limit-width">
+			<div class="languages">
+			</div>
+
+			<div class="ext-med pull-left">
+				<a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
+				<a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
+				<a class="button" href="https://github.com/TokTok/c-toxcore" title="Star us on Github"><span class="icon fa fa-github"></span></a>
+				<a class="button" href="https://wiki.tox.chat/users/community#irc" title="Chat with us on IRC"><span class="icon fa fa-comments"></span></a>
+				<a class="button do-button" href="https://www.digitalocean.com/" title="Powered by DigitalOcean"><img class="button" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/do.svg" /></a>
+			</div>
+
+			<div class="cc pull-right">
+				<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/CC.png"></a>
+				<br>
+				{% set template_path = template_rel_path() %}
+				{% set content_path = pelican_content_rel_path() %}
+				{% if content_path %}
+					<p>This page was generated from <a href="{{ GITHUB_URL }}/blob/master/{{ template_path }}">template</a> and <a href="{{ GITHUB_URL }}/blob/master/{{ content_path }}">content</a> files hosted in public GitHub repository — issue tickets and pull requests are very welcome!</p>
+				{% else %}
+					<p>This page was generated from <a href="{{ GITHUB_URL }}/blob/master/{{ template_path }}">a template file hosted in public GitHub repository</a> — issue tickets and pull requests are very welcome!</p>
+				{% endif %}
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
