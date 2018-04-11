@@ -84,12 +84,12 @@ MONTH_ARCHIVE_SAVE_AS = 'blog/posts/{date:%Y}/{date:%m}/index.html'
 DAY_ARCHIVE_SAVE_AS   = 'blog/posts/{date:%Y}/{date:%m}/{date:%d}/index.html'
 
 AUTHORS_SAVE_AS = 'blog/authors/index.html'
-AUTHOR_URL      = 'blog/author/{slug}/'
-AUTHOR_SAVE_AS  = 'blog/author/{slug}/index.html'
+AUTHOR_URL      = 'blog/authors/{slug}/'
+AUTHOR_SAVE_AS  = 'blog/authors/{slug}/index.html'
 
 CATEGORIES_SAVE_AS = 'blog/categories/index.html'
-CATEGORY_URL       = 'blog/category/{slug}/'
-CATEGORY_SAVE_AS   = 'blog/category/{slug}/index.html'
+CATEGORY_URL       = 'blog/categories/{slug}/'
+CATEGORY_SAVE_AS   = 'blog/categories/{slug}/index.html'
 
 # we don't use tags, they tend to be heavily misused and not used consistently,
 # a single category per post should be enough for keeping things organized.
@@ -112,12 +112,12 @@ FEED_DOMAIN = 'https://tox.chat'
 # blog feed should also go into blog/
 FEED_ALL_ATOM = ''
 FEED_ALL_RSS = ''
-TRANSLATION_FEED_ATOM = 'blog/feeds/all-%s.atom.xml'
-TRANSLATION_FEED_RSS = 'blog/feeds/all-%s.rss.xml'
-CATEGORY_FEED_ATOM = 'blog/feeds/category/%s.atom.xml'
-CATEGORY_FEED_RSS = 'blog/feeds/category/%s.rss.xml'
-AUTHOR_FEED_ATOM = 'blog/feeds/author/%s.atom.xml'
-AUTHOR_FEED_RSS = 'blog/feeds/author/%s.rss.xml'
+TRANSLATION_FEED_ATOM = 'blog/feed-%s.atom.xml'
+TRANSLATION_FEED_RSS = 'blog/feed-%s.rss.xml'
+CATEGORY_FEED_ATOM = 'blog/categories/%s/feed.atom.xml'
+CATEGORY_FEED_RSS = 'blog/categories/%s/feed.rss.xml'
+AUTHOR_FEED_ATOM = 'blog/authors/%s/feed.atom.xml'
+AUTHOR_FEED_RSS = 'blog/authors/%s/feed.rss.xml'
 
 # used in generation of feeds, without it pelican inserts some generic
 # 'Pelican Blog' name
