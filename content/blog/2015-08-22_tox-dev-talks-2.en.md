@@ -6,7 +6,7 @@ Status: published
 
 *(Tox Dev Talks is a series of weekly meetings that bring the Tox
 developer community together to share ideas, progress,
-and miscellaneous chatter. They take place Saturdays at 16:00 UTC.)*
+and miscellaneous chatter. They take place Saturdays at 16:00 UTC.)*
 
 Tox Dev Talks are back after a week-long hiatus due to scheduling
 difficulties. As we had irungentoo on hand, we spent a lot of time on
@@ -14,13 +14,13 @@ core issues. Here's a bit of what was discussed.
 
 -   **Tox core**
     -   **Offline messaging**
-        -   The student who was implementing it disappeared. irungentoo
-            will be taking over if he has time.
+        -   The student who was implementing it disappeared. irungentoo
+            will be taking over if he has time.
     -   **Friendly names / DNS replacement?**
         -   No real solution was brought up that would be better than
-            what we have now. That said, DNS will remain optional for
+            what we have now. That said, DNS will remain optional for
             clients and not a Tox core feature.
-    -   **irungentoo's to-do list**
+    -   **irungentoo's to-do list**
         -   Improve file transfers.
         -   Write proper documentation for the code.
         -   In general, fix bugs and/or finish some features that aren’t
@@ -61,7 +61,7 @@ core issues. Here's a bit of what was discussed.
 <!-- -->
 
 -   **Other things worth mentioning**
-    -   As some people aren't happy with the design of tox.chat,
+    -   As some people aren't happy with the design of tox.chat,
         installgen2 is going to redesign the site. He will show what he
         came up with at the next meeting.
 

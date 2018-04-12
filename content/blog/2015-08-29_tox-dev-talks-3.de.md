@@ -6,13 +6,13 @@ Status: published
 
 *(Tox Dev Talks is a series of weekly meetings that bring the Tox
 developer community together to share ideas, progress,
-and miscellaneous chatter. They take place Saturdays at 16:00 UTC.)*
+and miscellaneous chatter. They take place Saturdays at 16:00 UTC.)*
 
 In this week's meeting, as usual, we discussed a variety of topics,
 which have been summarized below.
 
 *(Edited 2015/08/30: a few factual corrections were made. Apologies for
-letting them slip past editing -ak)*
+letting them slip past editing -ak)*
 
 -   **Binaries**
     -   **Package signing**
@@ -29,7 +29,7 @@ letting them slip past editing -ak)*
             their responsibilities
         -   **Blog**
             -   Social media will now link to EVERY blog post
-            -   GSoC mentors should come up with a GSoC blog post
+            -   GSoC mentors should come up with a GSoC blog post
 -   **Our website**
     -   installgen2 is working on redesigning tox.chat from scratch,
         this will take 3-7 days to complete

@@ -4,19 +4,19 @@ Author: Project Tox
 Category: Uncategorized
 Status: published
 
-We are happy to announce that irungentoo's personal Indiegogo campaign
-has been successfully funded!
+We are happy to announce that irungentoo's personal Indiegogo campaign
+has been successfully funded!
 
 ![](https://blog.tox.chat/wp-content/uploads/2015/09/new-gentoo1.png){.wp-image-150
 .size-full .aligncenter width="607" height="680"}
 
 As you may already know, irungentoo has been running a [personal
 fundraiser](https://blog.tox.chat/2015/08/regarding-irungentoos-indiegogo-campaign/),
-to allow himself to dedicate a month of full time work to Tox
+to allow himself to dedicate a month of full time work to Tox
 development. This fundraiser reached
-its [[\$5,000]{.currency}]{.i-goal-amount} [ USD]{.i-goal-currency}
+its [[\$5,000]{.currency}]{.i-goal-amount} [ USD]{.i-goal-currency}
 [goal with 6 hours left on the clock.]{.i-goal-text}At the time of
-writing, a total of **[\$5,785]{.currency .currency-large}** has been
+writing, a total of **[\$5,785]{.currency .currency-large}** has been
 raised by **217**[[[ funders.]{#js-tab-funders-count
 .i-count}]{}]{.i-tab}
 

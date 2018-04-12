@@ -6,7 +6,7 @@ Status: published
 
 *(If you don't already know, Tox Dev Talks is a series of weekly
 meetings that bring the Tox developer community together to share ideas,
-progress, and miscellaneous chatter. They take place every Saturday at
+progress, and miscellaneous chatter. They take place every Saturday at
 03:00 UTC.)*
 
 This week's Tox Dev Talk turned out exceptionally well, especially as it
@@ -15,11 +15,11 @@ summary of what was discussed.
 
 -   How do we deal with doze mode in Android M?
     -   Do we use GCM?
--   Is a "passive mode" for toxcore so we can reduce battery and data
+-   Is a "passive mode" for toxcore so we can reduce battery and data
     usage possible?
 -   How do we deal with backgrounding restrictions on iOS?
     -   Possible solution: use VoIP sockets.
--   No concrete decisions as of now.
+-   No concrete decisions as of now.
 
 <!-- -->
 
@@ -37,14 +37,14 @@ summary of what was discussed.
     -   Tox Wiki - Add missing pages and clean up mess
 -   **chuongv (iOS)**
     -   Antidote: Implement video calls for this week.
--   **subliun (Android)**
+-   **subliun (Android)**
     -   Antox: working on encrypted profile support, fixing some bugs,
         and getting ready for av support.
     -   New ToxDNS host is toxme.io
 -   **Impyy (C\#/Windows)**
     -   SharpTox - finish new groupchat bindings, write documentation
         for both new av api and new groupchat api.
--   **oranges (Build infrastructure)**
+-   **oranges (Build infrastructure)**
     -   Jenkins is up and building libraries, some clients are building.
     -   Waiting on client devs for some of the other clients.
 

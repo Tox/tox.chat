@@ -18,7 +18,7 @@ about the current site, for reasons which are listed:
 -   [This](https://github.com/Tox/Tox-Website/issues/8) issue raises
     some points too
 
-So, as nobody else to my knowledge had started developing a new site, I
+So, as nobody else to my knowledge had started developing a new site, I
 started work on one. Unfortunately, I don't have the time or the
 experience to continue development on my own, and I need help if I want
 to continue. I'm asking everyone with an interest in web-development and
