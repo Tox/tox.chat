@@ -2,7 +2,6 @@ Title: SCaLE 14x Post-Mortem
 Date: 2016-02-08 21:18
 Author: zero-one
 Category: Uncategorized
-Tags: SCaLE14x, The Tox Project, Tox leaving the basement for once
 Status: published
 
 For those who aren't aware, The Tox Project was an exhibitor at this
@@ -33,14 +32,10 @@ small stacks of our rectangular stickers, so I'm looking forward to
 seeing those Tox stickers pasted everywhere! Here are some up-close
 pictures of the stickers we brought:
 
-![MjzYspf](https://blog.tox.chat/wp-content/uploads/2016/02/MjzYspf.jpg){.alignnone
-.size-full .wp-image-274 width="1632" height="917"}
+![](https://blog.tox.chat/wp-content/uploads/2016/02/MjzYspf.jpg)
 
-\[caption id="attachment\_275" align="alignnone" width="1632"\]![Our
-die-cut Tox lock logo
-sticker](https://blog.tox.chat/wp-content/uploads/2016/02/EgZVNFp.jpg){.size-full
-.wp-image-275 width="1632" height="917"} Our die-cut Tox lock logo
-sticker\[/caption\]
+![Our die-cut Tox lock logo sticker](https://blog.tox.chat/wp-content/uploads/2016/02/EgZVNFp.jpg)
+Our die-cut Tox lock logo sticker
 
 One thing was made very clear to me during the expo by attendees that
 came to the booth; Tox fills a niche in free software that very
@@ -87,32 +82,17 @@ pictures from the event. They include Chuong Vu, an ObjcTox developer,
 Greg Mullen (grayhatter), the main developer of uTox, and myself
 (zero-one).
 
-\[caption id="attachment\_276" align="alignnone" width="1632"\]![Setting
-up the booth before the expo floor opens to the
-conference-goers](https://blog.tox.chat/wp-content/uploads/2016/02/5e3G07P.jpg){.size-full
-.wp-image-276 width="1632" height="917"} Setting up the booth before the
-expo floor opens to the conference-goers\[/caption\]
+![Setting up the booth before the expo floor opens to the conference-goers](https://blog.tox.chat/wp-content/uploads/2016/02/5e3G07P.jpg)
+Setting up the booth before the expo floor opens to the conference-goers
 
-\[caption id="attachment\_277" align="alignnone" width="1632"\]![Chuong
-Vu (right) and myself (left) getting ready to show off some Tox
-clients.](https://blog.tox.chat/wp-content/uploads/2016/02/yXhHvN5.jpg){.size-full
-.wp-image-277 width="1632" height="917"} Chuong Vu (right) and myself
-(left) getting ready to show off some Tox clients.\[/caption\]
+![Chuong Vu (right) and myself (left) getting ready to show off some Tox clients](https://blog.tox.chat/wp-content/uploads/2016/02/yXhHvN5.jpg)
+Chuong Vu (right) and myself (left) getting ready to show off some Tox clients
 
-\[caption id="attachment\_278" align="alignnone" width="1632"\]![Greg
-Mullen (left) and Chuong Vu (right) explaining Tox to an expo
-attendee](https://blog.tox.chat/wp-content/uploads/2016/02/IZ6H92X.jpg){.size-full
-.wp-image-278 width="1632" height="917"} Greg Mullen (left) and Chuong
-Vu (right) explaining Tox to an expo attendee\[/caption\]
+![Greg Mullen (left) and Chuong Vu (right) explaining Tox to an expo attendee](https://blog.tox.chat/wp-content/uploads/2016/02/IZ6H92X.jpg)
+Greg Mullen (left) and Chuong Vu (right) explaining Tox to an expo attendee
 
-\[caption id="attachment\_279" align="alignnone" width="1632"\]![Chuong
-Vu (near) and Greg Mullen (far) explaining Tox to an expo
-attendee](https://blog.tox.chat/wp-content/uploads/2016/02/Q6J17uS.jpg){.size-full
-.wp-image-279 width="1632" height="917"} Chuong Vu (near) and Greg
-Mullen (far) explaining Tox to an expo attendee\[/caption\]
+![Chuong Vu (near) and Greg Mullen (far) explaining Tox to an expo attendee](https://blog.tox.chat/wp-content/uploads/2016/02/Q6J17uS.jpg)
+Chuong Vu (near) and Greg Mullen (far) explaining Tox to an expo attendee
 
-\[caption id="attachment\_280" align="alignnone" width="1632"\]![Having
-a good time at dinner. Pizza and calzones,
-yum!](https://blog.tox.chat/wp-content/uploads/2016/02/SFoH36w.jpg){.size-full
-.wp-image-280 width="1632" height="917"} Having a good time at dinner.
-Pizza and calzones, yum!\[/caption\]
+![Having a good time at dinner. Pizza and calzones, yum!](https://blog.tox.chat/wp-content/uploads/2016/02/SFoH36w.jpg)
+Having a good time at dinner. Pizza and calzones, yum!

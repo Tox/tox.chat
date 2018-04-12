@@ -8,8 +8,7 @@ As many of you in the Tox community have likely already heard, a serious
 situation was brought to our attention which has forced the
 Tox development team to disassociate itself from the Tox Foundation,
 along with its sole board member, Sean Qureshi (aka Stqism, aka
-AlexStraunoff, aka
-NikolaiToryzin). [We ]{style="font-size: 16px;"}learned by Sean’s own
+AlexStraunoff, aka NikolaiToryzin). We learned by Sean’s own
 admission that he "took a loan against the Tox Foundation", and used the
 entirety of the foundation’s funds on personal expenses completely
 unrelated to the project. He did not inform anyone about his actions

@@ -78,7 +78,7 @@ were fixed. A bug in development branch which resulted in a crash of
 Toxcore[\[3\]](https://github.com/irungentoo/toxcore/commit/ce60b9cf52dd20aedbe2f07ed29c96663f94c313)
 was fixed.
 
-TokTok/c-toxcore {#toktokctoxcore}
+TokTok/c-toxcore
 ----------------
 
 [A lot of internal

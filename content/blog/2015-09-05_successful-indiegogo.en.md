@@ -7,18 +7,15 @@ Status: published
 We are happy to announce that irungentoo's personal Indiegogo campaign
 has been successfully funded!
 
-![](https://blog.tox.chat/wp-content/uploads/2015/09/new-gentoo1.png){.wp-image-150
-.size-full .aligncenter width="607" height="680"}
+![](https://blog.tox.chat/wp-content/uploads/2015/09/new-gentoo1.png)
 
 As you may already know, irungentoo has been running a [personal
 fundraiser](https://blog.tox.chat/2015/08/regarding-irungentoos-indiegogo-campaign/),
 to allow himself to dedicate a month of full time work to Tox
 development. This fundraiser reached
-its [[\$5,000]{.currency}]{.i-goal-amount} [ USD]{.i-goal-currency}
-[goal with 6 hours left on the clock.]{.i-goal-text}At the time of
-writing, a total of **[\$5,785]{.currency .currency-large}** has been
-raised by **217**[[[ funders.]{#js-tab-funders-count
-.i-count}]{}]{.i-tab}
+its \$5,000 USD goal with 6 hours left on the clock. At the time of
+writing, a total of **\$5,785** has been
+raised by **217** funders.
 
 The Tox Project would like to give a big "Thank You!" to all that
 donated, as well as to all of Tox's supporters for making this happen,
@@ -40,7 +37,7 @@ irungentoo would like to say to everyone:
 > make sure that Tox does not die if I get hit by a bus. Thank you for
 > making sure that Tox will become even stronger.
 >
-> Sincerely,  
+> Sincerely,
 > irungentoo
 
 We'll be sitting down with irungentoo very soon to develop a roadmap for
