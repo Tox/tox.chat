@@ -19,7 +19,7 @@ Quite a few people have asked if this is an official Tox fundraising
 campaign. It is not. This is something that irungentoo is doing on his
 own, separate from the project; all raised funds will go directly to him
 to be used however he sees best fit. We mentioned in our [previous blog
-post](https://blog.tox.chat/2015/07/current-situation-3/) that we
+post]({filename}2015-07-11_current-situation-3.en.md) that we
 wouldn't be taking any donations as a project until we have set up a
 proper organization with an emphasis on transparency and protection of
 assets. This is still the case, however we also mentioned that

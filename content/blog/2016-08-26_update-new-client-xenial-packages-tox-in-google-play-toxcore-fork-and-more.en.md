@@ -184,7 +184,7 @@ New group chats
 
 New group chat support is currently not being worked on by anyone. As
 you might have read from [the previous update blog
-post](https://blog.tox.chat/2016/06/update-new-group-chats-multi-device-and-more/),
+post]({filename}2016-06-07_update-new-group-chats-multi-device-and-more.en.md),
 the new group chats are almost fully implemented in JFreegman's Toxcore
 fork, the only thing needed for them to work properly is the TCP-DHT
 support by Toxcore. Irungentoo has said that he will work on adding

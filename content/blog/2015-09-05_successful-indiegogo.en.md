@@ -10,7 +10,7 @@ has been successfully funded!
 ![](https://blog.tox.chat/wp-content/uploads/2015/09/new-gentoo1.png)
 
 As you may already know, irungentoo has been running a [personal
-fundraiser](https://blog.tox.chat/2015/08/regarding-irungentoos-indiegogo-campaign/),
+fundraiser]({filename}2015-08-09_regarding-irungentoos-indiegogo-campaign.en.md),
 to allow himself to dedicate a month of full time work to Tox
 development. This fundraiser reached
 its \$5,000 USD goal with 6 hours left on the clock. At the time of

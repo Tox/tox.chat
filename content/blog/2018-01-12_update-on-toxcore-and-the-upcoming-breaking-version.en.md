@@ -9,7 +9,7 @@ update, so a blog post is due, especially given that we are about to hit
 a new milestone and introduce some breaking changes.
 
 Since our last blog post about [Toxcore getting a stable version
-release](https://blog.tox.chat/2016/12/first-stable-release-of-toktok-toxcore/),
+release]({filename}2016-12-20_first-stable-release-of-toktok-toxcore.en.md),
 version 0.1.0, Toxcore has seen eleven more releases, which brings it to
 the version 0.1.11. Some of the notable changes in these releases
 include: (a little) reduction of bandwidth usage

@@ -19,7 +19,7 @@ were available for Ubuntu Yakkety on the day of its release.
 
 Packages for Ubuntu Vivid (15.04) and Ubuntu Wily (15.10) were removed.
 We have mentioned in [the previous blog
-post](https://blog.tox.chat/2016/08/update-new-client-xenial-packages-tox-in-google-play-toxcore-fork-and-more/)
+post]({filename}2016-08-26_update-new-client-xenial-packages-tox-in-google-play-toxcore-fork-and-more.en.md)
 that we would like to remove them at some point, as Ubuntu Vivid and
 Ubuntu Wily [have reached EOL](https://wiki.ubuntu.com/Releases), and
 addition of packages for the new Ubuntu release served as that point.
@@ -36,7 +36,7 @@ that they contained Tox clients, when in fact they were empty.
 
 qTox packages were removed from all package repositories. In [the
 previous blog
-post](https://blog.tox.chat/2016/08/update-new-client-xenial-packages-tox-in-google-play-toxcore-fork-and-more/)
+post]({filename}2016-08-26_update-new-client-xenial-packages-tox-in-google-play-toxcore-fork-and-more.en.md)
 we mentioned that [*Encrypt*](https://github.com/Encrypt) was going to
 take over the maintenance of qTox packages, but because of personal
 reasons he is not able to volunteer as much of his free time as he hoped
