@@ -24,6 +24,9 @@
 PATH = 'content/'
 PAGE_PATHS = ['website']
 ARTICLE_PATHS = ['blog']
+
+# where to find static files linked in markdown content using {filename}
+STATIC_PATHS = ['blog/static']
 # by default pelican expects articles to be placed directly in PATH and will
 # treat any subdirectories in there, like the 'blog' subdirectory we have, as
 # a category the articles that are in that directory were posted under, which

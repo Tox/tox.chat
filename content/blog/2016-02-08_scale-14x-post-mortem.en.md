@@ -32,9 +32,9 @@ small stacks of our rectangular stickers, so I'm looking forward to
 seeing those Tox stickers pasted everywhere! Here are some up-close
 pictures of the stickers we brought:
 
-![](https://blog.tox.chat/wp-content/uploads/2016/02/MjzYspf.jpg)
+![Our die-cut Tox lock logo sticker]({filename}/blog/static/images/scale-14x-1.jpg)
 
-![Our die-cut Tox lock logo sticker](https://blog.tox.chat/wp-content/uploads/2016/02/EgZVNFp.jpg)
+![Our die-cut Tox lock logo sticker]({filename}/blog/static/images/scale-14x-2.jpg)
 Our die-cut Tox lock logo sticker
 
 One thing was made very clear to me during the expo by attendees that
@@ -82,17 +82,17 @@ pictures from the event. They include Chuong Vu, an ObjcTox developer,
 Greg Mullen (grayhatter), the main developer of uTox, and myself
 (zero-one).
 
-![Setting up the booth before the expo floor opens to the conference-goers](https://blog.tox.chat/wp-content/uploads/2016/02/5e3G07P.jpg)
+![Setting up the booth before the expo floor opens to the conference-goers]({filename}/blog/static/images/scale-14x-3.jpg)
 Setting up the booth before the expo floor opens to the conference-goers
 
-![Chuong Vu (right) and myself (left) getting ready to show off some Tox clients](https://blog.tox.chat/wp-content/uploads/2016/02/yXhHvN5.jpg)
+![Chuong Vu (right) and myself (left) getting ready to show off some Tox clients]({filename}/blog/static/images/scale-14x-4.jpg)
 Chuong Vu (right) and myself (left) getting ready to show off some Tox clients
 
-![Greg Mullen (left) and Chuong Vu (right) explaining Tox to an expo attendee](https://blog.tox.chat/wp-content/uploads/2016/02/IZ6H92X.jpg)
+![Greg Mullen (left) and Chuong Vu (right) explaining Tox to an expo attendee]({filename}/blog/static/images/scale-14x-5.jpg)
 Greg Mullen (left) and Chuong Vu (right) explaining Tox to an expo attendee
 
-![Chuong Vu (near) and Greg Mullen (far) explaining Tox to an expo attendee](https://blog.tox.chat/wp-content/uploads/2016/02/Q6J17uS.jpg)
+![Chuong Vu (near) and Greg Mullen (far) explaining Tox to an expo attendee]({filename}/blog/static/images/scale-14x-6.jpg)
 Chuong Vu (near) and Greg Mullen (far) explaining Tox to an expo attendee
 
-![Having a good time at dinner. Pizza and calzones, yum!](https://blog.tox.chat/wp-content/uploads/2016/02/SFoH36w.jpg)
+![Having a good time at dinner. Pizza and calzones, yum!]({filename}/blog/static/images/scale-14x-7.jpg)
 Having a good time at dinner. Pizza and calzones, yum!

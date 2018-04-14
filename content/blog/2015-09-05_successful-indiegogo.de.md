@@ -7,7 +7,7 @@ Status: published
 We are happy to announce that irungentoo's personal Indiegogo campaign
 has been successfully funded!
 
-![](https://blog.tox.chat/wp-content/uploads/2015/09/new-gentoo1.png)
+![Sketch of irungentoo receiving Indiegogo campaign money]({filename}static/images/irungentoo-indiegogo.png)
 
 As you may already know, irungentoo has been running a [personal
 fundraiser]({filename}2015-08-09_regarding-irungentoos-indiegogo-campaign.en.md),
