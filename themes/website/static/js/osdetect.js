@@ -129,7 +129,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
+			dlLink: "https://github.com/qTox/qTox/releases/download/v1.15.0/setup-qtox-x86_64-release.exe",
 		}, {
 			title: "uTox 64-bit",
 			name: "utox",
@@ -143,7 +143,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/lastSuccessfulBuild/artifact/setup-qtox.exe",
+			dlLink: "https://github.com/qTox/qTox/releases/download/v1.15.0/setup-qtox-i686-release.exe",
 		}, {
 			title: "uTox 32-bit",
 			name: "utox",
