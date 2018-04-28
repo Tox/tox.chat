@@ -211,6 +211,7 @@ READ_MORE_LINK = 'Read More'
 # https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites
 # http://jinja.pocoo.org/docs/2.10/templates/#i18n
 # http://mozweb.readthedocs.io/en/latest/reference/l10n.html
+I18N_GETTEXT_LOCALEDIR = 'themes/i18n/translations'
 I18N_UNTRANSLATED_ARTICLES = 'keep'
 I18N_UNTRANSLATED_PAGES = 'keep'
 I18N_SUBSITES = {

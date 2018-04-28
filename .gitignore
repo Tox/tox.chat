@@ -3,6 +3,7 @@ public
 *.pyc
 pelican.pid
 srv.pid
+themes/i18n/translations/*/LC_MESSAGES/*.mo
 
 # This is a generic Python gitignore
 # https://github.com/github/gitignore/blob/2eba0d635f6f5f1b22a4ad99dcc9da0c11da2208/Python.gitignore
