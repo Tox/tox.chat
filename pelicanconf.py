@@ -155,42 +155,6 @@ for root, dirnames, filenames in os.walk(TEMPLATES_DIR):
             print(template_src + ' -> ' + template_dst)
             TEMPLATE_PAGES[template_src] = template_dst
 
-# we need to copy some files/directories from the theme's subdirectory into the
-# output diretory
-import shutil
-
-def copy(src, dst_dir):
-    dst_dir = os.path.join(OUTPUT_PATH, dst_dir)
-    if not os.path.exists(src):
-        raise Exception("Can't copy '{}', it doesn't exist".format(src))
-    if os.path.exists(dst_dir) and not os.path.isdir(dst_dir):
-        raise Exception("Can't copy to '{}', there already something exists that is not a directory".format(src))
-
-    if os.path.isfile(src):
-        if not os.path.exists(dst_dir):
-            os.makedirs(dst_dir)
-        shutil.copy(src, dst_dir)
-    elif os.path.isdir(src):
-        if not os.path.exists(dst_dir):
-            os.makedirs(dst_dir)
-        for root, _, filenames in os.walk(src):
-            current_dir = os.path.join(dst_dir, os.path.relpath(root, src))
-            if not os.path.exists(current_dir):
-                os.mkdir(current_dir)
-            for f in filenames:
-                shutil.copy(os.path.join(root, f), os.path.join(current_dir, f))
-    else:
-        raise Exception("Can't copy '{}', it's neither a file or directory".format(src))
-
-def copy_list(l):
-    for (src, dst_dir) in l:
-        copy(src, dst_dir)
-
-#copy_list([
-#    ('themes/blog/static',    'blog/static'),
-#    ('themes/website/static', 'static'),
-#    ('themes/global/static',  'static')
-#])
 
 # add pelican plugins
 PLUGINS = [
