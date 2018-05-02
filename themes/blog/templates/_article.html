@@ -1,4 +1,4 @@
-{% macro print_article(content) %}
+{% macro print_article(is_full) %}
  <article class="article-status-{{ article.status }} center-block" style="font-family: 'Lora', serif; font-size:18px; line-height: 1.6; max-width:32em;">
 	<header class="article-header text-center">
 		<h2 class="article-title">
@@ -23,7 +23,12 @@
 		</div>
 	</header>
 	<div class="article-content">
-		{{ content }}
+		{% if is_full %}
+			{{ article.content }}
+		{% else %}
+			{{ article.summary }}
+			<p><a class="article-read-more" href="{{ SITEURL }}/{{ article.url }}">Read More</a></p>
+		{% endif %}
 	</div>
 </article>
 {% endmacro %}

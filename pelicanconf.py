@@ -130,6 +130,8 @@ TIMEZONE = 'UTC'
 DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 DEFAULT_LANG = 'en'
 
+SUMMARY_MAX_LENGTH = 120
+
 THEME = 'themes'
 EXTRA_TEMPLATES_PATHS = ['themes', 'themes/blog/templates']
 
@@ -159,16 +161,8 @@ for root, dirnames, filenames in os.walk(TEMPLATES_DIR):
 # add pelican plugins
 PLUGINS = [
     'plugins.jinja_globals_tests.jinja_globals_tests',
-    'plugins.read_more_link.read_more_link',
     'plugins.i18n_subsites.i18n_subsites'
 ]
-
-# settings for plugins.read_more_link.read_more_link
-SUMMARY_MAX_LENGTH = 120
-# This is the format of the read more link
-READ_MORE_LINK_FORMAT = '<a class="read-more" href="{url}"><span> {text}</span></a>'
-# this is what '{text}' is set to in the above
-READ_MORE_LINK = 'Read More'
 
 # plugins.i18n_subsites.i18n_subsites settings.
 # here are some sources on using this plugin:
@@ -179,12 +173,7 @@ I18N_GETTEXT_LOCALEDIR = 'themes/i18n/translations'
 I18N_UNTRANSLATED_ARTICLES = 'keep'
 I18N_UNTRANSLATED_PAGES = 'keep'
 I18N_SUBSITES = {
-    'de': {
-        # those need to be translated from their english counterparts that are
-        # defined above
-        'SITENAME': '???',
-        'READ_MORE_LINK': '???'
-    }
+    'de': {}
 }
 
 # add our own (or 3rd party) jinja extensions, filters, globals, tests, etc.
