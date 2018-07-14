@@ -38,7 +38,7 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/qTox/qTox/releases/download/v1.15.0/qTox.dmg",
+		dlLink: "https://github.com/qTox/qTox/releases/download/v1.16.3/qTox.dmg",
 	},  {
 		title: "uTox 64-bit",
 		name: "utox",
@@ -129,7 +129,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/qTox/qTox/releases/download/v1.15.0/setup-qtox-x86_64-release.exe",
+			dlLink: "https://github.com/qTox/qTox/releases/download/v1.16.3/setup-qtox-x86_64-release.exe",
 		}, {
 			title: "uTox 64-bit",
 			name: "utox",
@@ -143,7 +143,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/qTox/qTox/releases/download/v1.15.0/setup-qtox-i686-release.exe",
+			dlLink: "https://github.com/qTox/qTox/releases/download/v1.16.3/setup-qtox-i686-release.exe",
 		}, {
 			title: "uTox 32-bit",
 			name: "utox",
