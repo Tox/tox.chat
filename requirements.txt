@@ -6,7 +6,6 @@ Jinja2==2.10
 Markdown==2.6.11
 MarkupSafe==1.0
 pelican==3.7.1
-pkg-resources==0.0.0
 Pygments==2.2.0
 python-dateutil==2.7.2
 pytz==2018.4
