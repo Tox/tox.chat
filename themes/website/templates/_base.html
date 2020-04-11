@@ -1,74 +1,12 @@
-<!doctype html>
-<html lang="{{ DEFAULT_LANG }}">
+{% extends 'global/templates/_base.html' %}
 
-<head>
-  {% block head %}
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="theme/img/favicon.ico">
-  <title>
-  {%- block title %}{% endblock -%}
-  {%- if self.title() == "" %}A New Kind of Instant Messaging{% else %} - Tox{% endif -%}
-  </title>
-
-  <link href="theme/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="theme/css/bootstrap.css" rel="stylesheet">
-  <link href="theme/css/style.css" rel="stylesheet">
-
-  <meta property="og:title" content="A New Kind of Instant Messaging"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://tox.chat"/>
-  <meta property="og:image" content="https://tox.chat/theme/img/toxvert.png"/>
-  <meta property="og:site_name" content="Project Tox"/>
-  <meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising &mdash; forever."/>
-  {% endblock %}
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="container-fluid limit-width">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html"><img src="theme/img/logo.svg"></a>
-        <input type="checkbox" id="hambox" class="navbar-toggle collapsed">
-        <label id="hamlabel" class="navbar-toggle collapsed fa fa-navicon" for="hambox"></label>
-        <div class="tinynav navbar-toggle collapsed">
-          <ul class="nav navbar-nav">
-            {% include '_navbar_items.html' %}
-          </ul>
-        </div>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          {% include '_navbar_items.html' %}
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  {% block content %}{% endblock %}
-
-  <footer id="footer" class="dark">
-    <div class="container-fluid limit-width">
-      <div class="languages">
-
-      </div>
-
-      <div class="ext-med pull-left">
-        <a class="button" href="https://twitter.com/projecttox" title="Follow us on Twitter"><span class="icon fa fa-twitter"></span></a>
-        <a class="button" href="https://www.facebook.com/toxproject" title="Like us on Facebook"><span class="icon fa fa-facebook"></span></a>
-        <a class="button" href="https://github.com/TokTok/c-toxcore" title="Star us on Github"><span class="icon fa fa-github"></span></a>
-        <a class="button" href="https://wiki.tox.chat/users/community#irc" title="Chat with us on IRC"><span class="icon fa fa-comments"></span></a>
-        <a class="button do-button" href="https://www.digitalocean.com/" title="Powered by DigitalOcean"><img class="button" src="theme/img/do.svg" /></a>
-      </div>
-
-      <div class="cc pull-right">
-        <a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="theme/img/CC.png"></a>
-        <br>
-        <p>This page was generated from <a href="https://github.com/Tox/tox.chat/tree/master/{{ TEMPLATES_DIR }}/{{ self._TemplateReference__context.name }}">a file hosted in public GitHub repository</a> — issue tickets and pull requests are very welcome!</p>
-      </div>
-    </div>
-  </footer>
-</body>
-
-</html>
+{% block head -%}
+	{{ super() }}
+	
+	<meta property="og:title" content="A New Kind of Instant Messaging"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://tox.chat"/>
+	<meta property="og:image" content="https://tox.chat/static/img/toxvert.png"/>
+	<meta property="og:site_name" content="Project Tox"/>
+	<meta property="og:description" content="Whether it's corporations or governments, there's just too much digital spying going on today. Tox is an easy to use application that connects you with friends and family without anyone else listening in. While other big-name services require you to pay for features, Tox is totally free and comes without advertising &mdash; forever."/>
+{% endblock %}

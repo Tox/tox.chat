@@ -1,0 +1,25 @@
+{% extends 'blog/templates/_base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<section id="content" class="container">
+	{% block content_title %}{% endblock %}
+	<main id="articles" class="center-block" style="font-family: 'Lora', serif; font-size:18px; line-height: 1.6; max-width:32em;">
+	{% for article in articles_page.object_list %}
+		{% include 'blog/templates/_article_summary.html' %}
+	{% endfor %}
+	</main>
+	{% if articles_page.has_other_pages() %}
+	<p class="paginator">
+		{% if articles_page.has_previous() %}
+			<a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&laquo;</a>
+		{% endif %}
+		Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+		{% if articles_page.has_next() %}
+			<a href="{{ SITEURL }}/{{ articles_next_page.url }}">&raquo;</a>
+		{% endif %}
+	</p>
+	{% endif %}
+</section>
+{% endblock %}

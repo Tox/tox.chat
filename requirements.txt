@@ -1,0 +1,13 @@
+Babel==2.5.3
+blinker==1.4
+docutils==0.14
+feedgenerator==1.9
+Jinja2==2.10
+Markdown==2.6.11
+MarkupSafe==1.0
+pelican==3.7.1
+Pygments==2.2.0
+python-dateutil==2.7.2
+pytz==2018.4
+six==1.11.0
+Unidecode==1.0.22

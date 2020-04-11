@@ -1,0 +1,34 @@
+{% macro print_article(is_full) %}
+ <article class="article-status-{{ article.status }} center-block" style="font-family: 'Lora', serif; font-size:18px; line-height: 1.6; max-width:32em;">
+	<header class="article-header text-center">
+		<h2 class="article-title">
+			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|escape }}">{{ article.title }}</a>
+		</h2>
+		<div class="article-metadata">
+			Posted on
+				<time class="article-datetime article-status-{{ article.status }}" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+			by
+				<span class="article-author">
+					{% for author in article.authors %}
+					{% if loop.last and not loop.first %}
+						and
+					{% endif %}
+					<a class="article-author-name" rel="author" href="{{ SITEURL }}/{{ author.url }}" title="View all articles by {{ author|escape }}">{{ author }}</a>
+					{%- if article.authors|length > 1 and not loop.last -%}
+					,
+					{% endif %}
+					{% endfor %}
+
+				</span>
+		</div>
+	</header>
+	<div class="article-content">
+		{% if is_full %}
+			{{ article.content }}
+		{% else %}
+			{{ article.summary }}
+			<p><a class="article-read-more" href="{{ SITEURL }}/{{ article.url }}">Read More</a></p>
+		{% endif %}
+	</div>
+</article>
+{% endmacro %}

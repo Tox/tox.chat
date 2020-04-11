@@ -1,0 +1,16 @@
+{% extends 'blog/templates/_base.html' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+<section id="content" class="container">
+	<h1 class="text-center">Categories</h1>
+		<div class="center-block text-center">
+	<ul class="center-block">
+	{% for category, articles in categories|sort %}
+		<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+	{% endfor %}
+	</ul>
+	</div>
+</section>
+{% endblock %}

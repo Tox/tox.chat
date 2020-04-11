@@ -1,0 +1,16 @@
+{% for (url, fa, text) in [
+							(SITEURL + '/download.html',  'download',       'Download'),
+							(SITEURL + '/about.html',     'align-left',     'About'),
+							(SITEURL + '/faq.html',       'info-circle',    'FAQ'),
+							(SITEURL + '/clients.html',   'list-ul',        'Clients'),
+							('https://wiki.tox.chat/',    'globe',          'Wiki'),
+							('https://lists.tox.chat/',   'envelope',       'Mailing lists'),
+							(SITEURL + '/blog/',          'rss',            'Blog'),
+							('https://toktok.ltd/',       'connectdevelop', 'TokTok'),
+							] %}
+					<li>
+						<a href="{{ url }}">
+						<span class="fa fa-{{ fa }}"></span> {{ text }}
+						</a>
+					</li>
+{% endfor %}
