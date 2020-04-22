@@ -51,25 +51,13 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 if (window.navigator.userAgent.indexOf("iPad") != -1) {
 	OSName = "iOS";
 
-	clients = [{
-		title: "Antidote",
-		name: "antidote",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
-	}];
+	clients = [];
 }
 
 if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 	OSName = "iOS";
 
-	clients = [{
-		title: "Antidote",
-		name: "antidote",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://itunes.apple.com/app/antidote-for-tox/id933117605",
-	}];
+	clients = [];
 }
 
 if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
