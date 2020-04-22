@@ -226,12 +226,6 @@ tbody th:first-child, thead th {
 
 .slider input[type=radio]#antox-images-control1:checked ~ .sliderinner > ul { left: 0 }
 
-.slider label[for=antidote-images-control1] { margin-left: -18px }
-.slider label[for=antidote-images-control3] { margin-left: 18px }
-.slider input[type=radio]#antidote-images-control1:checked ~ .sliderinner > ul { left: 0 }
-.slider input[type=radio]#antidote-images-control2:checked ~ .sliderinner > ul { left: -100% }
-.slider input[type=radio]#antidote-images-control3:checked ~ .sliderinner > ul { left: -200% }
-
 /* Specific styling */
 @media (min-width: 768px) {
 	#cover {
