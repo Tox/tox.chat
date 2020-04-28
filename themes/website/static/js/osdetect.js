@@ -123,7 +123,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "utox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://downloads.utox.io/stable/uTox_win64.exe",
+			dlLink: "https://github.com/uTox/uTox/releases/download/v0.17.2/utox_x86_64.exe",
 		}];
 	} else {
 		clients = [{
@@ -132,12 +132,6 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			icon: "download",
 			desc: true,
 			dlLink: "https://github.com/qTox/qTox/releases/download/v1.17.2/setup-qtox-i686-release.exe",
-		}, {
-			title: "uTox 32-bit",
-			name: "utox",
-			icon: "download",
-			desc: true,
-			dlLink: "https://downloads.utox.io/stable/uTox_win32.exe"
 		}];
 	}
 }
