@@ -39,12 +39,6 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		icon: "download",
 		desc: true,
 		dlLink: "https://github.com/qTox/qTox/releases/download/v1.17.2/qTox.dmg",
-	},  {
-		title: "uTox 64-bit",
-		name: "utox",
-		icon: "download",
-		desc: true,
-		dlLink: "https://github.com/uTox/uTox/releases/download/v0.17.0/uTox.0.17.0.dmg",
 	}];
 }
 
