@@ -45,7 +45,7 @@ make devserver_stop
 * Don't make website pull assets from CDNs or other places, keep everything local
 * Before working on fixing an issue, double check there is no ongoing fork fixing it
 * When fixing an issue, post a comment saying that you are doing so, to save the confusion
-* All images should be optimized for web: resonable resolution and size, stripped metadata, etc.
+* All images should be optimized for web: reasonable resolution and size, stripped metadata, etc.
 * Use tabs over spaces for HTML indentation
 
 ## FAQ
