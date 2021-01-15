@@ -203,7 +203,10 @@ tbody th:first-child, thead th {
 .slider input[type=radio]#desktop-images-control2:checked ~ .sliderinner > ul { left: -100% }
 .slider input[type=radio]#desktop-images-control3:checked ~ .sliderinner > ul { left: -200% }
 
+.slider label[for=mobile-images-control1] { margin-left: -9px }
+.slider label[for=mobile-images-control2] { margin-left: 9px }
 .slider input[type=radio]#mobile-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider input[type=radio]#mobile-images-control2:checked ~ .sliderinner > ul { left: -100% }
 
 .slider label[for=qtox-images-control1] { margin-left: -9px }
 .slider label[for=qtox-images-control2] { margin-left: 9px }
@@ -224,7 +227,10 @@ tbody th:first-child, thead th {
 
 .slider input[type=radio]#toxic-images-control1:checked ~ .sliderinner > ul { left: 0 }
 
-.slider input[type=radio]#antox-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider label[for=atox-images-control1] { margin-left: -9px }
+.slider label[for=atox-images-control2] { margin-left: 9px }
+.slider input[type=radio]#atox-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider input[type=radio]#atox-images-control2:checked ~ .sliderinner > ul { left: -100% }
 
 /* Specific styling */
 @media (min-width: 768px) {
@@ -321,7 +327,7 @@ tbody th:first-child, thead th {
 		display: block;
 		margin: auto;
 		/* Fixes carousel breaking at certain resolutions */
-		min-width: 240px; 
+		min-width: 240px;
 	}
 	.sliderinner > ul > li > div > img { max-height: 500px;	}
 }

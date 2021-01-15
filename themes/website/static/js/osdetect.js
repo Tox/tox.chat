@@ -82,23 +82,11 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 	OSName = "Android";
 
 	clients = [{
-		title: "Antox F-Droid",
-		name: "antox",
+		title: "aTox APK",
+		name: "atox",
 		icon: "external-link",
 		desc: true,
-		dlLink: "#fdroid",
-	}, {
-		title: "Antox Google Play",
-		name: "antox",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://play.google.com/store/apps/details?id=chat.tox.antox",
-	}, {
-		title: "Antox APK",
-		name: "antox",
-		icon: "download",
-		desc: true,
-		dlLink: "https://pkg.tox.chat/fdroid/repo/antox.apk",
+		dlLink: "https://github.com/evilcorpltd/aTox/releases/download/v0.5.1/atox.apk",
 	}];
 }
 
