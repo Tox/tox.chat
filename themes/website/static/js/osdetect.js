@@ -82,9 +82,15 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 	OSName = "Android";
 
 	clients = [{
-		title: "aTox APK",
+		title: "aTox F-Droid",
 		name: "atox",
 		icon: "external-link",
+		desc: true,
+		dlLink: "https://f-droid.org/en/packages/ltd.evilcorp.atox/",
+	}, {
+		title: "aTox APK",
+		name: "atox",
+		icon: "download",
 		desc: true,
 		dlLink: "https://github.com/evilcorpltd/aTox/releases/download/v0.5.1/atox.apk",
 	}];
