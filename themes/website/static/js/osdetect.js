@@ -88,6 +88,12 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 		desc: true,
 		dlLink: "https://f-droid.org/en/packages/ltd.evilcorp.atox/",
 	}, {
+		title: "aTox Google Play",
+		name: "atox",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://play.google.com/store/apps/details?id=ltd.evilcorp.atox",
+	}, {
 		title: "aTox APK",
 		name: "atox",
 		icon: "download",
