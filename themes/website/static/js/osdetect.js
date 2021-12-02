@@ -99,6 +99,24 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 		icon: "download",
 		desc: true,
 		dlLink: "https://github.com/evilcorpltd/aTox/releases/download/v0.6.0/atox.apk",
+	}, {
+		title: "TRIfA F-Droid",
+		name: "trifa",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://f-droid.org/app/com.zoffcc.applications.trifa",
+	}, {
+		title: "TRIfA Google Play",
+		name: "trifa",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://play.google.com/store/apps/details?id=com.zoffcc.applications.trifa",
+	}, {
+		title: "TRIfA APK",
+		name: "trifa",
+		icon: "download",
+		desc: true,
+		dlLink: "https://github.com/zoff99/ToxAndroidRefImpl/releases/latest/download/play.trifa.apk",
 	}];
 }
 

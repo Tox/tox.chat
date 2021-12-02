@@ -232,6 +232,11 @@ tbody th:first-child, thead th {
 .slider input[type=radio]#atox-images-control1:checked ~ .sliderinner > ul { left: 0 }
 .slider input[type=radio]#atox-images-control2:checked ~ .sliderinner > ul { left: -100% }
 
+.slider label[for=trifa-images-control1] { margin-left: -9px }
+.slider label[for=trifa-images-control2] { margin-left: 9px }
+.slider input[type=radio]#trifa-images-control1:checked ~ .sliderinner > ul { left: 0 }
+.slider input[type=radio]#trifa-images-control2:checked ~ .sliderinner > ul { left: -100% }
+
 /* Specific styling */
 @media (min-width: 768px) {
 	#cover {
