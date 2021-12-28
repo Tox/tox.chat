@@ -232,6 +232,8 @@ tbody th:first-child, thead th {
 .slider input[type=radio]#atox-images-control1:checked ~ .sliderinner > ul { left: 0 }
 .slider input[type=radio]#atox-images-control2:checked ~ .sliderinner > ul { left: -100% }
 
+.slider input[type=radio]#trifa-images-control1:checked ~ .sliderinner > ul { left: 0 }
+
 /* Specific styling */
 @media (min-width: 768px) {
 	#cover {
