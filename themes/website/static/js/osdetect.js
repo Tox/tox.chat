@@ -98,7 +98,7 @@ if (window.navigator.userAgent.indexOf("Android") != -1) {
 		name: "atox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/evilcorpltd/aTox/releases/download/v0.7.2/atox.apk",
+		dlLink: "https://github.com/evilcorpltd/aTox/releases/download/v0.7.3/atox.apk",
 	}];
 }
 
