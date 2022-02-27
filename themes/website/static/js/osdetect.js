@@ -51,7 +51,13 @@ if (window.navigator.userAgent.indexOf("iPad") != -1) {
 if (window.navigator.userAgent.indexOf("iPhone") != -1) {
 	OSName = "iOS";
 
-	clients = [];
+	clients = [{
+		title: "Antidote",
+		name: "antidote",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://apps.apple.com/app/antidote-tox-client/id1592895292",
+	}];
 }
 
 if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
@@ -153,6 +159,11 @@ for (var i = 0; i < clients.length; i++) {
 	<a id='link" + i + "' href='" + client.dlLink + "' class='button large-button download'>\
 		<span class='fa fa-" + client.icon + "'>&nbsp;</span>" + client.title + "\
 	</a>";
+
+    if (client.name == "antidote") {
+        button = button + '\n<a class="button" href="#antidote-warning" title="Warning">'
+         + '<span style="font-size:150%" class="fa fa-exclamation-triangle"></span></a>';
+    }
 
 	var infoButton = "";
 	if (client.desc) {
