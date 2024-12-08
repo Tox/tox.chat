@@ -52,12 +52,6 @@ if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
 	OSName = "FreeBSD";
 
 	clients = [{
-		title: "Install uTox",
-		name: "utox",
-		icon: "external-link",
-		desc: true,
-		dlLink: "https://freshports.org/net-im/uTox/",
-	}, {
 		title: "Install Toxic",
 		name: "toxic",
 		icon: "external-link",
