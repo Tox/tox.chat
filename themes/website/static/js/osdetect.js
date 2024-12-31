@@ -112,12 +112,6 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			icon: "download",
 			desc: true,
 			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/setup-qtox-x86_64-release.exe",
-		}, {
-			title: "uTox 64-bit",
-			name: "utox",
-			icon: "download",
-			desc: true,
-			dlLink: "https://github.com/uTox/uTox/releases/download/v0.18.1/utox_x86_64.exe",
 		}];
 	} else {
 		clients = [{
