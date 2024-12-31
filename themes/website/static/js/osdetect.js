@@ -33,7 +33,19 @@ if (window.navigator.userAgent.indexOf("Windows") != -1 && arch == 0) {
 if (window.navigator.userAgent.indexOf("Mac") != -1) {
 	OSName = "Mac";
 
-	clients = [];
+	clients = [{
+		title: "qTox (Apple Sillicon)",
+		name: "qtox",
+		icon: "download",
+		desc: true,
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/qTox-arm64.dmg",
+	}, {
+		title: "qTox (Intel)",
+		name: "qtox",
+		icon: "download",
+		desc: true,
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/qTox-x86_64.dmg",
+	}];
 }
 
 if (window.navigator.userAgent.indexOf("iPad") != -1) {
@@ -52,6 +64,12 @@ if (window.navigator.userAgent.indexOf("FreeBSD") != -1) {
 	OSName = "FreeBSD";
 
 	clients = [{
+		title: "Install qTox",
+		name: "qtox",
+		icon: "external-link",
+		desc: true,
+		dlLink: "https://www.freshports.org/net-im/qTox",
+	}, {
 		title: "Install uTox",
 		name: "utox",
 		icon: "external-link",
@@ -95,6 +113,12 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 
 	if (arch == 64) {
 		clients = [{
+			title: "qTox 64-bit",
+			name: "qtox",
+			icon: "download",
+			desc: true,
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/setup-qtox-x86_64-release.exe",
+		}, {
 			title: "uTox 64-bit",
 			name: "utox",
 			icon: "download",
@@ -102,7 +126,13 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			dlLink: "https://github.com/uTox/uTox/releases/download/v0.18.1/utox_x86_64.exe",
 		}];
 	} else {
-		clients = [];
+		clients = [{
+			title: "qTox 32-bit",
+			name: "qtox",
+			icon: "download",
+			desc: true,
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/setup-qtox-i686-release.exe",
+		}];
 	}
 }
 
