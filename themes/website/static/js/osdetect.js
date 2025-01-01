@@ -38,13 +38,13 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/qTox-arm64.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0/qTox-arm64.dmg",
 	}, {
 		title: "qTox (Intel)",
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/qTox-x86_64.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0/qTox-x86_64.dmg",
 	}];
 }
 
@@ -111,7 +111,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/setup-qtox-x86_64-release.exe",
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0/setup-qtox-x86_64-release.exe",
 		}];
 	} else {
 		clients = [{
@@ -119,7 +119,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0-rc.4/setup-qtox-i686-release.exe",
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.0/setup-qtox-i686-release.exe",
 		}];
 	}
 }
