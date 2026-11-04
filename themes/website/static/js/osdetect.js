@@ -38,25 +38,25 @@ if (window.navigator.userAgent.indexOf("Mac") != -1) {
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/qTox-v1.18.3.arm64-12.0.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/qTox-v1.18.6.arm64-12.0.dmg",
 	}, {
 		title: "qTox (macOS 10.15+, Apple Silicon)",
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/qTox-v1.18.3.arm64-10.15.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/qTox-v1.18.6.arm64-10.15.dmg",
 	}, {
 		title: "qTox (macOS 12+, Intel)",
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/qTox-v1.18.3.x86_64-12.0.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/qTox-v1.18.6.x86_64-12.0.dmg",
 	}, {
 		title: "qTox (macOS 10.15+, Intel)",
 		name: "qtox",
 		icon: "download",
 		desc: true,
-		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/qTox-v1.18.3.x86_64-10.15.dmg",
+		dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/qTox-v1.18.6.x86_64-10.15.dmg",
 	}];
 }
 
@@ -123,7 +123,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/setup-qtox-x86_64-release.exe",
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/setup-qtox-x86_64-release.exe",
 		}];
 	} else {
 		clients = [{
@@ -131,7 +131,7 @@ if (window.navigator.userAgent.indexOf("Windows") != -1) {
 			name: "qtox",
 			icon: "download",
 			desc: true,
-			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.3/setup-qtox-i686-release.exe",
+			dlLink: "https://github.com/TokTok/qTox/releases/download/v1.18.6/setup-qtox-i686-release.exe",
 		}];
 	}
 }
